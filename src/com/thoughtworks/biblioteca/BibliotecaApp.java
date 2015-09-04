@@ -15,8 +15,8 @@ public class BibliotecaApp {
     }
 
     private static ArrayList<Book> generateListOfBooks() {
-        Book book1 = new Book("Harry Potter and the Philosopher's Stone");
-        Book book2 = new Book("Harry Potter and the Chamber of Secrets");
+        Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
+        Book book2 = new Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998);
         ArrayList<Book> listOfBooks = new ArrayList<Book>();
         listOfBooks.add(book1);
         listOfBooks.add(book2);

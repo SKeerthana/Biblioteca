@@ -13,7 +13,7 @@ public class Biblioteca {
     public String getListOfBooks() {
         String listOfBooksString = "";
         for (Book book : books) {
-            listOfBooksString += book.getBookDetails() + "\n";
+            listOfBooksString += book.getBookDetails();
         }
         return listOfBooksString;
     }
