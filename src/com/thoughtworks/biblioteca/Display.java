@@ -1,7 +1,7 @@
 package com.thoughtworks.biblioteca;
 
 import java.io.PrintStream;
-
+//takes the message and displays the output
 public class Display {
     private PrintStream out;
 

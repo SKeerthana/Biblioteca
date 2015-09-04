@@ -1,7 +1,7 @@
 package com.thoughtworks.biblioteca;
 
 import java.util.ArrayList;
-
+//Manages the bibilioteca aaplication
 public class BibliotecaApp {
 
     public static void main(String[] args) {

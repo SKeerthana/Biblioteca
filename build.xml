@@ -2,7 +2,7 @@
 
 <project name="Biblioteca" default="runjUnit" basedir="." xmlns:jacoco="antlib:org.jacoco.ant">
 
-    <property name="result.report.dir" location="report/" />
+    <property name="result.report.dir" location="report/"/>
 
     <taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
         <classpath path="lib/jacocoant.jar"/>
@@ -24,39 +24,37 @@
 
     <target name="runjUnit" depends="build">
         <jacoco:coverage destfile="jacoco.exec">
-        <junit printsummary="yes" haltonfailure="true" fork="true" forkmode="once">
-            <classpath>
-                <pathelement location="lib/junit-4.12.jar"/>
-                <pathelement location="lib/hamcrest-core-1.3.jar"/>
-                <pathelement location="lib/mockito-all-1.9.5.jar"/>
-                <pathelement location="out"/>
-            </classpath>
+            <junit printsummary="yes" haltonfailure="true" fork="true" forkmode="once">
+                <classpath>
+                    <pathelement location="lib/junit-4.12.jar"/>
+                    <pathelement location="lib/hamcrest-core-1.3.jar"/>
+                    <pathelement location="lib/mockito-all-1.9.5.jar"/>
+                    <pathelement location="out"/>
+                </classpath>
 
-            <batchtest fork="yes">
-                <formatter type="plain" usefile="false"/>
-                <fileset dir="test">
-                    <include name="**/*Test.java"/>
-                </fileset>
-            </batchtest>
-        </junit>
+                <batchtest fork="yes">
+                    <formatter type="plain" usefile="false"/>
+                    <fileset dir="test">
+                        <include name="**/*Test.java"/>
+                    </fileset>
+                </batchtest>
+            </junit>
         </jacoco:coverage>
 
         <jacoco:report>
-
             <executiondata>
-                <file file="jacoco.exec" />
+                <file file="jacoco.exec"/>
             </executiondata>
 
             <structure name="AntTestReporting">
                 <classfiles>
-                    <fileset dir="out/" />
+                    <fileset dir="out/"/>
                 </classfiles>
             </structure>
 
-            <html destdir="${result.report.dir}" />
-            <xml destfile="${result.report.dir}/report.xml" />
+            <html destdir="${result.report.dir}"/>
+            <xml destfile="${result.report.dir}/report.xml"/>
         </jacoco:report>
-
     </target>
 
 </project>
