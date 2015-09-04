@@ -1,30 +1,21 @@
 package com.thoughtworks.biblioteca;
 
 import org.junit.Test;
-import org.mockito.Mockito;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
 
 public class BibliotecaTest {
 
     @Test
-    public void shouldCallStartFunctionOnlyOnce() {
-        Biblioteca biblioteca = mock(Biblioteca.class);
-        biblioteca.start();
-        Mockito.verify(biblioteca, times(1)).start();
+    public void shouldReturnListOfBooks() {
+        Book book1 = new Book("Harry Potter and the Philosopher's Stone");
+        Book book2 = new Book("Harry Potter and the Chamber of Secrets");
+        ArrayList<Book> listOfBooks = new ArrayList<Book>();
+        listOfBooks.add(book1);
+        listOfBooks.add(book2);
+        Biblioteca bibilioteca = new Biblioteca(listOfBooks);
+        assertEquals("Harry Potter and the Philosopher's Stone\n" + "Harry Potter and the Chamber of Secrets\n",bibilioteca.getListOfBooks());
     }
 
-    @Test
-    public void shouldCallPrintMethod() {
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
-        Biblioteca biblioteca = new Biblioteca();
-        biblioteca.start();
-        assertEquals("Welcome to Biblioteca" + "\n", outContent.toString());
-    }
 }
