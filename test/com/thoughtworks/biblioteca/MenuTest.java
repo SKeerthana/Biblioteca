@@ -32,11 +32,24 @@ public class MenuTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         Display display = new Display(printStream);
-        Menu menu = new Menu(bibilioteca,display);
+        Menu menu = new Menu(bibilioteca, display);
 
         System.setOut(printStream);
         menu.handleSelectedMenuOption(1);
 
-        assertEquals(bibilioteca.getListOfBooks(),outContent.toString());
+        assertEquals(bibilioteca.getListOfBooks(), outContent.toString());
+    }
+
+    @Test
+    public void shouldHandleTheInvalidMenuOption() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        Display display = new Display(printStream);
+        Menu menu = new Menu(bibilioteca, display);
+
+        System.setOut(printStream);
+        menu.handleSelectedMenuOption(112);
+
+        assertEquals("Invalid Menu Option", outContent.toString());
     }
 }
