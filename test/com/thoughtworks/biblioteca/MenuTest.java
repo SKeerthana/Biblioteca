@@ -7,6 +7,8 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class MenuTest {
 
@@ -24,6 +26,7 @@ public class MenuTest {
         Menu menu = new Menu(bibilioteca, display);
         String menuOptions = "Choose one of the menu option :\n";
         menuOptions += "1. List all the books\n";
+        menuOptions += "2. Quit\n";
         assertEquals(menuOptions, menu.getMenuOptions());
     }
 

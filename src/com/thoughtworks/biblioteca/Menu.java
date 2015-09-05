@@ -12,6 +12,7 @@ public class Menu {
     public String getMenuOptions() {
         String menuOptions = "Choose one of the menu option :\n";
         menuOptions += "1. List all the books\n";
+        menuOptions += "2. Quit\n";
         return menuOptions;
     }
 
@@ -20,8 +21,14 @@ public class Menu {
             case 1:
                 display.printMessage(biblioteca.getListOfBooks());
                 break;
+            case 2:
+                Quit();
             default:
                 display.printMessage("Select a valid option!\n");
         }
+    }
+
+    private void Quit() {
+        System.exit(0);
     }
 }
