@@ -1,15 +1,25 @@
 package com.thoughtworks.biblioteca;
 
+import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.Scanner;
+
 //takes the message and displays the output
 public class Display {
-    private PrintStream out;
+    private PrintStream printStream;
+    private InputStream inputStream;
 
-    public Display(PrintStream out) {
-        this.out = out;
+    public Display(PrintStream printStream, InputStream inputStream) {
+        this.printStream = printStream;
+        this.inputStream = inputStream;
     }
 
     public void printMessage(String message) {
-        out.print(message);
+        printStream.print(message);
+    }
+
+    public int getInputFromUser() {
+        Scanner sc = new Scanner(inputStream);
+        return sc.nextInt();
     }
 }

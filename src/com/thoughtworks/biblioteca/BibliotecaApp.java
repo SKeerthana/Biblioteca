@@ -1,18 +1,21 @@
 package com.thoughtworks.biblioteca;
 
 import java.util.ArrayList;
+
 //Manages the bibilioteca aaplication
 public class BibliotecaApp {
 
     public static void main(String[] args) {
         ArrayList<Book> listOfBooks = generateListOfBooks();
-        Display display = new Display(System.out);
-        display.printMessage("Welcome to Bibliotica");
+        Display display = new Display(System.out, System.in);
+        display.printMessage("Welcome to Bibliotica\n");
 
         Biblioteca biblioteca = new Biblioteca(listOfBooks);
-        display.printMessage(biblioteca.getListOfBooks());
-
-        Menu menu = new Menu(biblioteca,display);
+        Menu menu = new Menu(biblioteca, display);
+        display.printMessage(menu.getMenuOptions());
+        int option;
+        while (true) {
+        }
 
     }
 

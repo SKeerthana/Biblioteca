@@ -20,9 +20,9 @@ public class MenuTest {
 
     @Test
     public void shouldReturnTheListOFMenuOptions() {
-        Display display = new Display(System.out);
+        Display display = new Display(System.out, System.in);
         Menu menu = new Menu(bibilioteca, display);
-        String menuOptions = "Menu options :\n";
+        String menuOptions = "Choose one of the menu option :\n";
         menuOptions += "1. List all the books\n";
         assertEquals(menuOptions, menu.getMenuOptions());
     }
@@ -31,7 +31,7 @@ public class MenuTest {
     public void shouldHandleTheSelectedOption() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
-        Display display = new Display(printStream);
+        Display display = new Display(printStream, System.in);
         Menu menu = new Menu(bibilioteca, display);
 
         System.setOut(printStream);
@@ -44,7 +44,7 @@ public class MenuTest {
     public void shouldHandleTheInvalidMenuOption() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
-        Display display = new Display(printStream);
+        Display display = new Display(printStream, System.in);
         Menu menu = new Menu(bibilioteca, display);
 
         System.setOut(printStream);

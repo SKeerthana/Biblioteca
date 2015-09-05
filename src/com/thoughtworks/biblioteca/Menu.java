@@ -10,7 +10,7 @@ public class Menu {
     }
 
     public String getMenuOptions() {
-        String menuOptions = "Menu options :\n";
+        String menuOptions = "Choose one of the menu option :\n";
         menuOptions += "1. List all the books\n";
         return menuOptions;
     }
