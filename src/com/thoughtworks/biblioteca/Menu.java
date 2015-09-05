@@ -21,7 +21,7 @@ public class Menu {
                 display.printMessage(biblioteca.getListOfBooks());
                 break;
             default:
-                display.printMessage("Invalid Menu Option");
+                display.printMessage("Select a valid option!\n");
         }
     }
 }

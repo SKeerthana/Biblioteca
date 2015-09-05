@@ -12,9 +12,11 @@ public class BibliotecaApp {
 
         Biblioteca biblioteca = new Biblioteca(listOfBooks);
         Menu menu = new Menu(biblioteca, display);
-        display.printMessage(menu.getMenuOptions());
         int option;
         while (true) {
+            display.printMessage(menu.getMenuOptions());
+            option = display.getInputFromUser();
+            menu.handleSelectedMenuOption(option);
         }
 
     }

@@ -50,6 +50,6 @@ public class MenuTest {
         System.setOut(printStream);
         menu.handleSelectedMenuOption(112);
 
-        assertEquals("Invalid Menu Option", outContent.toString());
+        assertEquals("Select a valid option!\n", outContent.toString());
     }
 }
