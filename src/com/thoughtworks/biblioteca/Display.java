@@ -10,6 +10,6 @@ public class Display {
     }
 
     public void printMessage(String message) {
-        out.println(message);
+        out.print(message);
     }
 }

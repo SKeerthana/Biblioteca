@@ -12,6 +12,8 @@ public class BibliotecaApp {
         Biblioteca biblioteca = new Biblioteca(listOfBooks);
         display.printMessage(biblioteca.getListOfBooks());
 
+        Menu menu = new Menu(biblioteca,display);
+
     }
 
     private static ArrayList<Book> generateListOfBooks() {

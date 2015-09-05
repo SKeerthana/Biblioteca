@@ -7,7 +7,6 @@ import java.io.PrintStream;
 import static org.junit.Assert.assertEquals;
 
 public class DisplayTest {
-
     @Test
     public void shouldPrintTheWelcomeMessagePassed() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -16,7 +15,7 @@ public class DisplayTest {
         System.setOut(printStream);
 
         display.printMessage("Welcome to Biblioteca");
-        assertEquals("Welcome to Biblioteca\n", outContent.toString());
+        assertEquals("Welcome to Biblioteca", outContent.toString());
     }
 
     @Test

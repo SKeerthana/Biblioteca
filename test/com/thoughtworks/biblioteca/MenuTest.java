@@ -2,13 +2,26 @@ package com.thoughtworks.biblioteca;
 
 import org.junit.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class MenuTest {
 
+    final Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
+    final Book book2 = new Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998);
+    ArrayList<Book> listOfBooks = new ArrayList<Book>() {{
+        add(book1);
+        add(book2);
+    }};
+    Biblioteca bibilioteca = new Biblioteca(listOfBooks);
+
     @Test
     public void shouldReturnTheListOFMenuOptions() {
-        Menu menu = new Menu();
+        Display display = new Display(System.out);
+        Menu menu = new Menu(bibilioteca, display);
         String menuOptions = "Menu options :\n";
         menuOptions += "1. List all the books\n";
         assertEquals(menuOptions, menu.getMenuOptions());
@@ -16,7 +29,14 @@ public class MenuTest {
 
     @Test
     public void shouldHandleTheSelectedOption() {
-        Menu menu = new Menu();
-        assertEquals(1,menu.handleSelectedMenuOption(1));
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        Display display = new Display(printStream);
+        Menu menu = new Menu(bibilioteca,display);
+
+        System.setOut(printStream);
+        menu.handleSelectedMenuOption(1);
+
+        assertEquals(bibilioteca.getListOfBooks(),outContent.toString());
     }
 }

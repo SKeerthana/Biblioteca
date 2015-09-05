@@ -1,6 +1,13 @@
 package com.thoughtworks.biblioteca;
-
+//Has the list of menu options for Biblioteca
 public class Menu {
+    private Biblioteca biblioteca;
+    private Display display;
+
+    public Menu(Biblioteca biblioteca, Display display) {
+        this.biblioteca = biblioteca;
+        this.display = display;
+    }
 
     public String getMenuOptions() {
         String menuOptions = "Menu options :\n";
@@ -8,12 +15,13 @@ public class Menu {
         return menuOptions;
     }
 
-    public int handleSelectedMenuOption(int choice) {
+    public void handleSelectedMenuOption(int choice) {
         switch (choice) {
             case 1:
-                return 1;
+                display.printMessage(biblioteca.getListOfBooks());
+                break;
             default:
-                return 0;
+                display.printMessage("Invalid Menu Option");
         }
     }
 }
