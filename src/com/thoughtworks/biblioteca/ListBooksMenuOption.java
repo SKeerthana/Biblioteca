@@ -15,7 +15,9 @@ public class ListBooksMenuOption implements MenuOption {
     }
 
     @Override
-    public boolean equals(Object object) {
+    public boolean equals(Object that) {
+        if (that.getClass() != getClass())
+            return false;
         return true;
     }
 }

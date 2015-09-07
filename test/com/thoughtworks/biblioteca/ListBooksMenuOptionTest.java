@@ -6,6 +6,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
+import static org.junit.Assert.assertEquals;
+
 public class ListBooksMenuOptionTest {
 
     Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
@@ -24,5 +26,12 @@ public class ListBooksMenuOptionTest {
     public void shouldDisplayListOfBooks() {
         ListBooksMenuOption listBooksMenuOption = new ListBooksMenuOption(bibilioteca, display);
         listBooksMenuOption.performOperation();
+    }
+
+    @Test
+    public void shouldCompareTwoListBooksMenuOptionInstance() {
+        ListBooksMenuOption listBooksMenuOption1 = new ListBooksMenuOption(bibilioteca, display);
+        ListBooksMenuOption listBooksMenuOption2 = new ListBooksMenuOption(bibilioteca, display);
+        assertEquals(listBooksMenuOption1, listBooksMenuOption2);
     }
 }
