@@ -16,7 +16,8 @@ public class BibliotecaApp {
         display.printMessage("Welcome to Bibliotica\n");
         while (true) {
             menuOptionController.displayMenuOption();
-            menuOptionController.handleMenuOption();
+            int option = display.getInputMenuOptionFromUser();
+            menuOptionController.handleMenuOption(option);
         }
 
     }

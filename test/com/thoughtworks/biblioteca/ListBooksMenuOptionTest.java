@@ -28,17 +28,4 @@ public class ListBooksMenuOptionTest {
         ListBooksMenuOption listBooksMenuOption = new ListBooksMenuOption(bibilioteca, display);
         listBooksMenuOption.performOperation();
     }
-
-    @Test
-    public void shouldCompareTwoListBooksMenuOptionInstance() {
-        ListBooksMenuOption listBooksMenuOption1 = new ListBooksMenuOption(bibilioteca, display);
-        ListBooksMenuOption listBooksMenuOption2 = new ListBooksMenuOption(bibilioteca, display);
-        assertEquals(listBooksMenuOption1, listBooksMenuOption2);
-    }
-
-    @Test
-    public void shouldNotCompareWithOtherObjects() {
-        ListBooksMenuOption listBooksMenuOption1 = new ListBooksMenuOption(bibilioteca, display);
-        assertNotEquals(listBooksMenuOption1, "string");
-    }
 }

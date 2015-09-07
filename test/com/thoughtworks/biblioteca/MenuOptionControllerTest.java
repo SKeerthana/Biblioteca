@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 public class MenuOptionControllerTest {
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -38,14 +39,9 @@ public class MenuOptionControllerTest {
 
     @Test
     public void shouldHandleListOfBooksOption() {
-        Menu menu = mock(Menu.class);
-        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream("1".getBytes());
-        System.setIn(byteArrayInputStream);
-        Display display = new Display(printStream, System.in);
         MenuOptionController menuOptionController = new MenuOptionController(menu, bibilioteca, display);
-
-        menuOptionController.handleMenuOption();
-
-        verify(menu).handleSelectedMenuOption(new ListBooksMenuOption(bibilioteca, display));
+        menuOptionController.handleMenuOption(1);
+        System.setOut(printStream);
+        assertEquals(bibilioteca.getListOfBooks(), outContent.toString());
     }
 }
