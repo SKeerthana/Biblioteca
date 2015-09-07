@@ -7,6 +7,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class ListBooksMenuOptionTest {
 
@@ -33,5 +34,11 @@ public class ListBooksMenuOptionTest {
         ListBooksMenuOption listBooksMenuOption1 = new ListBooksMenuOption(bibilioteca, display);
         ListBooksMenuOption listBooksMenuOption2 = new ListBooksMenuOption(bibilioteca, display);
         assertEquals(listBooksMenuOption1, listBooksMenuOption2);
+    }
+
+    @Test
+    public void shouldNotCompareWithOtherObjects() {
+        ListBooksMenuOption listBooksMenuOption1 = new ListBooksMenuOption(bibilioteca, display);
+        assertNotEquals(listBooksMenuOption1, "string");
     }
 }
