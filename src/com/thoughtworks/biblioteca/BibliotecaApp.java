@@ -6,22 +6,22 @@ import java.util.ArrayList;
 public class BibliotecaApp {
 
     public static void main(String[] args) {
-        ArrayList<Book> listOfBooks = generateListOfBooks();
-        Display display = new Display(System.out, System.in);
-        display.printMessage("Welcome to Bibliotica\n");
-
+        BibliotecaApp bibliotecaApp = new BibliotecaApp();
+        ArrayList<Book> listOfBooks = bibliotecaApp.generateListOfBooks();
         Biblioteca biblioteca = new Biblioteca(listOfBooks);
-        Menu menu = new Menu(biblioteca, display);
-        int option;
+
+        Display display = new Display(System.out, System.in);
+        MenuOptionController menuOptionController = new MenuOptionController(new Menu(), biblioteca, display);
+
+        display.printMessage("Welcome to Bibliotica\n");
         while (true) {
-            display.printMessage(menu.getMenuOptions());
-            option = display.getInputMenuOptionFromUser();
-            menu.handleSelectedMenuOption(option);
+            menuOptionController.displayMenuOption();
+            menuOptionController.handleMenuOption();
         }
 
     }
 
-    private static ArrayList<Book> generateListOfBooks() {
+    private ArrayList<Book> generateListOfBooks() {
         Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
         Book book2 = new Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998);
         ArrayList<Book> listOfBooks = new ArrayList<Book>();

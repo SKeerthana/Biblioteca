@@ -17,9 +17,6 @@ public class DisplayTest {
 
     @Test
     public void shouldPrintTheWelcomeMessagePassed() {
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        PrintStream printStream = new PrintStream(outContent);
-        Display display = new Display(printStream, System.in);
         System.setOut(printStream);
 
         display.printMessage("Welcome to Biblioteca");
