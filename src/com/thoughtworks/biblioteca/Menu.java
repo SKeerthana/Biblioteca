@@ -13,6 +13,7 @@ public class Menu {
         String menuOptions = "Choose one of the menu option :\n";
         menuOptions += "1. List all the books\n";
         menuOptions += "2. Quit\n";
+        menuOptions += "3. Checkout books";
         return menuOptions;
     }
 
@@ -23,6 +24,10 @@ public class Menu {
                 break;
             case 2:
                 Quit();
+                break;
+            case 3:
+                display.printMessage("Enter the book name you want to checkout : \n");
+                String bookName = display.getInputFromUser();
             default:
                 display.printMessage("Select a valid option!\n");
         }

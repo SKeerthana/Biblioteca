@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+
+<coverage line-rate="0.0" branch-rate="0.5" lines-covered="0" lines-valid="1" branches-covered="2" branches-valid="4" complexity="1.3571428571428572" version="2.1.1" timestamp="1441594869404">
+	<sources>
+		<source>src</source>
+	</sources>
+	<packages>
+		<package name="com.thoughtworks.biblioteca" line-rate="0.0" branch-rate="0.5" complexity="1.3571428571428572">
+			<classes>
+				<class name="com.thoughtworks.biblioteca.Biblioteca" filename="com/thoughtworks/biblioteca/Biblioteca.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="com.thoughtworks.biblioteca.BibliotecaApp" filename="com/thoughtworks/biblioteca/BibliotecaApp.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="com.thoughtworks.biblioteca.Book" filename="com/thoughtworks/biblioteca/Book.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="com.thoughtworks.biblioteca.Display" filename="com/thoughtworks/biblioteca/Display.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="com.thoughtworks.biblioteca.Menu" filename="com/thoughtworks/biblioteca/Menu.java" line-rate="0.0" branch-rate="0.5" complexity="1.75">
+					<methods>
+					</methods>
+					<lines>
+						<line number="0" hits="0" branch="true" condition-coverage="50% (2/4)">
+							<conditions>
+								<condition number="0" type="switch" coverage="50%"/>
+							</conditions>
+						</line>
+					</lines>
+				</class>
+				<class name="com.thoughtworks.biblioteca.MenuTest$1" filename="com/thoughtworks/biblioteca/MenuTest.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>

@@ -39,9 +39,19 @@ public class DisplayTest {
     }
 
     @Test
-    public void shouldGetInputFromUser() {
+    public void shouldGetMenuOptionFromUser() {
         Display mockDisplay = mock(Display.class);
-        when(mockDisplay.getInputFromUser()).thenReturn(1);
-        assertEquals(1, mockDisplay.getInputFromUser());
+        when(mockDisplay.getInputMenuOptionFromUser()).thenReturn(1);
+        assertEquals(1, mockDisplay.getInputMenuOptionFromUser());
+    }
+
+    @Test
+    public void shouldGetStringInputFromUser() {
+        String input = "Harry Potter and the Chamber of Secrets";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        Display display = new Display(System.out, inContent);
+
+        System.setIn(inContent);
+        assertEquals("Harry Potter and the Chamber of Secrets", display.getInputFromUser());
     }
 }

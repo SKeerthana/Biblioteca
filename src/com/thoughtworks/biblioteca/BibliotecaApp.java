@@ -15,7 +15,7 @@ public class BibliotecaApp {
         int option;
         while (true) {
             display.printMessage(menu.getMenuOptions());
-            option = display.getInputFromUser();
+            option = display.getInputMenuOptionFromUser();
             menu.handleSelectedMenuOption(option);
         }
 
