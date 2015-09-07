@@ -44,4 +44,11 @@ public class MenuOptionControllerTest {
         System.setOut(printStream);
         assertEquals(bibilioteca.getListOfBooks(), outContent.toString());
     }
+
+    @Test
+    public void shouldHandleInvalidMenuOption() {
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bibilioteca, display);
+        menuOptionController.handleMenuOption(3);
+        assertEquals("Select a valid option!", outContent.toString());
+    }
 }
