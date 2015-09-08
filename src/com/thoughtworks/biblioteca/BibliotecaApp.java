@@ -1,8 +1,7 @@
 package com.thoughtworks.biblioteca;
 
 import java.util.ArrayList;
-
-//Manages the bibilioteca aaplication
+//displays the welcome message and menu options
 public class BibliotecaApp {
 
     public static void main(String[] args) {
@@ -25,7 +24,7 @@ public class BibliotecaApp {
     private ArrayList<Book> generateListOfBooks() {
         Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
         Book book2 = new Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998);
-        ArrayList<Book> listOfBooks = new ArrayList<Book>();
+        ArrayList<Book> listOfBooks = new ArrayList<>();
         listOfBooks.add(book1);
         listOfBooks.add(book2);
         return listOfBooks;
