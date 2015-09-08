@@ -12,7 +12,9 @@ public class Biblioteca {
     }
 
     public boolean contains(Book bookName) {
-        return true;
+        if (books.contains(bookName))
+            return true;
+        return false;
     }
 
     public String getListOfBooks() {
