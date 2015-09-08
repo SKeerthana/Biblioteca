@@ -10,13 +10,7 @@ public class Biblioteca {
     public Biblioteca(ArrayList<Book> books) {
         this.books = books;
     }
-
-    public boolean contains(String bookName) {
-        if (books.contains(bookName))
-            return true;
-        return false;
-    }
-
+    
     public String getListOfBooks() {
         String listOfBooksString = "";
         for (Book book : books) {
