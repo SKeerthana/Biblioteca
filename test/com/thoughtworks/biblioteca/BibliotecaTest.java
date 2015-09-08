@@ -1,6 +1,7 @@
 package com.thoughtworks.biblioteca;
 
 import org.junit.Test;
+
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
@@ -11,7 +12,10 @@ public class BibliotecaTest {
 
     Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
     Book book2 = new Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998);
-    ArrayList<Book> listOfBooks = new ArrayList<Book>(){{add(book1);add(book2);}};
+    ArrayList<Book> listOfBooks = new ArrayList<Book>() {{
+        add(book1);
+        add(book2);
+    }};
     Biblioteca bibilioteca = new Biblioteca(listOfBooks);
 
     @Test
@@ -28,6 +32,13 @@ public class BibliotecaTest {
     @Test
     public void shouldReturnFalseIfBookDoesNotExistsInBookList() {
         assertFalse(bibilioteca.contains(new Book("My experiments", "M.K.Gandhi", 1942)));
+    }
+
+    @Test
+    public void shouldRemoveBookFromList() {
+        Book bookToSearch = new Book("My experiments with Truth", null, 0);
+        bibilioteca.remove(bookToSearch);
+        assertFalse(bibilioteca.contains(bookToSearch));
     }
 
 }

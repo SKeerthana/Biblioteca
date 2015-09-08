@@ -10,5 +10,8 @@ public class CheckoutMenuOption implements MenuOption{
     }
     @Override
     public void performOperation() {
+        String bookName = display.getInputFromUser();
+        Book bookToBeSearched = new Book(bookName, null, 0);
+        biblioteca.remove(bookToBeSearched);
     }
 }

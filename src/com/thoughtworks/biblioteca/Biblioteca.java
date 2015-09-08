@@ -17,6 +17,10 @@ public class Biblioteca {
         return false;
     }
 
+    public void remove(Book bookName) {
+        books.remove(bookName);
+    }
+
     public String getListOfBooks() {
         String listOfBooksString = "";
         for (Book book : books) {
