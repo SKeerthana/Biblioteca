@@ -52,4 +52,36 @@ public class CheckoutMenuOptionTest {
 
         assertEquals(bookListBeforeFunctionCall, bibilioteca.getListOfBooks());
     }
+
+    @Test
+    public void shouldPrintMessageForSuccessfulCheckout() {
+        String input = "Harry Potter and the Chamber of Secrets";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        Display display = new Display(printStream, inContent);
+        System.setIn(inContent);
+        CheckoutMenuOption checkoutMenuOption = new CheckoutMenuOption(bibilioteca, display);
+
+        checkoutMenuOption.performOperation();
+
+        assertEquals("Thank you! Enjoy the book", outContent.toString());
+    }
+
+    @Test
+    public void shouldPrintMessageForUnsuccessfulCheckout() {
+        String input = "Harry Potter";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        Display display = new Display(printStream, inContent);
+        System.setIn(inContent);
+        CheckoutMenuOption checkoutMenuOption = new CheckoutMenuOption(bibilioteca, display);
+
+        checkoutMenuOption.performOperation();
+
+        assertEquals("That book is not available", outContent.toString());
+    }
 }

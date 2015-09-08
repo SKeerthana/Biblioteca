@@ -16,5 +16,8 @@ public class CheckoutMenuOption implements MenuOption{
             biblioteca.checkOutBook(bookToBeSearched);
             display.printMessage("Thank you! Enjoy the book");
         }
+        else {
+            display.printMessage("That book is not available");
+        }
     }
 }
