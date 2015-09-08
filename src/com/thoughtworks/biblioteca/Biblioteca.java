@@ -17,7 +17,7 @@ public class Biblioteca {
         return false;
     }
 
-    public void remove(Book bookName) {
+    public void checkOutBook(Book bookName) {
         books.remove(bookName);
     }
 

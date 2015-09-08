@@ -3,11 +3,12 @@ package com.thoughtworks.biblioteca;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 public class CheckoutMenuOptionTest {
     Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
@@ -22,7 +23,10 @@ public class CheckoutMenuOptionTest {
     public void shouldCheckoutBookIfTheBookListContains() {
         String input = "Harry Potter and the Chamber of Secrets";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        Display display = new Display(System.out, inContent);
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        Display display = new Display(printStream, inContent);
         Book bookToSearch = new Book(input, null, 0);
         System.setIn(inContent);
         CheckoutMenuOption checkoutMenuOption = new CheckoutMenuOption(bibilioteca, display);
@@ -36,13 +40,16 @@ public class CheckoutMenuOptionTest {
     public void shouldNotCheckoutBookIfTheBookListDoesNotContain() {
         String input = "Harry Potter";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        Display display = new Display(System.out, inContent);
-        Book bookToSearch = new Book(input, null, 0);
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        Display display = new Display(printStream, inContent);
         System.setIn(inContent);
         CheckoutMenuOption checkoutMenuOption = new CheckoutMenuOption(bibilioteca, display);
-        String bookListBeforeFunctioCall = bibilioteca.getListOfBooks();
+        String bookListBeforeFunctionCall = bibilioteca.getListOfBooks();
+
         checkoutMenuOption.performOperation();
 
-        assertEquals(bookListBeforeFunctioCall,bibilioteca.getListOfBooks());
+        assertEquals(bookListBeforeFunctionCall, bibilioteca.getListOfBooks());
     }
 }

@@ -37,7 +37,7 @@ public class BibliotecaTest {
     @Test
     public void shouldRemoveBookFromList() {
         Book bookToSearch = new Book("My experiments with Truth", null, 0);
-        bibilioteca.remove(bookToSearch);
+        bibilioteca.checkOutBook(bookToSearch);
         assertFalse(bibilioteca.contains(bookToSearch));
     }
 
