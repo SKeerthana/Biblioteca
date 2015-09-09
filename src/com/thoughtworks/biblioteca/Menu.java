@@ -8,6 +8,7 @@ public class Menu {
         add("1. List all the books");
         add("2. Quit");
         add("3. Checkout books");
+        add("4. Return books");
     }};
 
     public String getMenuOptions() {
