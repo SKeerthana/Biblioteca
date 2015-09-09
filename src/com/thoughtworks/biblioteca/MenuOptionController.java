@@ -28,6 +28,8 @@ public class MenuOptionController {
                 return new QuitMenuOption();
             case "3":
                 return new CheckoutMenuOption(biblioteca, display);
+            case "4":
+                return new ReturnBookOption(biblioteca, display);
             default:
                 return new InvalidMenuOption(display);
         }

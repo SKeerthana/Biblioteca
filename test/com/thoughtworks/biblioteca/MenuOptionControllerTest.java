@@ -54,7 +54,7 @@ public class MenuOptionControllerTest {
 
 
     @Test
-    public void shouldCheckOutBookForOption4() {
+    public void shouldCallCheckOutBookForOption3() {
         String input = "Harry Potter";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -67,5 +67,21 @@ public class MenuOptionControllerTest {
         menuOptionController.handleMenuOption("3");
 
         assertEquals("That book is not available", outContent.toString());
+    }
+
+    @Test
+    public void shouldCallReturnBookForOption4() {
+        String input = "Harry Potter";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        Display display = new Display(printStream, inContent);
+        System.setIn(inContent);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bibilioteca, display);
+
+        menuOptionController.handleMenuOption("4");
+
+        assertEquals("That is not a valid book to return.", outContent.toString());
     }
 }
