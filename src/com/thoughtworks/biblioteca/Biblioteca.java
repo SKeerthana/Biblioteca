@@ -38,4 +38,10 @@ public class Biblioteca {
         }
         return listOfBooksString;
     }
+
+    public void returnBook(Book bookToBeReturned) {
+        int index = checkedoutBooks.indexOf(bookToBeReturned);
+        availableBooks.add(checkedoutBooks.get(index));
+        checkedoutBooks.remove(bookToBeReturned);
+    }
 }

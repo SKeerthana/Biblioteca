@@ -35,7 +35,7 @@ public class BibliotecaTest {
     }
 
     @Test
-    public void shouldRemoveBookFromList() {
+    public void shouldRemoveBookFromAvailableList() {
         Book bookToSearch = new Book("My experiments with Truth", null, 0);
         bibilioteca.checkOutBook(bookToSearch);
         assertFalse(bibilioteca.containsBookInAvailableList(bookToSearch));
@@ -46,6 +46,26 @@ public class BibliotecaTest {
         Book bookToSearch = new Book("My experiments with Truth", null, 0);
         bibilioteca.checkOutBook(bookToSearch);
         assertTrue(bibilioteca.containsBookInCheckedOutList(bookToSearch));
+    }
+
+    @Test
+    public void shouldRemoveBookFromCheckoutListWhenItIsReturned() {
+        Book bookToReturn = new Book("My experiments with Truth", null, 0);
+        Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>() {{
+            add(book1);
+        }});
+        bibilioteca.returnBook(bookToReturn);
+        assertFalse(bibilioteca.containsBookInCheckedOutList(bookToReturn));
+    }
+
+    @Test
+    public void shouldAddBookToAvailableListWhenBookIsReturned() {
+        Book bookToReturn = new Book("My experiments with Truth", null, 0);
+        Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>() {{
+            add(book1);
+        }});
+        bibilioteca.returnBook(bookToReturn);
+        assertTrue(bibilioteca.containsBookInAvailableList(bookToReturn));
     }
 
 }
