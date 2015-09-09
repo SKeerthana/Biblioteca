@@ -13,6 +13,9 @@ public class ReturnBookOption implements MenuOption {
     public void performOperation() {
         String bookName = display.getInputFromUser();
         Book bookToBeReturned = new Book(bookName, null, 0);
-        biblioteca.returnBook(bookToBeReturned);
+        if(biblioteca.containsBookInCheckedOutList(bookToBeReturned)) {
+            biblioteca.returnBook(bookToBeReturned);
+            display.printMessage("Thank you for returning the book.");
+        }
     }
 }

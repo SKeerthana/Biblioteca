@@ -7,7 +7,6 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 
 public class ListBooksMenuOptionTest {
 
@@ -26,6 +25,9 @@ public class ListBooksMenuOptionTest {
     @Test
     public void shouldDisplayListOfBooks() {
         ListBooksMenuOption listBooksMenuOption = new ListBooksMenuOption(bibilioteca, display);
+
         listBooksMenuOption.performOperation();
+
+        assertEquals(bibilioteca.getListOfBooks(), outContent.toString());
     }
 }
