@@ -13,7 +13,7 @@ public class Book {
     }
 
     public String getBookDetails() {
-        return bookName + "\t" + author + "\t" + yearPublished + "\n";
+        return String.format("%-50s %-25s %-15s\n", bookName, author, yearPublished);
     }
 
     @Override
