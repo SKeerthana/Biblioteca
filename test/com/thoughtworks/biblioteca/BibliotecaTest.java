@@ -51,9 +51,7 @@ public class BibliotecaTest {
     @Test
     public void shouldRemoveBookFromCheckoutListWhenItIsReturned() {
         Book bookToReturn = new Book("My experiments with Truth", null, 0);
-        Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>() {{
-            add(book1);
-        }});
+        Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>(){{add(book1);}});
         bibilioteca.returnBook(bookToReturn);
         assertFalse(bibilioteca.containsBookInCheckedOutList(bookToReturn));
     }
@@ -61,9 +59,7 @@ public class BibliotecaTest {
     @Test
     public void shouldAddBookToAvailableListWhenBookIsReturned() {
         Book bookToReturn = new Book("My experiments with Truth", null, 0);
-        Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>() {{
-            add(book1);
-        }});
+        Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>(){{add(book1);}});
         bibilioteca.returnBook(bookToReturn);
         assertTrue(bibilioteca.containsBookInAvailableList(bookToReturn));
     }

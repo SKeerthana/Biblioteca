@@ -15,6 +15,7 @@ public class MenuTest {
         menuOptions += "1. List all the books\n";
         menuOptions += "2. Quit\n";
         menuOptions += "3. Checkout books\n";
+        menuOptions += "4. Return books\n";
         assertEquals(menuOptions, menu.getMenuOptions());
     }
 
