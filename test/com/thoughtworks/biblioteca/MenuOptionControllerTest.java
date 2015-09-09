@@ -40,7 +40,7 @@ public class MenuOptionControllerTest {
     @Test
     public void shouldHandleListOfBooksOption() {
         MenuOptionController menuOptionController = new MenuOptionController(menu, bibilioteca, display);
-        menuOptionController.handleMenuOption(1);
+        menuOptionController.handleMenuOption("1");
         System.setOut(printStream);
         assertEquals(bibilioteca.getListOfBooks(), outContent.toString());
     }
@@ -48,7 +48,24 @@ public class MenuOptionControllerTest {
     @Test
     public void shouldHandleInvalidMenuOption() {
         MenuOptionController menuOptionController = new MenuOptionController(menu, bibilioteca, display);
-        menuOptionController.handleMenuOption(3);
+        menuOptionController.handleMenuOption("2382");
         assertEquals("Select a valid option!", outContent.toString());
+    }
+
+
+    @Test
+    public void shouldCheckOutBookForOption4() {
+        String input = "Harry Potter";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        Display display = new Display(printStream, inContent);
+        System.setIn(inContent);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bibilioteca, display);
+
+        menuOptionController.handleMenuOption("3");
+
+        assertEquals("That book is not available", outContent.toString());
     }
 }

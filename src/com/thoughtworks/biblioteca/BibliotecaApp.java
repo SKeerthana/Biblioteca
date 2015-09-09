@@ -1,6 +1,7 @@
 package com.thoughtworks.biblioteca;
 
 import java.util.ArrayList;
+
 //displays the welcome message and menu options
 public class BibliotecaApp {
 
@@ -13,9 +14,10 @@ public class BibliotecaApp {
         MenuOptionController menuOptionController = new MenuOptionController(new Menu(), biblioteca, display);
 
         display.printMessage("Welcome to Bibliotica\n");
+
         while (true) {
             menuOptionController.displayMenuOption();
-            int option = display.getInputMenuOptionFromUser();
+            String option = display.getInputFromUser();
             menuOptionController.handleMenuOption(option);
         }
 

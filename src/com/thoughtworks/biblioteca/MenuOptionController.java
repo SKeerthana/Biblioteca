@@ -15,17 +15,19 @@ public class MenuOptionController {
         display.printMessage(menu.getMenuOptions());
     }
 
-    public void handleMenuOption(int option) {
+    public void handleMenuOption(String option) {
         MenuOption menuOption = getMenuOption(option);
         menu.handleSelectedMenuOption(menuOption);
     }
 
-    private MenuOption getMenuOption(int option) {
+    private MenuOption getMenuOption(String option) {
         switch (option) {
-            case 1:
+            case "1":
                 return new ListBooksMenuOption(biblioteca, display);
-            case 2:
+            case "2":
                 return new QuitMenuOption();
+            case "3":
+                return new CheckoutMenuOption(biblioteca, display);
             default:
                 return new InvalidMenuOption(display);
         }

@@ -22,7 +22,7 @@ public class ReturnBookOptionTest {
     Biblioteca bibilioteca = new Biblioteca(listOfAvailableBooks, listOfCheckedOutBooks);
 
     @Test
-    public void shouldPrintMessageForSuccessfulCheckout() {
+    public void shouldPrintMessageForSuccessfulReturn() {
         String input = "Harry Potter and the Chamber of Secrets";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -35,5 +35,21 @@ public class ReturnBookOptionTest {
         returnBookOption.performOperation();
 
         assertEquals("Thank you for returning the book.", outContent.toString());
+    }
+
+    @Test
+    public void shouldPrintMessageForUnSuccessfulReturn() {
+        String input = "My experiments with Truth";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        Display display = new Display(printStream, inContent);
+        System.setIn(inContent);
+
+        ReturnBookOption returnBookOption = new ReturnBookOption(bibilioteca, display);
+        returnBookOption.performOperation();
+
+        assertEquals("That is not a valid book to return.", outContent.toString());
     }
 }

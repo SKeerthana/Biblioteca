@@ -17,5 +17,9 @@ public class ReturnBookOption implements MenuOption {
             biblioteca.returnBook(bookToBeReturned);
             display.printMessage("Thank you for returning the book.");
         }
+        else
+        {
+            display.printMessage("That is not a valid book to return.");
+        }
     }
 }
