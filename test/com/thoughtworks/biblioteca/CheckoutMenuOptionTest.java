@@ -66,7 +66,7 @@ public class CheckoutMenuOptionTest {
 
         checkoutMenuOption.performOperation();
 
-        assertEquals("Thank you! Enjoy the book", outContent.toString());
+        assertEquals("Thank you! Enjoy the book\n", outContent.toString());
     }
 
     @Test
@@ -82,6 +82,6 @@ public class CheckoutMenuOptionTest {
 
         checkoutMenuOption.performOperation();
 
-        assertEquals("That book is not available", outContent.toString());
+        assertEquals("That book is not available\n", outContent.toString());
     }
 }

@@ -10,6 +10,6 @@ public class InvalidMenuOption implements MenuOption {
 
     @Override
     public void performOperation() {
-        display.printMessage("Select a valid option!");
+        display.printMessage("Select a valid option!\n");
     }
 }

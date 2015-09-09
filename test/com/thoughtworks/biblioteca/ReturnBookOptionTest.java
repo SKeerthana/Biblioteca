@@ -34,7 +34,7 @@ public class ReturnBookOptionTest {
         ReturnBookOption returnBookOption = new ReturnBookOption(bibilioteca, display);
         returnBookOption.performOperation();
 
-        assertEquals("Thank you for returning the book.", outContent.toString());
+        assertEquals("Thank you for returning the book.\n", outContent.toString());
     }
 
     @Test
@@ -50,6 +50,6 @@ public class ReturnBookOptionTest {
         ReturnBookOption returnBookOption = new ReturnBookOption(bibilioteca, display);
         returnBookOption.performOperation();
 
-        assertEquals("That is not a valid book to return.", outContent.toString());
+        assertEquals("That is not a valid book to return.\n", outContent.toString());
     }
 }

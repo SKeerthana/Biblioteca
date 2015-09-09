@@ -15,11 +15,11 @@ public class ReturnBookOption implements MenuOption {
         Book bookToBeReturned = new Book(bookName, null, 0);
         if(biblioteca.containsBookInCheckedOutList(bookToBeReturned)) {
             biblioteca.returnBook(bookToBeReturned);
-            display.printMessage("Thank you for returning the book.");
+            display.printMessage("Thank you for returning the book.\n");
         }
         else
         {
-            display.printMessage("That is not a valid book to return.");
+            display.printMessage("That is not a valid book to return.\n");
         }
     }
 }

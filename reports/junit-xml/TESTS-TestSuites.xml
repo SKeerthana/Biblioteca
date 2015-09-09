@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="0" name="BibliotecaTest" package="com.thoughtworks.biblioteca" skipped="0" tests="7" time="0.254" timestamp="2015-09-09T09:36:34">
+  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="0" name="BibliotecaAppTest" package="com.thoughtworks.biblioteca" skipped="0" tests="1" time="0.058" timestamp="2015-09-09T10:00:32">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -114,7 +114,178 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.BibliotecaTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.BibliotecaTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher595464427824630537.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit8046019624478916113.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.BibliotecaAppTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.BibliotecaAppTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher9157111519875584026.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit3510117484169302422.properties" />
+
+          <property name="java.class.path" value="/Users/keerthas/IdeaProjects/Biblioteca/instrumented:/Users/keerthas/IdeaProjects/Biblioteca/out:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-analysis-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-commons-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-tree-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-util-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-javadoc.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/commons-lang3-3.3.2.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/hamcrest-core-1.3.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jacocoant.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jaxen-1.1.4.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-util-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/junit-4.12.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-classic-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-core-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/mockito-all-1.9.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/oro-2.0.8.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/powermock-mockito-1.4.8-full.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/servlet-api-2.5-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/slf4j-api-1.7.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/system-rules-1.12.0.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="ant.file.type" value="file" />
+
+          <property name="java.vm.specification.version" value="1.7" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="unknown" />
+
+          <property name="java.io.tmpdir" value="/var/folders/m8/lr6xtvfj6173m99_dwh4c4c00000gp/T/" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="os.arch" value="x86_64" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+
+          <property name="instrumented.dir" value="instrumented" />
+
+          <property name="java.ext.dirs" value="/Users/keerthas/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+
+          <property name="user.dir" value="/Users/keerthas/IdeaProjects/Biblioteca" />
+
+          <property name="line.separator" value="&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+
+          <property name="basedir" value="/Users/keerthas/IdeaProjects/Biblioteca" />
+
+          <property name="ant.java.version" value="1.7" />
+
+          <property name="ant.core.lib" value="/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar" />
+
+          <property name="file.encoding" value="UTF-8" />
+
+          <property name="java.specification.version" value="1.7" />
+
+          <property name="src.dir" value="src" />
+
+          <property name="ant.project.invoked-targets" value="coverage" />
+
+      </properties>
+
+      <testcase classname="com.thoughtworks.biblioteca.BibliotecaAppTest" name="should" time="0.002" />
+
+      <system-out><![CDATA[]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="1" name="BibliotecaTest" package="com.thoughtworks.biblioteca" skipped="0" tests="7" time="0.255" timestamp="2015-09-09T10:00:32">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="coverage.summaryxml.dir" value="reports/cobertura-summary-xml" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="os.name" value="Mac OS X" />
+
+          <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/classes" />
+
+          <property name="reports.html.dir" value="reports/junit-html" />
+
+          <property name="user.country.format" value="IN" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="/usr/local/Cellar/ant/1.9.6/libexec" />
+
+          <property name="java.runtime.version" value="1.7.0_79-b15" />
+
+          <property name="cobertura.dir" value="." />
+
+          <property name="user.name" value="keerthas" />
+
+          <property name="user.language" value="en" />
+
+          <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib" />
+
+          <property name="reports.dir" value="reports" />
+
+          <property name="ant.project.default-target" value="coverage" />
+
+          <property name="ant.project.name" value="cobertura.examples.basic" />
+
+          <property name="ant.file.cobertura.examples.basic" value="/Users/keerthas/IdeaProjects/Biblioteca/build.xml" />
+
+          <property name="java.version" value="1.7.0_79" />
+
+          <property name="coverage.html.dir" value="reports/cobertura-html" />
+
+          <property name="user.timezone" value="" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+
+          <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/endorsed" />
+
+          <property name="sun.cpu.isalist" value="" />
+
+          <property name="sun.jnu.encoding" value="UTF-8" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="/" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="classes.dir" value="out" />
+
+          <property name="java.class.version" value="51.0" />
+
+          <property name="user.country" value="US" />
+
+          <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="ant.file.type.cobertura.examples.basic" value="file" />
+
+          <property name="ant.file" value="/Users/keerthas/IdeaProjects/Biblioteca/build.xml" />
+
+          <property name="os.version" value="10.9.5" />
+
+          <property name="path.separator" value=":" />
+
+          <property name="java.vm.version" value="24.79-b02" />
+
+          <property name="ant.library.dir" value="/usr/local/Cellar/ant/1.9.6/libexec/lib" />
+
+          <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+
+          <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
+
+          <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+
+          <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+
+          <property name="reports.xml.dir" value="reports/junit-xml" />
+
+          <property name="user.home" value="/Users/keerthas" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="coverage.xml.dir" value="reports/cobertura-xml" />
+
+          <property name="test.dir" value="test" />
+
+          <property name="java.library.path" value="/Users/keerthas/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="gopherProxySet" value="false" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.BibliotecaTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.BibliotecaTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher4949058505351790814.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit4447190718786656538.properties" />
 
           <property name="java.class.path" value="/Users/keerthas/IdeaProjects/Biblioteca/instrumented:/Users/keerthas/IdeaProjects/Biblioteca/out:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-analysis-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-commons-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-tree-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-util-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-javadoc.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/commons-lang3-3.3.2.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/hamcrest-core-1.3.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jacocoant.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jaxen-1.1.4.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-util-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/junit-4.12.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-classic-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-core-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/mockito-all-1.9.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/oro-2.0.8.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/powermock-mockito-1.4.8-full.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/servlet-api-2.5-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/slf4j-api-1.7.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/system-rules-1.12.0.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -178,29 +349,29 @@
 
       <testcase classname="com.thoughtworks.biblioteca.BibliotecaTest" name="shouldReturnListOfBooks" time="0.0" />
 
-      <system-out><![CDATA[15:06:34,620 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-15:06:34,620 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-15:06:34,621 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:34,622 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-15:06:34,622 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:34,622 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
-15:06:34,642 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@6952b54b - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
-15:06:34,684 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-15:06:34,686 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-15:06:34,695 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-15:06:34,720 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-15:06:34,761 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
-15:06:34,761 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-15:06:34,761 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-15:06:34,761 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-15:06:34,762 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@34fc84f2 - Registering current configuration as safe fallback point
+      <system-out><![CDATA[15:30:32,824 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+15:30:32,825 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+15:30:32,825 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:32,826 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+15:30:32,826 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:32,826 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
+15:30:32,846 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@6952b54b - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+15:30:32,888 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+15:30:32,890 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+15:30:32,900 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+15:30:32,924 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:30:32,962 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+15:30:32,962 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+15:30:32,962 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+15:30:32,962 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+15:30:32,963 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@34fc84f2 - Registering current configuration as safe fallback point
 
 ]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="1" name="BookTest" package="com.thoughtworks.biblioteca" skipped="0" tests="9" time="0.25" timestamp="2015-09-09T09:36:36">
+  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="2" name="BookTest" package="com.thoughtworks.biblioteca" skipped="0" tests="9" time="0.261" timestamp="2015-09-09T10:00:34">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -314,7 +485,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.BookTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.BookTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher3549534999182834608.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit7457698948458630981.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.BookTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.BookTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher2295142313078297746.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit40437352217996883.properties" />
 
           <property name="java.class.path" value="/Users/keerthas/IdeaProjects/Biblioteca/instrumented:/Users/keerthas/IdeaProjects/Biblioteca/out:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-analysis-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-commons-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-tree-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-util-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-javadoc.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/commons-lang3-3.3.2.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/hamcrest-core-1.3.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jacocoant.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jaxen-1.1.4.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-util-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/junit-4.12.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-classic-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-core-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/mockito-all-1.9.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/oro-2.0.8.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/powermock-mockito-1.4.8-full.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/servlet-api-2.5-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/slf4j-api-1.7.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/system-rules-1.12.0.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -364,13 +535,13 @@
 
       </properties>
 
-      <testcase classname="com.thoughtworks.biblioteca.BookTest" name="shouldReturnTheBookDetails" time="0.185" />
+      <testcase classname="com.thoughtworks.biblioteca.BookTest" name="shouldReturnTheBookDetails" time="0.19" />
 
-      <testcase classname="com.thoughtworks.biblioteca.BookTest" name="shouldNotBeEqualIfNameISDifferent" time="0.0" />
+      <testcase classname="com.thoughtworks.biblioteca.BookTest" name="shouldNotBeEqualIfNameISDifferent" time="0.001" />
 
       <testcase classname="com.thoughtworks.biblioteca.BookTest" name="shouldBeEqualToItself" time="0.0" />
 
-      <testcase classname="com.thoughtworks.biblioteca.BookTest" name="shouldNotBeEqualToAnotherType" time="0.001" />
+      <testcase classname="com.thoughtworks.biblioteca.BookTest" name="shouldNotBeEqualToAnotherType" time="0.0" />
 
       <testcase classname="com.thoughtworks.biblioteca.BookTest" name="shouldHaveSameHashCodeForSameBookTitle" time="0.0" />
 
@@ -382,29 +553,29 @@
 
       <testcase classname="com.thoughtworks.biblioteca.BookTest" name="shouldHaveDifferentHashCodeForDifferentBookTitle" time="0.0" />
 
-      <system-out><![CDATA[15:06:36,195 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-15:06:36,195 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-15:06:36,195 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:36,196 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-15:06:36,196 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:36,196 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
-15:06:36,217 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@1f427975 - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
-15:06:36,259 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-15:06:36,261 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-15:06:36,270 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-15:06:36,294 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-15:06:36,331 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
-15:06:36,332 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-15:06:36,332 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-15:06:36,332 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-15:06:36,333 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@4534005b - Registering current configuration as safe fallback point
+      <system-out><![CDATA[15:30:34,393 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+15:30:34,394 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+15:30:34,394 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:34,395 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+15:30:34,395 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:34,395 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
+15:30:34,415 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@1f427975 - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+15:30:34,457 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+15:30:34,460 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+15:30:34,470 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+15:30:34,493 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:30:34,535 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+15:30:34,535 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+15:30:34,536 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+15:30:34,536 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+15:30:34,537 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@4534005b - Registering current configuration as safe fallback point
 
 ]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="2" name="CheckoutMenuOptionTest" package="com.thoughtworks.biblioteca" skipped="0" tests="4" time="0.262" timestamp="2015-09-09T09:36:37">
+  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="3" name="CheckoutMenuOptionTest" package="com.thoughtworks.biblioteca" skipped="0" tests="4" time="0.258" timestamp="2015-09-09T10:00:35">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -518,7 +689,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.CheckoutMenuOptionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.CheckoutMenuOptionTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher5947202858413206558.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit1689235908295003010.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.CheckoutMenuOptionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.CheckoutMenuOptionTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher7992649166457834510.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit2481928844393132589.properties" />
 
           <property name="java.class.path" value="/Users/keerthas/IdeaProjects/Biblioteca/instrumented:/Users/keerthas/IdeaProjects/Biblioteca/out:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-analysis-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-commons-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-tree-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-util-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-javadoc.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/commons-lang3-3.3.2.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/hamcrest-core-1.3.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jacocoant.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jaxen-1.1.4.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-util-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/junit-4.12.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-classic-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-core-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/mockito-all-1.9.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/oro-2.0.8.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/powermock-mockito-1.4.8-full.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/servlet-api-2.5-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/slf4j-api-1.7.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/system-rules-1.12.0.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -572,33 +743,33 @@
 
       <testcase classname="com.thoughtworks.biblioteca.CheckoutMenuOptionTest" name="shouldPrintMessageForUnsuccessfulCheckout" time="0.001" />
 
-      <testcase classname="com.thoughtworks.biblioteca.CheckoutMenuOptionTest" name="shouldCheckoutBookIfTheBookListContains" time="0.0" />
+      <testcase classname="com.thoughtworks.biblioteca.CheckoutMenuOptionTest" name="shouldCheckoutBookIfTheBookListContains" time="0.001" />
 
       <testcase classname="com.thoughtworks.biblioteca.CheckoutMenuOptionTest" name="shouldNotCheckoutBookIfTheBookListDoesNotContain" time="0.0" />
 
-      <system-out><![CDATA[15:06:37,753 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-15:06:37,753 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-15:06:37,753 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:37,754 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-15:06:37,754 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:37,754 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
-15:06:37,775 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@41d13c26 - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
-15:06:37,816 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-15:06:37,818 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-15:06:37,828 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-15:06:37,853 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-15:06:37,891 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
-15:06:37,891 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-15:06:37,891 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-15:06:37,891 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-15:06:37,892 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@fc4048c - Registering current configuration as safe fallback point
+      <system-out><![CDATA[15:30:35,960 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+15:30:35,960 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+15:30:35,960 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:35,961 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+15:30:35,961 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:35,961 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
+15:30:35,982 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@7310860e - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+15:30:36,023 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+15:30:36,025 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+15:30:36,034 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+15:30:36,059 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:30:36,097 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+15:30:36,097 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+15:30:36,097 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+15:30:36,098 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+15:30:36,098 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@41d13c26 - Registering current configuration as safe fallback point
 
 ]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="3" name="DisplayTest" package="com.thoughtworks.biblioteca" skipped="0" tests="4" time="0.361" timestamp="2015-09-09T09:36:39">
+  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="4" name="DisplayTest" package="com.thoughtworks.biblioteca" skipped="0" tests="4" time="0.369" timestamp="2015-09-09T10:00:37">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -712,7 +883,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.DisplayTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.DisplayTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher913637757311272417.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit1662141776162302541.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.DisplayTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.DisplayTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher3121098560815488298.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit4086125513791656791.properties" />
 
           <property name="java.class.path" value="/Users/keerthas/IdeaProjects/Biblioteca/instrumented:/Users/keerthas/IdeaProjects/Biblioteca/out:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-analysis-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-commons-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-tree-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-util-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-javadoc.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/commons-lang3-3.3.2.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/hamcrest-core-1.3.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jacocoant.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jaxen-1.1.4.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-util-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/junit-4.12.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-classic-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-core-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/mockito-all-1.9.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/oro-2.0.8.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/powermock-mockito-1.4.8-full.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/servlet-api-2.5-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/slf4j-api-1.7.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/system-rules-1.12.0.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -762,7 +933,7 @@
 
       </properties>
 
-      <testcase classname="com.thoughtworks.biblioteca.DisplayTest" name="shouldGetMenuOptionFromUser" time="0.121" />
+      <testcase classname="com.thoughtworks.biblioteca.DisplayTest" name="shouldGetMenuOptionFromUser" time="0.118" />
 
       <testcase classname="com.thoughtworks.biblioteca.DisplayTest" name="shouldPrintTheListOfBooks" time="0.0" />
 
@@ -770,29 +941,29 @@
 
       <testcase classname="com.thoughtworks.biblioteca.DisplayTest" name="shouldPrintTheWelcomeMessagePassed" time="0.0" />
 
-      <system-out><![CDATA[15:06:39,323 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-15:06:39,324 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-15:06:39,324 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:39,325 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-15:06:39,325 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:39,325 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
-15:06:39,345 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@18bbe4d3 - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
-15:06:39,385 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-15:06:39,386 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-15:06:39,396 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-15:06:39,421 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-15:06:39,462 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
-15:06:39,462 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-15:06:39,462 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-15:06:39,463 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-15:06:39,464 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@57abe554 - Registering current configuration as safe fallback point
+      <system-out><![CDATA[15:30:37,534 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+15:30:37,534 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+15:30:37,534 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:37,535 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+15:30:37,535 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:37,535 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
+15:30:37,556 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@1459e0e5 - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+15:30:37,599 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+15:30:37,601 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+15:30:37,611 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+15:30:37,636 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:30:37,673 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+15:30:37,674 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+15:30:37,674 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+15:30:37,674 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+15:30:37,675 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@18bbe4d3 - Registering current configuration as safe fallback point
 
 ]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="4" name="InvalidMenuOptionTest" package="com.thoughtworks.biblioteca" skipped="0" tests="1" time="0.24" timestamp="2015-09-09T09:36:40">
+  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="5" name="InvalidMenuOptionTest" package="com.thoughtworks.biblioteca" skipped="0" tests="1" time="0.238" timestamp="2015-09-09T10:00:39">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -906,7 +1077,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.InvalidMenuOptionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.InvalidMenuOptionTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher2095787484770090976.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit1101063645933893383.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.InvalidMenuOptionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.InvalidMenuOptionTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher6064166652615084844.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit6843572805316357508.properties" />
 
           <property name="java.class.path" value="/Users/keerthas/IdeaProjects/Biblioteca/instrumented:/Users/keerthas/IdeaProjects/Biblioteca/out:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-analysis-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-commons-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-tree-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-util-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-javadoc.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/commons-lang3-3.3.2.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/hamcrest-core-1.3.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jacocoant.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jaxen-1.1.4.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-util-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/junit-4.12.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-classic-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-core-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/mockito-all-1.9.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/oro-2.0.8.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/powermock-mockito-1.4.8-full.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/servlet-api-2.5-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/slf4j-api-1.7.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/system-rules-1.12.0.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -956,31 +1127,31 @@
 
       </properties>
 
-      <testcase classname="com.thoughtworks.biblioteca.InvalidMenuOptionTest" name="shouldDisplayInvalidMenuMessage" time="0.187" />
+      <testcase classname="com.thoughtworks.biblioteca.InvalidMenuOptionTest" name="shouldDisplayInvalidMenuMessage" time="0.182" />
 
-      <system-out><![CDATA[15:06:40,990 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-15:06:40,990 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-15:06:40,990 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:40,991 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-15:06:40,991 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:40,991 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
-15:06:41,012 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@4b1aeb38 - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
-15:06:41,052 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-15:06:41,053 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-15:06:41,063 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-15:06:41,092 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-15:06:41,129 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
-15:06:41,129 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-15:06:41,129 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-15:06:41,129 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-15:06:41,130 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@5448d00d - Registering current configuration as safe fallback point
+      <system-out><![CDATA[15:30:39,229 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+15:30:39,230 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+15:30:39,230 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:39,231 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+15:30:39,231 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:39,231 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
+15:30:39,251 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@351459e9 - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+15:30:39,291 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+15:30:39,293 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+15:30:39,302 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+15:30:39,326 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:30:39,363 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+15:30:39,363 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+15:30:39,363 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+15:30:39,363 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+15:30:39,364 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@4b1aeb38 - Registering current configuration as safe fallback point
 
 ]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="5" name="ListBooksMenuOptionTest" package="com.thoughtworks.biblioteca" skipped="0" tests="1" time="0.253" timestamp="2015-09-09T09:36:42">
+  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="6" name="ListBooksMenuOptionTest" package="com.thoughtworks.biblioteca" skipped="0" tests="1" time="0.257" timestamp="2015-09-09T10:00:40">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -1094,7 +1265,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.ListBooksMenuOptionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.ListBooksMenuOptionTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher8919943476423435478.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit6793417102728524353.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.ListBooksMenuOptionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.ListBooksMenuOptionTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher3324761264702054370.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit7871856359251586809.properties" />
 
           <property name="java.class.path" value="/Users/keerthas/IdeaProjects/Biblioteca/instrumented:/Users/keerthas/IdeaProjects/Biblioteca/out:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-analysis-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-commons-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-tree-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-util-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-javadoc.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/commons-lang3-3.3.2.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/hamcrest-core-1.3.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jacocoant.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jaxen-1.1.4.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-util-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/junit-4.12.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-classic-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-core-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/mockito-all-1.9.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/oro-2.0.8.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/powermock-mockito-1.4.8-full.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/servlet-api-2.5-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/slf4j-api-1.7.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/system-rules-1.12.0.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -1146,29 +1317,29 @@
 
       <testcase classname="com.thoughtworks.biblioteca.ListBooksMenuOptionTest" name="shouldDisplayListOfBooks" time="0.002" />
 
-      <system-out><![CDATA[15:06:42,542 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-15:06:42,542 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-15:06:42,542 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:42,543 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-15:06:42,543 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:42,543 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
-15:06:42,564 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@34fc84f2 - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
-15:06:42,604 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-15:06:42,606 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-15:06:42,616 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-15:06:42,643 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-15:06:42,681 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
-15:06:42,681 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-15:06:42,682 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-15:06:42,682 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-15:06:42,683 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@2e7c470b - Registering current configuration as safe fallback point
+      <system-out><![CDATA[15:30:40,763 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+15:30:40,763 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+15:30:40,763 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:40,764 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+15:30:40,764 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:40,764 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
+15:30:40,785 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@611c3b04 - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+15:30:40,826 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+15:30:40,828 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+15:30:40,837 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+15:30:40,863 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:30:40,902 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+15:30:40,902 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+15:30:40,902 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+15:30:40,902 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+15:30:40,903 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@466b56b - Registering current configuration as safe fallback point
 
 ]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="6" name="MenuOptionControllerTest" package="com.thoughtworks.biblioteca" skipped="0" tests="5" time="0.253" timestamp="2015-09-09T09:36:44">
+  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="7" name="MenuOptionControllerTest" package="com.thoughtworks.biblioteca" skipped="0" tests="5" time="0.257" timestamp="2015-09-09T10:00:42">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -1282,7 +1453,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.MenuOptionControllerTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.MenuOptionControllerTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher556072972265285452.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit8116720754247099058.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.MenuOptionControllerTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.MenuOptionControllerTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher9144465734580621095.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit2658518820726259752.properties" />
 
           <property name="java.class.path" value="/Users/keerthas/IdeaProjects/Biblioteca/instrumented:/Users/keerthas/IdeaProjects/Biblioteca/out:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-analysis-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-commons-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-tree-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-util-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-javadoc.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/commons-lang3-3.3.2.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/hamcrest-core-1.3.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jacocoant.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jaxen-1.1.4.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-util-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/junit-4.12.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-classic-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-core-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/mockito-all-1.9.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/oro-2.0.8.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/powermock-mockito-1.4.8-full.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/servlet-api-2.5-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/slf4j-api-1.7.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/system-rules-1.12.0.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -1336,35 +1507,35 @@
 
       <testcase classname="com.thoughtworks.biblioteca.MenuOptionControllerTest" name="shouldHandleInvalidMenuOption" time="0.001" />
 
-      <testcase classname="com.thoughtworks.biblioteca.MenuOptionControllerTest" name="shouldCallCheckOutBookForOption3" time="0.003" />
+      <testcase classname="com.thoughtworks.biblioteca.MenuOptionControllerTest" name="shouldCallCheckOutBookForOption3" time="0.004" />
 
       <testcase classname="com.thoughtworks.biblioteca.MenuOptionControllerTest" name="shouldDisplayMenuOptions" time="0.0" />
 
       <testcase classname="com.thoughtworks.biblioteca.MenuOptionControllerTest" name="shouldCallReturnBookForOption4" time="0.001" />
 
-      <system-out><![CDATA[15:06:44,106 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-15:06:44,106 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-15:06:44,106 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:44,107 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-15:06:44,107 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:44,107 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
-15:06:44,128 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@62679e87 - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
-15:06:44,169 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-15:06:44,170 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-15:06:44,180 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-15:06:44,205 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-15:06:44,242 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
-15:06:44,243 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-15:06:44,243 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-15:06:44,243 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-15:06:44,244 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@d8e38a - Registering current configuration as safe fallback point
+      <system-out><![CDATA[15:30:42,328 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+15:30:42,328 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+15:30:42,329 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:42,330 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+15:30:42,330 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:42,330 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
+15:30:42,350 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@4534005b - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+15:30:42,391 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+15:30:42,393 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+15:30:42,403 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+15:30:42,427 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:30:42,464 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+15:30:42,465 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+15:30:42,465 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+15:30:42,465 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+15:30:42,466 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@590379db - Registering current configuration as safe fallback point
 
 ]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="7" name="MenuTest" package="com.thoughtworks.biblioteca" skipped="0" tests="2" time="0.574" timestamp="2015-09-09T09:36:45">
+  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="8" name="MenuTest" package="com.thoughtworks.biblioteca" skipped="0" tests="2" time="0.381" timestamp="2015-09-09T10:00:43">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -1478,7 +1649,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.MenuTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.MenuTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher7828165351570574704.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit2006922432465647969.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.MenuTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.MenuTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher978782702155340109.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit8680762233116528267.properties" />
 
           <property name="java.class.path" value="/Users/keerthas/IdeaProjects/Biblioteca/instrumented:/Users/keerthas/IdeaProjects/Biblioteca/out:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-analysis-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-commons-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-tree-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-util-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-javadoc.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/commons-lang3-3.3.2.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/hamcrest-core-1.3.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jacocoant.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jaxen-1.1.4.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-util-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/junit-4.12.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-classic-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-core-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/mockito-all-1.9.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/oro-2.0.8.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/powermock-mockito-1.4.8-full.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/servlet-api-2.5-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/slf4j-api-1.7.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/system-rules-1.12.0.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -1528,33 +1699,33 @@
 
       </properties>
 
-      <testcase classname="com.thoughtworks.biblioteca.MenuTest" name="shouldHandleListOfBooksOption" time="0.361" />
+      <testcase classname="com.thoughtworks.biblioteca.MenuTest" name="shouldHandleListOfBooksOption" time="0.324" />
 
       <testcase classname="com.thoughtworks.biblioteca.MenuTest" name="shouldReturnTheListOFMenuOptions" time="0.0" />
 
-      <system-out><![CDATA[15:06:45,882 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-15:06:45,882 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-15:06:45,882 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:45,883 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-15:06:45,883 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:45,883 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
-15:06:45,898 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@4da648f9 - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
-15:06:45,938 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-15:06:45,939 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-15:06:45,948 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-15:06:45,969 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-15:06:46,014 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
-15:06:46,014 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-15:06:46,015 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-15:06:46,015 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-15:06:46,016 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@6000fb42 - Registering current configuration as safe fallback point
+      <system-out><![CDATA[15:30:44,041 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+15:30:44,042 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+15:30:44,042 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:44,042 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+15:30:44,042 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:44,042 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
+15:30:44,056 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@6000fb42 - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+15:30:44,096 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+15:30:44,098 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+15:30:44,106 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+15:30:44,125 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:30:44,163 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+15:30:44,163 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+15:30:44,163 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+15:30:44,163 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+15:30:44,164 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@606fdb4b - Registering current configuration as safe fallback point
 
 ]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="8" name="QuitMenuOptionTest" package="com.thoughtworks.biblioteca" skipped="0" tests="1" time="0.249" timestamp="2015-09-09T09:36:47">
+  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="9" name="QuitMenuOptionTest" package="com.thoughtworks.biblioteca" skipped="0" tests="1" time="0.247" timestamp="2015-09-09T10:00:45">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -1668,7 +1839,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.QuitMenuOptionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.QuitMenuOptionTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher5720562426991862076.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit5548257358089352023.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.QuitMenuOptionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.QuitMenuOptionTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher1516087605519018759.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit4967702480453489599.properties" />
 
           <property name="java.class.path" value="/Users/keerthas/IdeaProjects/Biblioteca/instrumented:/Users/keerthas/IdeaProjects/Biblioteca/out:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-analysis-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-commons-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-tree-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-util-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-javadoc.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/commons-lang3-3.3.2.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/hamcrest-core-1.3.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jacocoant.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jaxen-1.1.4.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-util-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/junit-4.12.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-classic-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-core-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/mockito-all-1.9.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/oro-2.0.8.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/powermock-mockito-1.4.8-full.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/servlet-api-2.5-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/slf4j-api-1.7.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/system-rules-1.12.0.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -1718,31 +1889,31 @@
 
       </properties>
 
-      <testcase classname="com.thoughtworks.biblioteca.QuitMenuOptionTest" name="shouldExitIfOptionTwoIsChosen" time="0.191" />
+      <testcase classname="com.thoughtworks.biblioteca.QuitMenuOptionTest" name="shouldExitIfOptionTwoIsChosen" time="0.188" />
 
-      <system-out><![CDATA[15:06:47,620 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-15:06:47,620 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-15:06:47,620 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:47,622 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-15:06:47,622 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:47,622 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
-15:06:47,642 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@524f6f2a - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
-15:06:47,684 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-15:06:47,685 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-15:06:47,695 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-15:06:47,719 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-15:06:47,758 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
-15:06:47,758 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-15:06:47,758 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-15:06:47,758 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-15:06:47,759 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@5d0b589d - Registering current configuration as safe fallback point
+      <system-out><![CDATA[15:30:45,655 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+15:30:45,655 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+15:30:45,656 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:45,657 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+15:30:45,657 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:45,657 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
+15:30:45,678 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@13e6db24 - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+15:30:45,720 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+15:30:45,721 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+15:30:45,731 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+15:30:45,755 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:30:45,791 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+15:30:45,791 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+15:30:45,791 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+15:30:45,792 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+15:30:45,793 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@193d22b1 - Registering current configuration as safe fallback point
 
 ]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="9" name="ReturnBookOptionTest" package="com.thoughtworks.biblioteca" skipped="0" tests="2" time="0.259" timestamp="2015-09-09T09:36:49">
+  <testsuite errors="0" failures="0" hostname="INkeerthas.local" id="10" name="ReturnBookOptionTest" package="com.thoughtworks.biblioteca" skipped="0" tests="2" time="0.25" timestamp="2015-09-09T10:00:47">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -1856,7 +2027,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.ReturnBookOptionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.ReturnBookOptionTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher138487384859216658.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit4325457726247751451.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.ReturnBookOptionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.ReturnBookOptionTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher2768279887100651490.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit4010233645680391239.properties" />
 
           <property name="java.class.path" value="/Users/keerthas/IdeaProjects/Biblioteca/instrumented:/Users/keerthas/IdeaProjects/Biblioteca/out:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-analysis-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-commons-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-tree-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/asm-util-5.0.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-javadoc.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/commons-lang3-3.3.2.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/hamcrest-core-1.3.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jacocoant.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jaxen-1.1.4.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/jetty-util-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/junit-4.12.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-classic-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/logback-core-1.0.13.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/mockito-all-1.9.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/oro-2.0.8.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/powermock-mockito-1.4.8-full.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/servlet-api-2.5-6.1.14.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/slf4j-api-1.7.5.jar:/Users/keerthas/IdeaProjects/Biblioteca/lib/system-rules-1.12.0.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -1906,26 +2077,26 @@
 
       </properties>
 
-      <testcase classname="com.thoughtworks.biblioteca.ReturnBookOptionTest" name="shouldPrintMessageForSuccessfulReturn" time="0.006" />
+      <testcase classname="com.thoughtworks.biblioteca.ReturnBookOptionTest" name="shouldPrintMessageForSuccessfulReturn" time="0.005" />
 
       <testcase classname="com.thoughtworks.biblioteca.ReturnBookOptionTest" name="shouldPrintMessageForUnSuccessfulReturn" time="0.001" />
 
-      <system-out><![CDATA[15:06:49,168 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-15:06:49,168 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-15:06:49,168 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:49,169 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-15:06:49,169 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:06:49,169 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
-15:06:49,190 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@466b56b - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
-15:06:49,233 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-15:06:49,235 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-15:06:49,244 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-15:06:49,272 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-15:06:49,314 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
-15:06:49,315 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-15:06:49,315 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-15:06:49,315 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-15:06:49,316 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@7310860e - Registering current configuration as safe fallback point
+      <system-out><![CDATA[15:30:47,194 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+15:30:47,194 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+15:30:47,194 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:47,195 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+15:30:47,195 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:30:47,195 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1.jar!/logback.xml]
+15:30:47,216 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@466b56b - URL [jar:file:/Users/keerthas/IdeaProjects/Biblioteca/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+15:30:47,256 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+15:30:47,258 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+15:30:47,267 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+15:30:47,294 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:30:47,332 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+15:30:47,332 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+15:30:47,332 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+15:30:47,333 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+15:30:47,333 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@7310860e - Registering current configuration as safe fallback point
 
 ]]></system-out>
 

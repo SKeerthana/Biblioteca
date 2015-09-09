@@ -16,6 +16,6 @@ public class InvalidMenuOptionTest {
         Display display = new Display(printStream, System.in);
         InvalidMenuOption invalidMenuOption = new InvalidMenuOption(display);
         invalidMenuOption.performOperation();
-        assertEquals("Select a valid option!",outContent.toString());
+        assertEquals("Select a valid option!\n",outContent.toString());
     }
 }

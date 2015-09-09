@@ -7,7 +7,11 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
         BibliotecaApp bibliotecaApp = new BibliotecaApp();
-        ArrayList<Book> listOfBooks = bibliotecaApp.generateListOfBooks();
+        bibliotecaApp.start();
+    }
+
+    public void start() {
+        ArrayList<Book> listOfBooks = generateListOfBooks();
         Biblioteca biblioteca = new Biblioteca(listOfBooks, new ArrayList<Book>());
 
         Display display = new Display(System.out, System.in);
@@ -20,7 +24,6 @@ public class BibliotecaApp {
             String option = display.getInputFromUser();
             menuOptionController.handleMenuOption(option);
         }
-
     }
 
     private ArrayList<Book> generateListOfBooks() {

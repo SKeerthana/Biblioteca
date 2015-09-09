@@ -14,10 +14,10 @@ public class CheckoutMenuOption implements MenuOption{
         Book bookToBeSearched = new Book(bookName, null, 0);
         if(biblioteca.containsBookInAvailableList(bookToBeSearched)) {
             biblioteca.checkOutBook(bookToBeSearched);
-            display.printMessage("Thank you! Enjoy the book");
+            display.printMessage("Thank you! Enjoy the book\n");
         }
         else {
-            display.printMessage("That book is not available");
+            display.printMessage("That book is not available\n");
         }
     }
 }

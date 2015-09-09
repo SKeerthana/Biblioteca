@@ -8,9 +8,6 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 public class MenuOptionControllerTest {
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -50,7 +47,7 @@ public class MenuOptionControllerTest {
     public void shouldHandleInvalidMenuOption() {
         MenuOptionController menuOptionController = new MenuOptionController(menu, bibilioteca, display);
         menuOptionController.handleMenuOption("2382");
-        assertEquals("Select a valid option!", outContent.toString());
+        assertEquals("Select a valid option!\n", outContent.toString());
     }
 
 
@@ -67,7 +64,7 @@ public class MenuOptionControllerTest {
 
         menuOptionController.handleMenuOption("3");
 
-        assertEquals("That book is not available", outContent.toString());
+        assertEquals("That book is not available\n", outContent.toString());
     }
 
     @Test
@@ -83,6 +80,6 @@ public class MenuOptionControllerTest {
 
         menuOptionController.handleMenuOption("4");
 
-        assertEquals("That is not a valid book to return.", outContent.toString());
+        assertEquals("That is not a valid book to return.\n", outContent.toString());
     }
 }
