@@ -16,7 +16,7 @@ public class BibliotecaTest {
         add(book1);
         add(book2);
     }};
-    Biblioteca bibilioteca = new Biblioteca(listOfBooks);
+    Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>());
 
     @Test
     public void shouldReturnListOfBooks() {
@@ -26,19 +26,26 @@ public class BibliotecaTest {
 
     @Test
     public void shouldReturnTrueIfBookExistsInBookList() {
-        assertTrue(bibilioteca.contains(new Book("My experiments with Truth", "M.K.Gandhi", 1942)));
+        assertTrue(bibilioteca.containsBookInAvailableList(new Book("My experiments with Truth", "M.K.Gandhi", 1942)));
     }
 
     @Test
     public void shouldReturnFalseIfBookDoesNotExistsInBookList() {
-        assertFalse(bibilioteca.contains(new Book("My experiments", "M.K.Gandhi", 1942)));
+        assertFalse(bibilioteca.containsBookInAvailableList(new Book("My experiments", "M.K.Gandhi", 1942)));
     }
 
     @Test
     public void shouldRemoveBookFromList() {
         Book bookToSearch = new Book("My experiments with Truth", null, 0);
         bibilioteca.checkOutBook(bookToSearch);
-        assertFalse(bibilioteca.contains(bookToSearch));
+        assertFalse(bibilioteca.containsBookInAvailableList(bookToSearch));
+    }
+
+    @Test
+    public void shouldAddBookToCheckoutList() {
+        Book bookToSearch = new Book("My experiments with Truth", null, 0);
+        bibilioteca.checkOutBook(bookToSearch);
+        assertTrue(bibilioteca.containsBookInCheckedOutList(bookToSearch));
     }
 
 }

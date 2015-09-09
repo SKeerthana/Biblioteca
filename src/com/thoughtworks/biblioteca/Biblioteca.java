@@ -2,28 +2,38 @@ package com.thoughtworks.biblioteca;
 
 import java.util.ArrayList;
 
-//Bibilioteca contains the list of books
+//Bibilioteca contains the list of available books and checkedout books
 public class Biblioteca {
 
-    private ArrayList<Book> books;
+    private ArrayList<Book> availableBooks;
+    private ArrayList<Book> checkedoutBooks;
 
-    public Biblioteca(ArrayList<Book> books) {
-        this.books = books;
+    public Biblioteca(ArrayList<Book> availableBooks, ArrayList<Book> checkedoutBooks) {
+        this.availableBooks = availableBooks;
+        this.checkedoutBooks = checkedoutBooks;
     }
 
-    public boolean contains(Book bookName) {
-        if (books.contains(bookName))
+    public boolean containsBookInAvailableList(Book bookName) {
+        if (availableBooks.contains(bookName))
+            return true;
+        return false;
+    }
+
+    public boolean containsBookInCheckedOutList(Book bookName) {
+        if (checkedoutBooks.contains(bookName))
             return true;
         return false;
     }
 
     public void checkOutBook(Book bookName) {
-        books.remove(bookName);
+        int index = availableBooks.indexOf(bookName);
+        checkedoutBooks.add(availableBooks.get(index));
+        availableBooks.remove(bookName);
     }
 
     public String getListOfBooks() {
         String listOfBooksString = "";
-        for (Book book : books) {
+        for (Book book : availableBooks) {
             listOfBooksString += book.getBookDetails();
         }
         return listOfBooksString;

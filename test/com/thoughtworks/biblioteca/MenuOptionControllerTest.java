@@ -22,7 +22,7 @@ public class MenuOptionControllerTest {
         add(book1);
         add(book2);
     }};
-    Biblioteca bibilioteca = new Biblioteca(listOfBooks);
+    Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>());
     Menu menu = new Menu();
 
     @Test

@@ -7,7 +7,7 @@ public class BibliotecaApp {
     public static void main(String[] args) {
         BibliotecaApp bibliotecaApp = new BibliotecaApp();
         ArrayList<Book> listOfBooks = bibliotecaApp.generateListOfBooks();
-        Biblioteca biblioteca = new Biblioteca(listOfBooks);
+        Biblioteca biblioteca = new Biblioteca(listOfBooks, new ArrayList<Book>());
 
         Display display = new Display(System.out, System.in);
         MenuOptionController menuOptionController = new MenuOptionController(new Menu(), biblioteca, display);

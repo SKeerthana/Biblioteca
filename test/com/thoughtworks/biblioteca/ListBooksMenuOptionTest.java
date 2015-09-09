@@ -17,7 +17,7 @@ public class ListBooksMenuOptionTest {
         add(book1);
         add(book2);
     }};
-    Biblioteca bibilioteca = new Biblioteca(listOfBooks);
+    Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>());
 
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     PrintStream printStream = new PrintStream(outContent);

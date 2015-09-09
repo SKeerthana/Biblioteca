@@ -17,7 +17,7 @@ public class CheckoutMenuOptionTest {
         add(book1);
         add(book2);
     }};
-    Biblioteca bibilioteca = new Biblioteca(listOfBooks);
+    Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>());
 
     @Test
     public void shouldCheckoutBookIfTheBookListContains() {
@@ -33,7 +33,7 @@ public class CheckoutMenuOptionTest {
 
         checkoutMenuOption.performOperation();
 
-        assertFalse(bibilioteca.contains(bookToSearch));
+        assertFalse(bibilioteca.containsBookInAvailableList(bookToSearch));
     }
 
     @Test

@@ -12,7 +12,7 @@ public class CheckoutMenuOption implements MenuOption{
     public void performOperation() {
         String bookName = display.getInputFromUser();
         Book bookToBeSearched = new Book(bookName, null, 0);
-        if(biblioteca.contains(bookToBeSearched)) {
+        if(biblioteca.containsBookInAvailableList(bookToBeSearched)) {
             biblioteca.checkOutBook(bookToBeSearched);
             display.printMessage("Thank you! Enjoy the book");
         }
