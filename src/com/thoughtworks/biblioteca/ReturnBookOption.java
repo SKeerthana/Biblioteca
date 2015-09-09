@@ -1,5 +1,6 @@
 package com.thoughtworks.biblioteca;
 
+//Get bookname from user to return book to the library
 public class ReturnBookOption implements MenuOption {
     private Biblioteca biblioteca;
     private Display display;

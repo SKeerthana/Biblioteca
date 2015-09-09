@@ -1,5 +1,6 @@
 package com.thoughtworks.biblioteca;
 
+//Get bookname from user and does checkout operation
 public class CheckoutMenuOption implements MenuOption{
     private Biblioteca biblioteca;
     private Display display;

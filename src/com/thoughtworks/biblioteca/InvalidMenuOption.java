@@ -1,5 +1,6 @@
 package com.thoughtworks.biblioteca;
 
+//generates a message for invalid menu option
 public class InvalidMenuOption implements MenuOption {
 
     private Display display;

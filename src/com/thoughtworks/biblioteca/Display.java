@@ -4,7 +4,7 @@ import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 
-//takes the message and displays the output
+//for getting input from user and displaying output.
 public class Display {
     private PrintStream printStream;
     private InputStream inputStream;

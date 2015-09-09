@@ -1,6 +1,6 @@
 package com.thoughtworks.biblioteca;
 
-//containsBookInAvailableList the book details
+//contains the details about the book
 public class Book {
     private String bookName;
     private String author;

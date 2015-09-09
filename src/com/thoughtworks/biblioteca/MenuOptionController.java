@@ -1,5 +1,6 @@
 package com.thoughtworks.biblioteca;
 
+//based on the option delegates the functionality
 public class MenuOptionController {
     private Menu menu;
     private Biblioteca biblioteca;

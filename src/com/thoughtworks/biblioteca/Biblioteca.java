@@ -2,7 +2,7 @@ package com.thoughtworks.biblioteca;
 
 import java.util.ArrayList;
 
-//Bibilioteca contains the list of available books and checkedout books
+//Bibilioteca contains the list of available and checked out books
 public class Biblioteca {
 
     private ArrayList<Book> availableBooks;

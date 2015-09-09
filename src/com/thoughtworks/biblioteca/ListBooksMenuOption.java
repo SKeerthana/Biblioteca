@@ -1,5 +1,6 @@
 package com.thoughtworks.biblioteca;
 
+//displays the list of books
 public class ListBooksMenuOption implements MenuOption {
     private Biblioteca biblioteca;
     private Display display;

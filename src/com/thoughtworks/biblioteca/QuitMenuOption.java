@@ -1,5 +1,6 @@
 package com.thoughtworks.biblioteca;
 
+//quits the application
 public class QuitMenuOption implements MenuOption {
 
     @Override
