@@ -18,11 +18,6 @@ public class Display {
         printStream.print(message);
     }
 
-    public int getInputMenuOptionFromUser() {
-        Scanner sc = new Scanner(inputStream);
-        return sc.nextInt();
-    }
-
     public String getInputFromUser() {
         Scanner sc = new Scanner(inputStream);
         return sc.nextLine();
