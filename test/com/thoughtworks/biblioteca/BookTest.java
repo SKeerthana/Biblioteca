@@ -10,7 +10,7 @@ public class BookTest {
     @Test
     public void shouldReturnTheBookDetails() {
         Book book = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
-        assertEquals("My experiments with Truth" + "\t" + "M.K.Gandhi" + "\t" + "1942" + "\n", book.getBookDetails());
+        assertEquals(String.format("%-50s %-25s %-15s\n", "My experiments with Truth", "M.K.Gandhi", "1942"), book.getBookDetails());
     }
 
     @Test

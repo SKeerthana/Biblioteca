@@ -4,18 +4,25 @@ import java.util.ArrayList;
 
 //displays the welcome message and menu options
 public class BibliotecaApp {
+    private Display display;
+    private Menu menu;
 
     public static void main(String[] args) {
-        BibliotecaApp bibliotecaApp = new BibliotecaApp();
+        Menu menu = new Menu();
+        Display display = new Display(System.out, System.in);
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(menu, display);
         bibliotecaApp.start();
     }
 
-    public void start() {
-        ArrayList<Book> listOfBooks = generateListOfBooks();
-        Biblioteca biblioteca = new Biblioteca(listOfBooks, new ArrayList<Book>());
+    public BibliotecaApp(Menu menu, Display display) {
+        this.menu = menu;
+        this.display = display;
+    }
 
-        Display display = new Display(System.out, System.in);
-        MenuOptionController menuOptionController = new MenuOptionController(new Menu(), biblioteca, display);
+    public void start() {
+        ArrayList<Book> listOfAvailableBooks = generateListOfBooks();
+        Biblioteca biblioteca = new Biblioteca(listOfAvailableBooks, new ArrayList<Book>());
+        MenuOptionController menuOptionController = new MenuOptionController(menu, biblioteca, display);
 
         display.printMessage("Welcome to Bibliotica\n");
 

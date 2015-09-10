@@ -20,8 +20,8 @@ public class BibliotecaTest {
 
     @Test
     public void shouldReturnListOfBooks() {
-        assertEquals("My experiments with Truth\t" + "M.K.Gandhi\t" + "1942\n"
-                + "Harry Potter and the Chamber of Secrets\t" + "J. K. Rowling\t" + "1998\n", bibilioteca.getListOfBooks());
+        assertEquals(String.format("%-50s %-25s %-15s\n", "My experiments with Truth", "M.K.Gandhi", "1942")
+                + String.format("%-50s %-25s %-15s\n","Harry Potter and the Chamber of Secrets", "J. K. Rowling", "1998"), bibilioteca.getListOfBooks());
     }
 
     @Test
