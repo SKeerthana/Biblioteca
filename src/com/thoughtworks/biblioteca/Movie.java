@@ -19,6 +19,7 @@ public class Movie {
             return true;
         if (that == null || that.getClass() != getClass())
             return false;
-        return true;
+        Movie thatMovie = (Movie) that;
+        return thatMovie.movieName.equals(movieName);
     }
 }
