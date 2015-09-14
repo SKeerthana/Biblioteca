@@ -1,7 +1,7 @@
 package com.thoughtworks.biblioteca;
 
 //contains the details about the book
-public class Book {
+public class Book implements LibraryItem{
     private String bookName;
     private String author;
     private int yearPublished;
@@ -12,7 +12,7 @@ public class Book {
         this.yearPublished = yearPublished;
     }
 
-    public String[] getBookHeaders() {
+    public String[] getHeaderDetails() {
         String[] bookHeaderInfo = new String[3];
         bookHeaderInfo[0] = "BOOK NAME";
         bookHeaderInfo[1] = "AUTHOR";

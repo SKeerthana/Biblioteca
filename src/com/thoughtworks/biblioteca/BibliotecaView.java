@@ -1,6 +1,5 @@
 package com.thoughtworks.biblioteca;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class BibliotecaView {
@@ -28,6 +27,6 @@ public class BibliotecaView {
     }
 
     private String getBookDetailsHeader(Book book) {
-        return String.format("%-50s %-25s %-15s\n", book.getBookHeaders());
+        return String.format("%-50s %-25s %-15s\n", book.getHeaderDetails());
     }
 }
