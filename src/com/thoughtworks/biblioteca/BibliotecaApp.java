@@ -8,9 +8,16 @@ public class BibliotecaApp {
     private Menu menu;
 
     public static void main(String[] args) {
-        Menu menu = new Menu();
+        ArrayList<String> listOfMenuOptions = new ArrayList<String>();
+        listOfMenuOptions.add("1. List all the books");
+        listOfMenuOptions.add("2. Quit");
+        listOfMenuOptions.add("3. Checkout books");
+        listOfMenuOptions.add("4. Return books");
+
+        Menu menu = new Menu(listOfMenuOptions);
         Display display = new Display(System.out, System.in);
         BibliotecaApp bibliotecaApp = new BibliotecaApp(menu, display);
+
         bibliotecaApp.start();
     }
 

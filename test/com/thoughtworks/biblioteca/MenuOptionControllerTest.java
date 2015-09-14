@@ -21,7 +21,13 @@ public class MenuOptionControllerTest {
     }};
     Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>());
     BibliotecaView bibliotecaView = new BibliotecaView(bibilioteca);
-    Menu menu = new Menu();
+    ArrayList<String> listOfMenuOptions = new ArrayList<String>() {{
+        add("1. List all the books");
+        add("2. Quit");
+        add("3. Checkout books");
+        add("4. Return books");
+    }};
+    Menu menu = new Menu(listOfMenuOptions);
 
     @Test
     public void shouldDisplayMenuOptions() {

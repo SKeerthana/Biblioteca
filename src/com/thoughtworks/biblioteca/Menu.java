@@ -4,12 +4,11 @@ import java.util.ArrayList;
 
 //Has the list of menu options for Biblioteca
 public class Menu {
-    private ArrayList<String> listOfMenuOptions = new ArrayList<String>() {{
-        add("1. List all the books");
-        add("2. Quit");
-        add("3. Checkout books");
-        add("4. Return books");
-    }};
+    private ArrayList<String> listOfMenuOptions;
+
+    public Menu(ArrayList<String> listOfMenuOptions) {
+        this.listOfMenuOptions = listOfMenuOptions;
+    }
 
     public String getMenuOptions() {
         String menuOptions = "Choose one of the menu option :\n";

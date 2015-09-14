@@ -1,8 +1,5 @@
 package com.thoughtworks.biblioteca;
 
-import java.util.ArrayList;
-import java.util.List;
-
 //contains the details about the book
 public class Book {
     private String bookName;
@@ -13,10 +10,6 @@ public class Book {
         this.bookName = bookName;
         this.author = author;
         this.yearPublished = yearPublished;
-    }
-
-    public String getBookDetails() {
-        return String.format("%-50s %-25s %-15s\n", bookName, author, yearPublished);
     }
 
     public String[] getBookHeaders() {

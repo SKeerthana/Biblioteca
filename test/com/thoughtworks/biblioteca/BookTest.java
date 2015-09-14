@@ -8,12 +8,6 @@ import static org.junit.Assert.assertNotEquals;
 public class BookTest {
 
     @Test
-    public void shouldReturnTheBookDetails() {
-        Book book = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
-        assertEquals(String.format("%-50s %-25s %-15s\n", "My experiments with Truth", "M.K.Gandhi", "1942"), book.getBookDetails());
-    }
-
-    @Test
     public void shouldNotBeNull() {
         Book book = new Book("Abc", "Def", 1900);
 
