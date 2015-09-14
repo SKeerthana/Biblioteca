@@ -40,9 +40,9 @@ public class BookTest {
     @Test
     public void shouldNotBeEqualIfNameISDifferent() {
         Book book1 = new Book("Abc", "Def", 1900);
-        Book book2 = new Book("Abc", "Def", 1900);
+        Book book2 = new Book("Abc1", "Def", 1900);
 
-        assertEquals(book1, book2);
+        assertNotEquals(book1, book2);
     }
 
     @Test

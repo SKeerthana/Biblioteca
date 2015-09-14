@@ -22,4 +22,9 @@ public class Movie {
         Movie thatMovie = (Movie) that;
         return thatMovie.movieName.equals(movieName);
     }
+
+    @Override
+    public int hashCode() {
+        return movieName.hashCode();
+    }
 }
