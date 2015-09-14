@@ -1,5 +1,8 @@
 package com.thoughtworks.biblioteca;
 
+import java.util.ArrayList;
+import java.util.List;
+
 //contains the details about the book
 public class Book {
     private String bookName;
@@ -16,6 +19,14 @@ public class Book {
         return String.format("%-50s %-25s %-15s\n", bookName, author, yearPublished);
     }
 
+    public String[] getBookHeaders() {
+        String[] bookHeaderInfo = new String[3];
+        bookHeaderInfo[0] = "BOOK NAME";
+        bookHeaderInfo[1] = "AUTHOR";
+        bookHeaderInfo[2] = "YEAR";
+        return bookHeaderInfo;
+    }
+
     @Override
     public boolean equals(Object that) {
         if(that == this)
@@ -29,5 +40,17 @@ public class Book {
     @Override
     public int hashCode() {
         return bookName.hashCode();
+    }
+
+    public String getBookName() {
+        return bookName;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getYearPublished() {
+        return yearPublished;
     }
 }

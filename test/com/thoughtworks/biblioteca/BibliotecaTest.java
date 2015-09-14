@@ -19,12 +19,6 @@ public class BibliotecaTest {
     Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>());
 
     @Test
-    public void shouldReturnListOfBooks() {
-        assertEquals(String.format("%-50s %-25s %-15s\n", "My experiments with Truth", "M.K.Gandhi", "1942")
-                + String.format("%-50s %-25s %-15s\n","Harry Potter and the Chamber of Secrets", "J. K. Rowling", "1998"), bibilioteca.getListOfBooks());
-    }
-
-    @Test
     public void shouldReturnTrueIfBookExistsInBookList() {
         assertTrue(bibilioteca.containsBookInAvailableList(new Book("My experiments with Truth", "M.K.Gandhi", 1942)));
     }

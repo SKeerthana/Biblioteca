@@ -1,6 +1,7 @@
 package com.thoughtworks.biblioteca;
 
 import java.util.ArrayList;
+import java.util.List;
 
 //Bibilioteca contains the list of available and checked out books
 public class Biblioteca {
@@ -31,17 +32,13 @@ public class Biblioteca {
         availableBooks.remove(bookName);
     }
 
-    public String getListOfBooks() {
-        String listOfBooksString = "";
-        for (Book book : availableBooks) {
-            listOfBooksString += book.getBookDetails();
-        }
-        return listOfBooksString;
-    }
-
     public void returnBook(Book bookToBeReturned) {
         int index = checkedoutBooks.indexOf(bookToBeReturned);
         availableBooks.add(checkedoutBooks.get(index));
         checkedoutBooks.remove(bookToBeReturned);
+    }
+
+    public List<Book> getAvailableBooks() {
+        return availableBooks;
     }
 }

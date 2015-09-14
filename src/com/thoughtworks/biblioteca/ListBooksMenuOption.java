@@ -2,22 +2,16 @@ package com.thoughtworks.biblioteca;
 
 //displays the list of books
 public class ListBooksMenuOption implements MenuOption {
-    private Biblioteca biblioteca;
+    private BibliotecaView bibliotecaView;
     private Display display;
 
-    public ListBooksMenuOption(Biblioteca biblioteca, Display display) {
-        this.biblioteca = biblioteca;
+    public ListBooksMenuOption(BibliotecaView bibliotecaView, Display display) {
+        this.bibliotecaView = bibliotecaView;
         this.display = display;
     }
 
     @Override
     public void performOperation() {
-        display.printMessage("=====================================================================================");
-        String header = String.format("%-50s %-25s %-15s", "BOOK NAME", "AUTHOR", "YEAR");
-        display.printMessage("\n" + header);
-        display.printMessage("=====================================================================================");
-        display.printMessage(biblioteca.getListOfBooks());
-        display.printMessage("=====================================================================================");
-
+        display.printMessage(bibliotecaView.getFormattedListOfBooks());
     }
 }

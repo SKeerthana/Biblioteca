@@ -6,6 +6,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -46,11 +47,11 @@ public class CheckoutMenuOptionTest {
         Display display = new Display(printStream, inContent);
         System.setIn(inContent);
         CheckoutMenuOption checkoutMenuOption = new CheckoutMenuOption(bibilioteca, display);
-        String bookListBeforeFunctionCall = bibilioteca.getListOfBooks();
+        List<Book> availableBooks= bibilioteca.getAvailableBooks();
 
         checkoutMenuOption.performOperation();
 
-        assertEquals(bookListBeforeFunctionCall, bibilioteca.getListOfBooks());
+        assertEquals(availableBooks, bibilioteca.getAvailableBooks());
     }
 
     @Test

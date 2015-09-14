@@ -24,7 +24,7 @@ public class MenuOptionController {
     public MenuOption getMenuOption(String option) {
         switch (option) {
             case "1":
-                return new ListBooksMenuOption(biblioteca, display);
+                return new ListBooksMenuOption(new BibliotecaView(biblioteca), display);
             case "2":
                 return new QuitMenuOption();
             case "3":

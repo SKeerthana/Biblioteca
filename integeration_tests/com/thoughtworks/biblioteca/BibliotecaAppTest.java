@@ -17,6 +17,7 @@ public class BibliotecaAppTest {
         add(book2);
     }};
     Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>());
+    BibliotecaView bibliotecaView = new BibliotecaView(bibilioteca);
     Menu menu = new Menu();
 
     @Rule
@@ -28,7 +29,7 @@ public class BibliotecaAppTest {
         when(display.getInputFromUser()).thenReturn("1", "2");
         BibliotecaApp bibliotecaApp = new BibliotecaApp(menu, display);
         MenuOptionController menuOptionController = mock(MenuOptionController.class);
-        ListBooksMenuOption listBooksMenuOption = new ListBooksMenuOption(bibilioteca, display);
+        ListBooksMenuOption listBooksMenuOption = new ListBooksMenuOption(bibliotecaView, display);
         when(menuOptionController.getMenuOption("1")).thenReturn(listBooksMenuOption);
         exit.expectSystemExit();
 

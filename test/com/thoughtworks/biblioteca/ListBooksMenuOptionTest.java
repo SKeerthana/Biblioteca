@@ -11,27 +11,26 @@ import static org.junit.Assert.assertEquals;
 public class ListBooksMenuOptionTest {
 
     Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
-    Book book2 = new Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998);
     ArrayList<Book> listOfBooks = new ArrayList<Book>() {{
         add(book1);
-        add(book2);
     }};
     Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>());
 
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     PrintStream printStream = new PrintStream(outContent);
     Display display = new Display(printStream, System.in);
+    BibliotecaView bibliotecaView = new BibliotecaView(bibilioteca);
 
     @Test
     public void shouldDisplayListOfBooks() {
-        ListBooksMenuOption listBooksMenuOption = new ListBooksMenuOption(bibilioteca, display);
+        ListBooksMenuOption listBooksMenuOption = new ListBooksMenuOption(bibliotecaView, display);
 
         listBooksMenuOption.performOperation();
         String header = "=====================================================================================\n";
-        header += String.format("%-50s %-25s %-15s", "BOOK NAME", "AUTHOR", "YEAR");
-        header += "=====================================================================================";
-        header += bibilioteca.getListOfBooks();
-        header += "=====================================================================================";
+        header += String.format("%-50s %-25s %-15s\n", "BOOK NAME", "AUTHOR", "YEAR");
+        header += "=====================================================================================\n";
+        header += String.format("%-50s %-25s %-15s\n", "My experiments with Truth", "M.K.Gandhi", "1942");
+        header += "=====================================================================================\n";
         assertEquals(header, outContent.toString());
     }
 }

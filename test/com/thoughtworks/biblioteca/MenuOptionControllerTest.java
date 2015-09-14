@@ -20,6 +20,7 @@ public class MenuOptionControllerTest {
         add(book2);
     }};
     Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>());
+    BibliotecaView bibliotecaView = new BibliotecaView(bibilioteca);
     Menu menu = new Menu();
 
     @Test
@@ -37,15 +38,15 @@ public class MenuOptionControllerTest {
 
     @Test
     public void shouldHandleListOfBooksOption() {
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bibilioteca, display);
-        menuOptionController.handleMenuOption("1");
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        String header = "=====================================================================================\n";
-        header += String.format("%-50s %-25s %-15s", "BOOK NAME", "AUTHOR", "YEAR");
-        header += "=====================================================================================";
-        header += bibilioteca.getListOfBooks();
-        header += "=====================================================================================";
-        assertEquals(header, outContent.toString());
+        Display display = new Display(printStream, System.in);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bibilioteca, display);
+
+        menuOptionController.handleMenuOption("1");
+
+        assertEquals(bibliotecaView.getFormattedListOfBooks(), outContent.toString());
     }
 
     @Test
@@ -54,7 +55,6 @@ public class MenuOptionControllerTest {
         menuOptionController.handleMenuOption("2382");
         assertEquals("Select a valid option!\n", outContent.toString());
     }
-
 
     @Test
     public void shouldCallCheckOutBookForOption3() {
