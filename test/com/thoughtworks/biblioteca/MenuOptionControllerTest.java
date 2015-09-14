@@ -40,7 +40,12 @@ public class MenuOptionControllerTest {
         MenuOptionController menuOptionController = new MenuOptionController(menu, bibilioteca, display);
         menuOptionController.handleMenuOption("1");
         System.setOut(printStream);
-        assertEquals(bibilioteca.getListOfBooks(), outContent.toString());
+        String header = "=====================================================================================\n";
+        header += String.format("%-50s %-25s %-15s", "BOOK NAME", "AUTHOR", "YEAR");
+        header += "=====================================================================================";
+        header += bibilioteca.getListOfBooks();
+        header += "=====================================================================================";
+        assertEquals(header, outContent.toString());
     }
 
     @Test

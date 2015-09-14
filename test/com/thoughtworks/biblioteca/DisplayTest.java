@@ -37,9 +37,13 @@ public class DisplayTest {
 
     @Test
     public void shouldGetMenuOptionFromUser() {
-        Display mockDisplay = mock(Display.class);
-        when(mockDisplay.getInputMenuOptionFromUser()).thenReturn(1);
-        assertEquals(1, mockDisplay.getInputMenuOptionFromUser());
+        String input = "1";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+
+        Display mockDisplay = new Display(System.out, inContent);
+        mockDisplay.getInputFromUser();
+        assertEquals("1", input);
     }
 
     @Test

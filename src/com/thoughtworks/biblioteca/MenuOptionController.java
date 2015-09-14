@@ -21,7 +21,7 @@ public class MenuOptionController {
         menu.handleSelectedMenuOption(menuOption);
     }
 
-    private MenuOption getMenuOption(String option) {
+    public MenuOption getMenuOption(String option) {
         switch (option) {
             case "1":
                 return new ListBooksMenuOption(biblioteca, display);

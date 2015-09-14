@@ -27,7 +27,11 @@ public class ListBooksMenuOptionTest {
         ListBooksMenuOption listBooksMenuOption = new ListBooksMenuOption(bibilioteca, display);
 
         listBooksMenuOption.performOperation();
-
-        assertEquals(bibilioteca.getListOfBooks(), outContent.toString());
+        String header = "=====================================================================================\n";
+        header += String.format("%-50s %-25s %-15s", "BOOK NAME", "AUTHOR", "YEAR");
+        header += "=====================================================================================";
+        header += bibilioteca.getListOfBooks();
+        header += "=====================================================================================";
+        assertEquals(header, outContent.toString());
     }
 }

@@ -12,12 +12,12 @@ public class ListBooksMenuOption implements MenuOption {
 
     @Override
     public void performOperation() {
-        System.out.println("=====================================================================================");
+        display.printMessage("=====================================================================================");
         String header = String.format("%-50s %-25s %-15s", "BOOK NAME", "AUTHOR", "YEAR");
-        System.out.println("\n" + header);
-        System.out.println("=====================================================================================");
+        display.printMessage("\n" + header);
+        display.printMessage("=====================================================================================");
         display.printMessage(biblioteca.getListOfBooks());
-        System.out.println("=====================================================================================");
+        display.printMessage("=====================================================================================");
 
     }
 }
