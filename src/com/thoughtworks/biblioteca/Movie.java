@@ -15,6 +15,8 @@ public class Movie {
 
     @Override
     public boolean equals(Object that) {
+        if(that == this)
+            return true;
         if(that == null)
             return false;
         return true;
