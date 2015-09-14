@@ -42,4 +42,12 @@ public class MovieTest {
 
         assertEquals(movie1.hashCode(), movie2.hashCode());
     }
+
+    @Test
+    public void shouldHaveDifferentHashCodeForDifferentMovieName() {
+        Movie movie1 = new Movie("Abc", 1900,"Def", 1);
+        Movie movie2 = new Movie("Abwdf", 1902,"Deef", 10);
+
+        assertNotEquals(movie1.hashCode(), movie2.hashCode());
+    }
 }
