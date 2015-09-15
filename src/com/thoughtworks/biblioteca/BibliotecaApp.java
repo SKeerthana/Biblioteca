@@ -14,6 +14,7 @@ public class BibliotecaApp {
         listOfMenuOptions.add("3. Checkout books");
         listOfMenuOptions.add("4. Return books");
         listOfMenuOptions.add("5. List all the movies");
+        listOfMenuOptions.add("6. Checkout movies");
 
         Menu menu = new Menu(listOfMenuOptions);
         Display display = new Display(System.out, System.in);
