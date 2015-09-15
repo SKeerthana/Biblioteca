@@ -31,4 +31,10 @@ public class UserInfoTest {
         UserInfo userInfo2 = new UserInfo("ABC23", "abd", "gsdjsjahjk");
         assertNotEquals(userInfo1, userInfo2);
     }
+
+    @Test
+    public void shouldCompareWithItself() {
+        UserInfo userInfo1 = new UserInfo("ABC", "ABC", "abc@gmail.com");
+        assertEquals(userInfo1, userInfo1);
+    }
 }

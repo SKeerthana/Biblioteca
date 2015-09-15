@@ -13,6 +13,8 @@ public class UserInfo {
 
     @Override
     public boolean equals(Object that){
+        if(that == this)
+            return true;
         if (that == null || that.getClass() != getClass())
             return false;
         UserInfo thatUserInfo = (UserInfo) that;
