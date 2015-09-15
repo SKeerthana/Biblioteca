@@ -3,14 +3,14 @@ package com.thoughtworks.biblioteca;
 //generates a message for invalid menu option
 public class InvalidMenuOption implements MenuOption {
 
-    private Display display;
+    private ConsoleDisplay consoleDisplay;
 
-    public InvalidMenuOption(Display display) {
-        this.display = display;
+    public InvalidMenuOption(ConsoleDisplay consoleDisplay) {
+        this.consoleDisplay = consoleDisplay;
     }
 
     @Override
     public void performOperation() {
-        display.printMessage("Select a valid option!\n");
+        consoleDisplay.printMessage("Select a valid option!\n");
     }
 }

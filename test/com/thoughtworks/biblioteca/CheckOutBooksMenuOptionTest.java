@@ -27,10 +27,10 @@ public class CheckOutBooksMenuOptionTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        Display display = new Display(printStream, inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         Book bookToSearch = new Book(input, null, 0);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, display);
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay);
 
         checkOutBooksMenuOption.performOperation();
 
@@ -44,9 +44,9 @@ public class CheckOutBooksMenuOptionTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        Display display = new Display(printStream, inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, display);
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay);
         List<LibraryItem> availableBooks= bibilioteca.getAvailableItems();
 
         checkOutBooksMenuOption.performOperation();
@@ -61,9 +61,9 @@ public class CheckOutBooksMenuOptionTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        Display display = new Display(printStream, inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, display);
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay);
 
         checkOutBooksMenuOption.performOperation();
 
@@ -77,9 +77,9 @@ public class CheckOutBooksMenuOptionTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        Display display = new Display(printStream, inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, display);
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay);
 
         checkOutBooksMenuOption.performOperation();
 

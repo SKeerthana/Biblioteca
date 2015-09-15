@@ -27,10 +27,10 @@ public class CheckOutMoviesMenuOptionTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        Display display = new Display(printStream, inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         Movie movie = new Movie("Vishvaroopam", 0, null, 0);
         System.setIn(inContent);
-        CheckOutMoviesMenuOption checkOutMoviesMenuOption = new CheckOutMoviesMenuOption(movieLibraryData, display);
+        CheckOutMoviesMenuOption checkOutMoviesMenuOption = new CheckOutMoviesMenuOption(movieLibraryData, consoleDisplay);
 
         checkOutMoviesMenuOption.performOperation();
 
@@ -44,9 +44,9 @@ public class CheckOutMoviesMenuOptionTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        Display display = new Display(printStream, inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        CheckOutMoviesMenuOption checkOutMoviesMenuOption = new CheckOutMoviesMenuOption(movieLibraryData, display);
+        CheckOutMoviesMenuOption checkOutMoviesMenuOption = new CheckOutMoviesMenuOption(movieLibraryData, consoleDisplay);
         List<LibraryItem> availableItems = movieLibraryData.getAvailableItems();
 
         checkOutMoviesMenuOption.performOperation();

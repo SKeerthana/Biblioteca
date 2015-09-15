@@ -35,16 +35,16 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldDisplayListOfBooksOptionsAfterDisplayingWelcomeMessage() {
-        Display display1 = mock(Display.class);
-        when(display1.getInputFromUser()).thenReturn("1", "2");
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(menu, display1);
+        ConsoleDisplay consoleDisplay1 = mock(ConsoleDisplay.class);
+        when(consoleDisplay1.getInputFromUser()).thenReturn("1", "2");
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(menu, consoleDisplay1);
         MenuOptionController menuOptionController = mock(MenuOptionController.class);
 
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        Display display = new Display(printStream, System.in);
-        ListLibraryItemMenuOption listLibraryItemMenuOption = new ListLibraryItemMenuOption(bookView, display);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
+        ListLibraryItemMenuOption listLibraryItemMenuOption = new ListLibraryItemMenuOption(bookView, consoleDisplay);
         when(menuOptionController.getMenuOption("1")).thenReturn(listLibraryItemMenuOption);
         exit.expectSystemExit();
 
@@ -54,9 +54,9 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldDisplaySuccessMessageWhenCheckOutIsSuccessful() {
-        Display display1 = mock(Display.class);
-        when(display1.getInputFromUser()).thenReturn("3", "2");
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(menu, display1);
+        ConsoleDisplay consoleDisplay1 = mock(ConsoleDisplay.class);
+        when(consoleDisplay1.getInputFromUser()).thenReturn("3", "2");
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(menu, consoleDisplay1);
         MenuOptionController menuOptionController = mock(MenuOptionController.class);
 
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -64,8 +64,8 @@ public class BibliotecaAppTest {
         System.setOut(printStream);
         ByteArrayInputStream inContent = new ByteArrayInputStream("Harry Potter and the Chamber of Secrets".getBytes());
         System.setIn(inContent);
-        Display display = new Display(printStream, inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, display);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay);
         when(menuOptionController.getMenuOption("3")).thenReturn(checkOutBooksMenuOption);
         exit.expectSystemExit();
 

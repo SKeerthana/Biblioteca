@@ -28,10 +28,10 @@ public class ReturnBookOptionTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        Display display = new Display(printStream, inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
 
-        ReturnBookOption returnBookOption = new ReturnBookOption(bibilioteca, display);
+        ReturnBookOption returnBookOption = new ReturnBookOption(bibilioteca, consoleDisplay);
         returnBookOption.performOperation();
 
         assertEquals("Thank you for returning the book.\n", outContent.toString());
@@ -44,10 +44,10 @@ public class ReturnBookOptionTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        Display display = new Display(printStream, inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
 
-        ReturnBookOption returnBookOption = new ReturnBookOption(bibilioteca, display);
+        ReturnBookOption returnBookOption = new ReturnBookOption(bibilioteca, consoleDisplay);
         returnBookOption.performOperation();
 
         assertEquals("That is not a valid book to return.\n", outContent.toString());

@@ -3,22 +3,22 @@ package com.thoughtworks.biblioteca;
 //Get bookname from user and does checkout operation
 public class CheckOutBooksMenuOption implements MenuOption{
     private Biblioteca libraryBookData;
-    private Display display;
+    private ConsoleDisplay consoleDisplay;
 
-    public CheckOutBooksMenuOption(Biblioteca libraryBookData, Display display) {
+    public CheckOutBooksMenuOption(Biblioteca libraryBookData, ConsoleDisplay consoleDisplay) {
         this.libraryBookData = libraryBookData;
-        this.display = display;
+        this.consoleDisplay = consoleDisplay;
     }
     @Override
     public void performOperation() {
-        String bookName = display.getInputFromUser();
+        String bookName = consoleDisplay.getInputFromUser();
         Book bookToBeSearched = new Book(bookName, null, 0);
         if(libraryBookData.containsLibraryItemInAvailableList(bookToBeSearched)) {
             libraryBookData.checkOutLibraryItem(bookToBeSearched);
-            display.printMessage("Thank you! Enjoy the book\n");
+            consoleDisplay.printMessage("Thank you! Enjoy the book\n");
         }
         else {
-            display.printMessage("That book is not available\n");
+            consoleDisplay.printMessage("That book is not available\n");
         }
     }
 }

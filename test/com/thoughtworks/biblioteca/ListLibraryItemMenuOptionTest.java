@@ -18,12 +18,12 @@ public class ListLibraryItemMenuOptionTest {
 
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     PrintStream printStream = new PrintStream(outContent);
-    Display display = new Display(printStream, System.in);
+    ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
     BookView bookView = new BookView(bibilioteca);
 
     @Test
     public void shouldDisplayListOfBooks() {
-        ListLibraryItemMenuOption listLibraryItemMenuOption = new ListLibraryItemMenuOption(bookView, display);
+        ListLibraryItemMenuOption listLibraryItemMenuOption = new ListLibraryItemMenuOption(bookView, consoleDisplay);
 
         listLibraryItemMenuOption.performOperation();
         String header = "=====================================================================================\n";

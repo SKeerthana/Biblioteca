@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 //displays the welcome message and menu options
 public class BibliotecaApp {
-    private Display display;
+    private ConsoleDisplay consoleDisplay;
     private Menu menu;
 
     public static void main(String[] args) {
@@ -17,15 +17,15 @@ public class BibliotecaApp {
         listOfMenuOptions.add("6. Checkout movies");
 
         Menu menu = new Menu(listOfMenuOptions);
-        Display display = new Display(System.out, System.in);
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(menu, display);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(System.out, System.in);
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(menu, consoleDisplay);
 
         bibliotecaApp.start();
     }
 
-    public BibliotecaApp(Menu menu, Display display) {
+    public BibliotecaApp(Menu menu, ConsoleDisplay consoleDisplay) {
         this.menu = menu;
-        this.display = display;
+        this.consoleDisplay = consoleDisplay;
     }
 
     public void start() {
@@ -33,13 +33,13 @@ public class BibliotecaApp {
         ArrayList<LibraryItem> listOfMoviesAvailable = generateListOfMovies();
         Biblioteca bookLibraryData = new Biblioteca(listOfAvailableBooks, new ArrayList<LibraryItem>());
         Biblioteca movieLibraryData = new Biblioteca(listOfMoviesAvailable, new ArrayList<LibraryItem>());
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, display);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay);
 
-        display.printMessage("Welcome to Bibliotica\n");
+        consoleDisplay.printMessage("Welcome to Bibliotica\n");
 
         while (true) {
             menuOptionController.displayMenuOption();
-            String option = display.getInputFromUser();
+            String option = consoleDisplay.getInputFromUser();
             menuOptionController.handleMenuOption(option);
         }
     }

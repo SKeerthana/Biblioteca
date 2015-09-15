@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.8152610441767069" branch-rate="0.8103448275862069" lines-covered="203" lines-valid="249" branches-covered="47" branches-valid="58" complexity="1.55" version="2.1.1" timestamp="1442286122228">
+<coverage line-rate="0.9398148148148148" branch-rate="0.8703703703703703" lines-covered="203" lines-valid="216" branches-covered="47" branches-valid="54" complexity="1.55" version="2.1.1" timestamp="1442291139593">
 	<sources>
 		<source>src</source>
 	</sources>
 	<packages>
-		<package name="com.thoughtworks.biblioteca" line-rate="0.8152610441767069" branch-rate="0.8103448275862069" complexity="1.55">
+		<package name="com.thoughtworks.biblioteca" line-rate="0.9398148148148148" branch-rate="0.8703703703703703" complexity="1.55">
 			<classes>
 				<class name="com.thoughtworks.biblioteca.Biblioteca" filename="com/thoughtworks/biblioteca/Biblioteca.java" line-rate="1.0" branch-rate="1.0" complexity="1.6666666666666667">
 					<methods>
@@ -92,34 +92,34 @@
 						<line number="42" hits="12" branch="false"/>
 					</lines>
 				</class>
-				<class name="com.thoughtworks.biblioteca.BibliotecaApp" filename="com/thoughtworks/biblioteca/BibliotecaApp.java" line-rate="0.7027027027027027" branch-rate="1.0" complexity="1.2">
+				<class name="com.thoughtworks.biblioteca.BibliotecaApp" filename="com/thoughtworks/biblioteca/BibliotecaApp.java" line-rate="0.6842105263157895" branch-rate="1.0" complexity="1.2">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Menu;Lcom/thoughtworks/biblioteca/Display;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Menu;Lcom/thoughtworks/biblioteca/ConsoleDisplay;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="25" hits="2" branch="false"/>
 								<line number="26" hits="2" branch="false"/>
 								<line number="27" hits="2" branch="false"/>
 								<line number="28" hits="2" branch="false"/>
+								<line number="29" hits="2" branch="false"/>
 							</lines>
 						</method>
 						<method name="generateListOfBooks" signature="()Ljava/util/ArrayList;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="56" hits="2" branch="false"/>
 								<line number="57" hits="2" branch="false"/>
 								<line number="58" hits="2" branch="false"/>
 								<line number="59" hits="2" branch="false"/>
 								<line number="60" hits="2" branch="false"/>
 								<line number="61" hits="2" branch="false"/>
+								<line number="62" hits="2" branch="false"/>
 							</lines>
 						</method>
 						<method name="generateListOfMovies" signature="()Ljava/util/ArrayList;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="47" hits="2" branch="false"/>
 								<line number="48" hits="2" branch="false"/>
 								<line number="49" hits="2" branch="false"/>
 								<line number="50" hits="2" branch="false"/>
 								<line number="51" hits="2" branch="false"/>
 								<line number="52" hits="2" branch="false"/>
+								<line number="53" hits="2" branch="false"/>
 							</lines>
 						</method>
 						<method name="main" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -130,25 +130,26 @@
 								<line number="14" hits="0" branch="false"/>
 								<line number="15" hits="0" branch="false"/>
 								<line number="16" hits="0" branch="false"/>
-								<line number="18" hits="0" branch="false"/>
+								<line number="17" hits="0" branch="false"/>
 								<line number="19" hits="0" branch="false"/>
 								<line number="20" hits="0" branch="false"/>
-								<line number="22" hits="0" branch="false"/>
+								<line number="21" hits="0" branch="false"/>
 								<line number="23" hits="0" branch="false"/>
+								<line number="24" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="start" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="31" hits="2" branch="false"/>
 								<line number="32" hits="2" branch="false"/>
 								<line number="33" hits="2" branch="false"/>
 								<line number="34" hits="2" branch="false"/>
 								<line number="35" hits="2" branch="false"/>
-								<line number="37" hits="2" branch="false"/>
-								<line number="40" hits="4" branch="false"/>
+								<line number="36" hits="2" branch="false"/>
+								<line number="38" hits="2" branch="false"/>
 								<line number="41" hits="4" branch="false"/>
 								<line number="42" hits="4" branch="false"/>
-								<line number="43" hits="2" branch="false"/>
+								<line number="43" hits="4" branch="false"/>
+								<line number="44" hits="2" branch="false"/>
 							</lines>
 						</method>
 					</methods>
@@ -159,101 +160,38 @@
 						<line number="14" hits="0" branch="false"/>
 						<line number="15" hits="0" branch="false"/>
 						<line number="16" hits="0" branch="false"/>
-						<line number="18" hits="0" branch="false"/>
+						<line number="17" hits="0" branch="false"/>
 						<line number="19" hits="0" branch="false"/>
 						<line number="20" hits="0" branch="false"/>
-						<line number="22" hits="0" branch="false"/>
+						<line number="21" hits="0" branch="false"/>
 						<line number="23" hits="0" branch="false"/>
-						<line number="25" hits="2" branch="false"/>
+						<line number="24" hits="0" branch="false"/>
 						<line number="26" hits="2" branch="false"/>
 						<line number="27" hits="2" branch="false"/>
 						<line number="28" hits="2" branch="false"/>
-						<line number="31" hits="2" branch="false"/>
+						<line number="29" hits="2" branch="false"/>
 						<line number="32" hits="2" branch="false"/>
 						<line number="33" hits="2" branch="false"/>
 						<line number="34" hits="2" branch="false"/>
 						<line number="35" hits="2" branch="false"/>
-						<line number="37" hits="2" branch="false"/>
-						<line number="40" hits="4" branch="false"/>
+						<line number="36" hits="2" branch="false"/>
+						<line number="38" hits="2" branch="false"/>
 						<line number="41" hits="4" branch="false"/>
 						<line number="42" hits="4" branch="false"/>
-						<line number="43" hits="2" branch="false"/>
-						<line number="47" hits="2" branch="false"/>
+						<line number="43" hits="4" branch="false"/>
+						<line number="44" hits="2" branch="false"/>
 						<line number="48" hits="2" branch="false"/>
 						<line number="49" hits="2" branch="false"/>
 						<line number="50" hits="2" branch="false"/>
 						<line number="51" hits="2" branch="false"/>
 						<line number="52" hits="2" branch="false"/>
-						<line number="56" hits="2" branch="false"/>
+						<line number="53" hits="2" branch="false"/>
 						<line number="57" hits="2" branch="false"/>
 						<line number="58" hits="2" branch="false"/>
 						<line number="59" hits="2" branch="false"/>
 						<line number="60" hits="2" branch="false"/>
 						<line number="61" hits="2" branch="false"/>
-					</lines>
-				</class>
-				<class name="com.thoughtworks.biblioteca.BibliotecaView" filename="com/thoughtworks/biblioteca/BibliotecaView.java" line-rate="0.0" branch-rate="0.0" complexity="0.0">
-					<methods>
-						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Biblioteca;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="8" hits="0" branch="false"/>
-								<line number="9" hits="0" branch="false"/>
-								<line number="10" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="getBookDetails" signature="(Ljava/util/List;)Ljava/lang/String;" line-rate="0.0" branch-rate="0.0" complexity="0">
-							<lines>
-								<line number="23" hits="0" branch="false"/>
-								<line number="24" hits="0" branch="true" condition-coverage="0% (0/2)">
-									<conditions>
-										<condition number="0" type="jump" coverage="0%"/>
-									</conditions>
-								</line>
-								<line number="25" hits="0" branch="false"/>
-								<line number="26" hits="0" branch="false"/>
-								<line number="27" hits="0" branch="false"/>
-								<line number="28" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="getBookDetailsHeader" signature="(Lcom/thoughtworks/biblioteca/LibraryItem;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="32" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="getFormattedListOfBooks" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="13" hits="0" branch="false"/>
-								<line number="14" hits="0" branch="false"/>
-								<line number="15" hits="0" branch="false"/>
-								<line number="16" hits="0" branch="false"/>
-								<line number="17" hits="0" branch="false"/>
-								<line number="18" hits="0" branch="false"/>
-								<line number="19" hits="0" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="8" hits="0" branch="false"/>
-						<line number="9" hits="0" branch="false"/>
-						<line number="10" hits="0" branch="false"/>
-						<line number="13" hits="0" branch="false"/>
-						<line number="14" hits="0" branch="false"/>
-						<line number="15" hits="0" branch="false"/>
-						<line number="16" hits="0" branch="false"/>
-						<line number="17" hits="0" branch="false"/>
-						<line number="18" hits="0" branch="false"/>
-						<line number="19" hits="0" branch="false"/>
-						<line number="23" hits="0" branch="false"/>
-						<line number="24" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
-						<line number="25" hits="0" branch="false"/>
-						<line number="26" hits="0" branch="false"/>
-						<line number="27" hits="0" branch="false"/>
-						<line number="28" hits="0" branch="false"/>
-						<line number="32" hits="0" branch="false"/>
+						<line number="62" hits="2" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.thoughtworks.biblioteca.Book" filename="com/thoughtworks/biblioteca/Book.java" line-rate="1.0" branch-rate="1.0" complexity="1.7142857142857142">
@@ -414,7 +352,7 @@
 				</class>
 				<class name="com.thoughtworks.biblioteca.CheckOutBooksMenuOption" filename="com/thoughtworks/biblioteca/CheckOutBooksMenuOption.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Biblioteca;Lcom/thoughtworks/biblioteca/Display;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Biblioteca;Lcom/thoughtworks/biblioteca/ConsoleDisplay;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="8" hits="7" branch="false"/>
 								<line number="9" hits="7" branch="false"/>
@@ -458,7 +396,7 @@
 				</class>
 				<class name="com.thoughtworks.biblioteca.CheckOutMoviesMenuOption" filename="com/thoughtworks/biblioteca/CheckOutMoviesMenuOption.java" line-rate="1.0" branch-rate="0.5" complexity="1.5">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Biblioteca;Lcom/thoughtworks/biblioteca/Display;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Biblioteca;Lcom/thoughtworks/biblioteca/ConsoleDisplay;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="7" hits="3" branch="false"/>
 								<line number="8" hits="3" branch="false"/>
@@ -496,51 +434,7 @@
 						<line number="19" hits="3" branch="false"/>
 					</lines>
 				</class>
-				<class name="com.thoughtworks.biblioteca.CheckoutMenuOption" filename="com/thoughtworks/biblioteca/CheckoutMenuOption.java" line-rate="0.0" branch-rate="0.0" complexity="0.0">
-					<methods>
-						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Biblioteca;Lcom/thoughtworks/biblioteca/Display;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="8" hits="0" branch="false"/>
-								<line number="9" hits="0" branch="false"/>
-								<line number="10" hits="0" branch="false"/>
-								<line number="11" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="performOperation" signature="()V" line-rate="0.0" branch-rate="0.0" complexity="0">
-							<lines>
-								<line number="14" hits="0" branch="false"/>
-								<line number="15" hits="0" branch="false"/>
-								<line number="16" hits="0" branch="true" condition-coverage="0% (0/2)">
-									<conditions>
-										<condition number="0" type="jump" coverage="0%"/>
-									</conditions>
-								</line>
-								<line number="17" hits="0" branch="false"/>
-								<line number="18" hits="0" branch="false"/>
-								<line number="21" hits="0" branch="false"/>
-								<line number="23" hits="0" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="8" hits="0" branch="false"/>
-						<line number="9" hits="0" branch="false"/>
-						<line number="10" hits="0" branch="false"/>
-						<line number="11" hits="0" branch="false"/>
-						<line number="14" hits="0" branch="false"/>
-						<line number="15" hits="0" branch="false"/>
-						<line number="16" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
-						<line number="17" hits="0" branch="false"/>
-						<line number="18" hits="0" branch="false"/>
-						<line number="21" hits="0" branch="false"/>
-						<line number="23" hits="0" branch="false"/>
-					</lines>
-				</class>
-				<class name="com.thoughtworks.biblioteca.Display" filename="com/thoughtworks/biblioteca/Display.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="com.thoughtworks.biblioteca.ConsoleDisplay" filename="com/thoughtworks/biblioteca/ConsoleDisplay.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/io/PrintStream;Ljava/io/InputStream;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -576,7 +470,7 @@
 				</class>
 				<class name="com.thoughtworks.biblioteca.InvalidMenuOption" filename="com/thoughtworks/biblioteca/InvalidMenuOption.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Display;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/ConsoleDisplay;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="8" hits="2" branch="false"/>
 								<line number="9" hits="2" branch="false"/>
@@ -610,35 +504,9 @@
 					<lines>
 					</lines>
 				</class>
-				<class name="com.thoughtworks.biblioteca.ListBooksMenuOption" filename="com/thoughtworks/biblioteca/ListBooksMenuOption.java" line-rate="0.0" branch-rate="1.0" complexity="0.0">
-					<methods>
-						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/LibraryView;Lcom/thoughtworks/biblioteca/Display;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="8" hits="0" branch="false"/>
-								<line number="9" hits="0" branch="false"/>
-								<line number="10" hits="0" branch="false"/>
-								<line number="11" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="performOperation" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="15" hits="0" branch="false"/>
-								<line number="16" hits="0" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="8" hits="0" branch="false"/>
-						<line number="9" hits="0" branch="false"/>
-						<line number="10" hits="0" branch="false"/>
-						<line number="11" hits="0" branch="false"/>
-						<line number="15" hits="0" branch="false"/>
-						<line number="16" hits="0" branch="false"/>
-					</lines>
-				</class>
 				<class name="com.thoughtworks.biblioteca.ListLibraryItemMenuOption" filename="com/thoughtworks/biblioteca/ListLibraryItemMenuOption.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/LibraryView;Lcom/thoughtworks/biblioteca/Display;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/LibraryView;Lcom/thoughtworks/biblioteca/ConsoleDisplay;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="8" hits="5" branch="false"/>
 								<line number="9" hits="5" branch="false"/>
@@ -716,7 +584,7 @@
 				</class>
 				<class name="com.thoughtworks.biblioteca.MenuOptionController" filename="com/thoughtworks/biblioteca/MenuOptionController.java" line-rate="1.0" branch-rate="0.7692307692307693" complexity="4.0">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Menu;Lcom/thoughtworks/biblioteca/Biblioteca;Lcom/thoughtworks/biblioteca/Biblioteca;Lcom/thoughtworks/biblioteca/Display;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Menu;Lcom/thoughtworks/biblioteca/Biblioteca;Lcom/thoughtworks/biblioteca/Biblioteca;Lcom/thoughtworks/biblioteca/ConsoleDisplay;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="10" hits="9" branch="false"/>
 								<line number="11" hits="9" branch="false"/>
@@ -984,7 +852,7 @@
 				</class>
 				<class name="com.thoughtworks.biblioteca.ReturnBookOption" filename="com/thoughtworks/biblioteca/ReturnBookOption.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Biblioteca;Lcom/thoughtworks/biblioteca/Display;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Biblioteca;Lcom/thoughtworks/biblioteca/ConsoleDisplay;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="8" hits="3" branch="false"/>
 								<line number="9" hits="3" branch="false"/>

@@ -13,7 +13,7 @@ import static org.junit.Assert.assertFalse;
 public class MenuOptionControllerTest {
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     PrintStream printStream = new PrintStream(outContent);
-    Display display = new Display(printStream, System.in);
+    ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
     Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
     Book book2 = new Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998);
     ArrayList<LibraryItem> listOfBooks = new ArrayList<LibraryItem>() {{
@@ -42,7 +42,7 @@ public class MenuOptionControllerTest {
     @Test
     public void shouldDisplayMenuOptions() {
         System.setOut(printStream);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, display);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay);
         menuOptionController.displayMenuOption();
         String menuOptions = "Choose one of the menu option :\n";
         menuOptions += "1. List all the books\n";
@@ -57,8 +57,8 @@ public class MenuOptionControllerTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        Display display = new Display(printStream, System.in);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, display);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay);
 
         menuOptionController.handleMenuOption("1");
 
@@ -67,7 +67,7 @@ public class MenuOptionControllerTest {
 
     @Test
     public void shouldHandleInvalidMenuOption() {
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, display);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay);
         menuOptionController.handleMenuOption("2382");
         assertEquals("Select a valid option!\n", outContent.toString());
     }
@@ -79,9 +79,9 @@ public class MenuOptionControllerTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        Display display = new Display(printStream, inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, display);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay);
 
         menuOptionController.handleMenuOption("3");
 
@@ -95,9 +95,9 @@ public class MenuOptionControllerTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        Display display = new Display(printStream, inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, display);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay);
         menuOptionController.handleMenuOption("4");
         assertEquals("That is not a valid book to return.\n", outContent.toString());
         }
@@ -107,8 +107,8 @@ public class MenuOptionControllerTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        Display display = new Display(printStream, System.in);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, display);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay);
 
         menuOptionController.handleMenuOption("5");
 
@@ -119,9 +119,9 @@ public class MenuOptionControllerTest {
     public void shouldCallCheckOutMovieForOption6() {
         String input = "Vishvaroopam";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        Display display = new Display(System.out, inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(System.out, inContent);
         System.setIn(inContent);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, display);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay);
         Movie movieCheckedOut = new Movie("Vishvaroopam", 0, null, 0);
         menuOptionController.handleMenuOption("6");
 

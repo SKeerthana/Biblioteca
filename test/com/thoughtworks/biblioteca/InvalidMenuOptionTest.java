@@ -13,8 +13,8 @@ public class InvalidMenuOptionTest {
     public void shouldDisplayInvalidMenuMessage() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
-        Display display = new Display(printStream, System.in);
-        InvalidMenuOption invalidMenuOption = new InvalidMenuOption(display);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
+        InvalidMenuOption invalidMenuOption = new InvalidMenuOption(consoleDisplay);
         invalidMenuOption.performOperation();
         assertEquals("Select a valid option!\n",outContent.toString());
     }

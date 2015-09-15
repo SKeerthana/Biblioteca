@@ -5,17 +5,17 @@ public class MenuOptionController {
     private Menu menu;
     private Biblioteca bookLibraryData;
     private Biblioteca movieLibraryData;
-    private Display display;
+    private ConsoleDisplay consoleDisplay;
 
-    public MenuOptionController(Menu menu, Biblioteca bookLibraryData, Biblioteca movieLibraryData, Display display) {
+    public MenuOptionController(Menu menu, Biblioteca bookLibraryData, Biblioteca movieLibraryData, ConsoleDisplay consoleDisplay) {
         this.menu = menu;
         this.bookLibraryData = bookLibraryData;
         this.movieLibraryData = movieLibraryData;
-        this.display = display;
+        this.consoleDisplay = consoleDisplay;
     }
 
     public void displayMenuOption() {
-        display.printMessage(menu.getMenuOptions());
+        consoleDisplay.printMessage(menu.getMenuOptions());
     }
 
     public void handleMenuOption(String option) {
@@ -26,19 +26,19 @@ public class MenuOptionController {
     public MenuOption getMenuOption(String option) {
         switch (option) {
             case "1":
-                return new ListLibraryItemMenuOption(new BookView(bookLibraryData), display);
+                return new ListLibraryItemMenuOption(new BookView(bookLibraryData), consoleDisplay);
             case "2":
                 return new QuitMenuOption();
             case "3":
-                return new CheckOutBooksMenuOption(bookLibraryData, display);
+                return new CheckOutBooksMenuOption(bookLibraryData, consoleDisplay);
             case "4":
-                return new ReturnBookOption(bookLibraryData, display);
+                return new ReturnBookOption(bookLibraryData, consoleDisplay);
             case "5":
-                return new ListLibraryItemMenuOption(new MovieView(movieLibraryData), display);
+                return new ListLibraryItemMenuOption(new MovieView(movieLibraryData), consoleDisplay);
             case "6":
-                return new CheckOutMoviesMenuOption(movieLibraryData, display);
+                return new CheckOutMoviesMenuOption(movieLibraryData, consoleDisplay);
             default:
-                return new InvalidMenuOption(display);
+                return new InvalidMenuOption(consoleDisplay);
         }
     }
 }
