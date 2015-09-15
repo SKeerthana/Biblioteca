@@ -6,12 +6,14 @@ public class MenuOptionController {
     private Biblioteca bookLibraryData;
     private Biblioteca movieLibraryData;
     private ConsoleDisplay consoleDisplay;
+    private UserManager userManager;
 
-    public MenuOptionController(Menu menu, Biblioteca bookLibraryData, Biblioteca movieLibraryData, ConsoleDisplay consoleDisplay) {
+    public MenuOptionController(Menu menu, Biblioteca bookLibraryData, Biblioteca movieLibraryData, ConsoleDisplay consoleDisplay, UserManager userManager) {
         this.menu = menu;
         this.bookLibraryData = bookLibraryData;
         this.movieLibraryData = movieLibraryData;
         this.consoleDisplay = consoleDisplay;
+        this.userManager = userManager;
     }
 
     public void displayMenuOption() {
@@ -37,6 +39,8 @@ public class MenuOptionController {
                 return new ListLibraryItemMenuOption(new MovieView(movieLibraryData), consoleDisplay);
             case "6":
                 return new CheckOutMoviesMenuOption(movieLibraryData, consoleDisplay);
+            case "7":
+                return new LoginMenuOption(consoleDisplay, userManager);
             default:
                 return new InvalidMenuOption(consoleDisplay);
         }

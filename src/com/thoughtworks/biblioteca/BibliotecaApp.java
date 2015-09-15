@@ -1,6 +1,7 @@
 package com.thoughtworks.biblioteca;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 //displays the welcome message and menu options
 public class BibliotecaApp {
@@ -31,9 +32,11 @@ public class BibliotecaApp {
     public void start() {
         ArrayList<LibraryItem> listOfAvailableBooks = generateListOfBooks();
         ArrayList<LibraryItem> listOfMoviesAvailable = generateListOfMovies();
+        HashMap<String, UserInfo> listOfUsers = generateListOfValidUsers();
         Biblioteca bookLibraryData = new Biblioteca(listOfAvailableBooks, new ArrayList<LibraryItem>());
         Biblioteca movieLibraryData = new Biblioteca(listOfMoviesAvailable, new ArrayList<LibraryItem>());
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay);
+        UserManager userManager = new UserManager(listOfUsers);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userManager);
 
         consoleDisplay.printMessage("Welcome to Bibliotica\n");
 
@@ -42,6 +45,10 @@ public class BibliotecaApp {
             String option = consoleDisplay.getInputFromUser();
             menuOptionController.handleMenuOption(option);
         }
+    }
+
+    private HashMap<String, UserInfo> generateListOfValidUsers() {
+        return null;
     }
 
     private ArrayList<LibraryItem> generateListOfMovies() {
