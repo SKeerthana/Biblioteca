@@ -13,8 +13,9 @@ public class UserInfo {
 
     @Override
     public boolean equals(Object that){
-        if (that != null)
+        if (that == null || that.getClass() != getClass())
             return false;
-        return true;
+        UserInfo thatUserInfo = (UserInfo) that;
+        return (thatUserInfo.userName.equals(userName));
     }
 }
