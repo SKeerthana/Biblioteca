@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
-public class ListBooksMenuOptionTest {
+public class ListLibraryItemMenuOptionTest {
 
     Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
     ArrayList<LibraryItem> listOfBooks = new ArrayList<LibraryItem>() {{
@@ -23,9 +23,9 @@ public class ListBooksMenuOptionTest {
 
     @Test
     public void shouldDisplayListOfBooks() {
-        ListBooksMenuOption listBooksMenuOption = new ListBooksMenuOption(bookView, display);
+        ListLibraryItemMenuOption listLibraryItemMenuOption = new ListLibraryItemMenuOption(bookView, display);
 
-        listBooksMenuOption.performOperation();
+        listLibraryItemMenuOption.performOperation();
         String header = "=====================================================================================\n";
         header += String.format("%-50s %-25s %-15s\n", "BOOK NAME", "AUTHOR", "YEAR");
         header += "=====================================================================================\n";

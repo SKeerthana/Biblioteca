@@ -30,9 +30,9 @@ public class MenuTest {
 
     @Test
     public void shouldHandleListOfBooksOption() {
-        ListBooksMenuOption listBooksMenuOption = mock(ListBooksMenuOption.class);
+        ListLibraryItemMenuOption listLibraryItemMenuOption = mock(ListLibraryItemMenuOption.class);
         Menu menu = new Menu(listOfMenuOptions);
-        menu.handleSelectedMenuOption(listBooksMenuOption);
-        verify(listBooksMenuOption).performOperation();
+        menu.handleSelectedMenuOption(listLibraryItemMenuOption);
+        verify(listLibraryItemMenuOption).performOperation();
     }
 }

@@ -8,7 +8,10 @@ import static org.junit.Assert.assertEquals;
 
 public class MovieViewTest {
     private Movie movie = new Movie("Vishvaroopam", 2013, "Kamalhasan", 10);
-    private ArrayList<LibraryItem> availableMovieList = new ArrayList<LibraryItem>(){{add(movie);}};
+    private ArrayList<LibraryItem> availableMovieList = new ArrayList<LibraryItem>() {{
+        add(movie);
+    }};
+
     @Test
     public void shouldFormattedListOfMovies() {
         Biblioteca movieLibraryData = new Biblioteca(availableMovieList, new ArrayList<LibraryItem>());

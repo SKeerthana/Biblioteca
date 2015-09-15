@@ -44,8 +44,8 @@ public class BibliotecaAppTest {
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
         Display display = new Display(printStream, System.in);
-        ListBooksMenuOption listBooksMenuOption = new ListBooksMenuOption(bookView, display);
-        when(menuOptionController.getMenuOption("1")).thenReturn(listBooksMenuOption);
+        ListLibraryItemMenuOption listLibraryItemMenuOption = new ListLibraryItemMenuOption(bookView, display);
+        when(menuOptionController.getMenuOption("1")).thenReturn(listLibraryItemMenuOption);
         exit.expectSystemExit();
 
         bibliotecaApp.start();

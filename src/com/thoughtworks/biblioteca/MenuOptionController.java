@@ -26,7 +26,7 @@ public class MenuOptionController {
     public MenuOption getMenuOption(String option) {
         switch (option) {
             case "1":
-                return new ListBooksMenuOption(new BookView(bookLibraryData), display);
+                return new ListLibraryItemMenuOption(new BookView(bookLibraryData), display);
             case "2":
                 return new QuitMenuOption();
             case "3":
@@ -34,7 +34,7 @@ public class MenuOptionController {
             case "4":
                 return new ReturnBookOption(bookLibraryData, display);
             case "5":
-                return new ListBooksMenuOption(new MovieView(movieLibraryData), display);
+                return new ListLibraryItemMenuOption(new MovieView(movieLibraryData), display);
             default:
                 return new InvalidMenuOption(display);
         }

@@ -79,20 +79,4 @@ public class MenuOptionControllerTest {
 
         assertEquals("That book is not available\n", outContent.toString());
     }
-
-    @Test
-    public void shouldCallReturnBookForOption4() {
-        String input = "Harry Potter";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        PrintStream printStream = new PrintStream(outContent);
-        System.setOut(printStream);
-        Display display = new Display(printStream, inContent);
-        System.setIn(inContent);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, display);
-
-        menuOptionController.handleMenuOption("4");
-
-        assertEquals("That is not a valid book to return.\n", outContent.toString());
-    }
 }

@@ -514,7 +514,7 @@
 					<lines>
 					</lines>
 				</class>
-				<class name="com.thoughtworks.biblioteca.ListBooksMenuOption" filename="com/thoughtworks/biblioteca/ListBooksMenuOption.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="com.thoughtworks.biblioteca.ListLibraryItemMenuOption" filename="com/thoughtworks/biblioteca/ListBooksMenuOption.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/BibliotecaView;Lcom/thoughtworks/biblioteca/Display;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
