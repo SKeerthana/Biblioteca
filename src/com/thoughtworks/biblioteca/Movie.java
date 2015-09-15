@@ -2,14 +2,14 @@ package com.thoughtworks.biblioteca;
 
 public class Movie implements LibraryItem{
     private String movieName;
-    private int yearPublished;
+    private int yearReleased;
     private String director;
     private int ratings;
 
     public Movie(String movieName, int yearPublished, String director, int ratings) {
         this.ratings = ratings;
         this.movieName = movieName;
-        this.yearPublished = yearPublished;
+        this.yearReleased = yearPublished;
         this.director = director;
     }
 
@@ -17,8 +17,8 @@ public class Movie implements LibraryItem{
     public String[] getHeaderDetails() {
         String[] movieHeaderInfo = new String[4];
         movieHeaderInfo[0] = "MOVIE NAME";
-        movieHeaderInfo[1] = "YEAR";
-        movieHeaderInfo[2] = "DIRECTOR";
+        movieHeaderInfo[1] = "DIRECTOR";
+        movieHeaderInfo[2] = "YEAR";
         movieHeaderInfo[3] = "RATINGS";
         return movieHeaderInfo;
     }
@@ -36,5 +36,21 @@ public class Movie implements LibraryItem{
     @Override
     public int hashCode() {
         return movieName.hashCode();
+    }
+
+    public String getMovieName() {
+        return movieName;
+    }
+
+    public int getYearReleased() {
+        return yearReleased;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public int getRatings() {
+        return ratings;
     }
 }

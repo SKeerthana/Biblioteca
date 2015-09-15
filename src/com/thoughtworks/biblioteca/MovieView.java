@@ -1,6 +1,8 @@
 package com.thoughtworks.biblioteca;
 
-public class MovieView implements LibraryView{
+import java.util.List;
+
+public class MovieView implements LibraryView {
     private Biblioteca movieDataLibrary;
 
     public MovieView(Biblioteca movieDataLibrary) {
@@ -8,6 +10,25 @@ public class MovieView implements LibraryView{
     }
 
     public String getFormattedListOfItems() {
-        return "movie data";
+        List<LibraryItem> availableMovies = movieDataLibrary.getAvailableItems();
+        String movieHeader = "=====================================================================================\n";
+        movieHeader += getItemDetailsHeader(availableMovies.get(0));
+        movieHeader += "=====================================================================================\n";
+        String movieDetails = getItemDetails(availableMovies);
+        String movieFooter = "=====================================================================================\n";
+        return movieHeader + movieDetails + movieFooter;
+    }
+
+    private String getItemDetails(List<LibraryItem> movies) {
+        String movieDetails = "";
+        for (LibraryItem movieItem : movies) {
+            Movie movie = (Movie) movieItem;
+            movieDetails += String.format("%-25s %-25s %-15s %-15s\n", movie.getMovieName(), movie.getDirector(), movie.getYearReleased(), movie.getRatings());
+        }
+        return movieDetails;
+    }
+
+    private String getItemDetailsHeader(LibraryItem movie) {
+        return String.format("%-25s %-25s %-15s %-15s\n", movie.getHeaderDetails());
     }
 }
