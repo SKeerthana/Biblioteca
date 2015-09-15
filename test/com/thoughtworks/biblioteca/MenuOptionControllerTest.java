@@ -20,9 +20,16 @@ public class MenuOptionControllerTest {
         add(book2);
     }};
     Biblioteca bookLibraryData = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>());
-    Biblioteca movieLibraryData = new Biblioteca(new ArrayList<LibraryItem>(), new ArrayList<LibraryItem>());
+
+    private Movie movie = new Movie("Vishvaroopam", 2013, "Kamalhasan", 10);
+    private ArrayList<LibraryItem> availableMovieList = new ArrayList<LibraryItem>() {{
+        add(movie);
+    }};
+    Biblioteca movieLibraryData = new Biblioteca(availableMovieList, new ArrayList<LibraryItem>());
 
     BookView bookView = new BookView(bookLibraryData);
+    MovieView movieView = new MovieView(movieLibraryData);
+
     ArrayList<String> listOfMenuOptions = new ArrayList<String>() {{
         add("1. List all the books");
         add("2. Quit");
@@ -78,5 +85,18 @@ public class MenuOptionControllerTest {
         menuOptionController.handleMenuOption("3");
 
         assertEquals("That book is not available\n", outContent.toString());
+    }
+
+    @Test
+    public void shouldListMenuItemToDisplayListOfMovies() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        Display display = new Display(printStream, System.in);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, display);
+
+        menuOptionController.handleMenuOption("5");
+
+        assertEquals(movieView.getFormattedListOfItems(), outContent.toString());
     }
 }
