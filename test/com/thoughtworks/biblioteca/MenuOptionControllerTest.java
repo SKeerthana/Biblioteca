@@ -8,6 +8,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class MenuOptionControllerTest {
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -88,6 +89,20 @@ public class MenuOptionControllerTest {
     }
 
     @Test
+    public void shouldCallReturnBookForOption4() {
+        String input = "Harry Potter";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        Display display = new Display(printStream, inContent);
+        System.setIn(inContent);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, display);
+        menuOptionController.handleMenuOption("4");
+        assertEquals("That is not a valid book to return.\n", outContent.toString());
+        }
+
+    @Test
     public void shouldListMenuItemToDisplayListOfMovies() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
@@ -98,5 +113,18 @@ public class MenuOptionControllerTest {
         menuOptionController.handleMenuOption("5");
 
         assertEquals(movieView.getFormattedListOfItems(), outContent.toString());
+    }
+
+    @Test
+    public void shouldCallCheckOutMovieForOption6() {
+        String input = "Vishvaroopam";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        Display display = new Display(System.out, inContent);
+        System.setIn(inContent);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, display);
+        Movie movieCheckedOut = new Movie("Vishvaroopam", 0, null, 0);
+        menuOptionController.handleMenuOption("6");
+
+        assertFalse(movieLibraryData.containsLibraryItemInAvailableList(movieCheckedOut));
     }
 }

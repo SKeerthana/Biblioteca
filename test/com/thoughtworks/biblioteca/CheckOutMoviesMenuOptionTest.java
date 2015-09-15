@@ -47,7 +47,7 @@ public class CheckOutMoviesMenuOptionTest {
         Display display = new Display(printStream, inContent);
         System.setIn(inContent);
         CheckOutMoviesMenuOption checkOutMoviesMenuOption = new CheckOutMoviesMenuOption(movieLibraryData, display);
-        List<LibraryItem> availableItems= movieLibraryData.getAvailableItems();
+        List<LibraryItem> availableItems = movieLibraryData.getAvailableItems();
 
         checkOutMoviesMenuOption.performOperation();
 
