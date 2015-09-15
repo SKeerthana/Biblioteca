@@ -22,7 +22,7 @@ public class MenuOptionControllerTest {
     Biblioteca bookLibraryData = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>());
     Biblioteca movieLibraryData = new Biblioteca(new ArrayList<LibraryItem>(), new ArrayList<LibraryItem>());
 
-    BibliotecaView bibliotecaView = new BibliotecaView(bookLibraryData);
+    BookView bookView = new BookView(bookLibraryData);
     ArrayList<String> listOfMenuOptions = new ArrayList<String>() {{
         add("1. List all the books");
         add("2. Quit");
@@ -54,7 +54,7 @@ public class MenuOptionControllerTest {
 
         menuOptionController.handleMenuOption("1");
 
-        assertEquals(bibliotecaView.getFormattedListOfBooks(), outContent.toString());
+        assertEquals(bookView.getFormattedListOfItems(), outContent.toString());
     }
 
     @Test

@@ -19,11 +19,11 @@ public class ListBooksMenuOptionTest {
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     PrintStream printStream = new PrintStream(outContent);
     Display display = new Display(printStream, System.in);
-    BibliotecaView bibliotecaView = new BibliotecaView(bibilioteca);
+    BookView bookView = new BookView(bibilioteca);
 
     @Test
     public void shouldDisplayListOfBooks() {
-        ListBooksMenuOption listBooksMenuOption = new ListBooksMenuOption(bibliotecaView, display);
+        ListBooksMenuOption listBooksMenuOption = new ListBooksMenuOption(bookView, display);
 
         listBooksMenuOption.performOperation();
         String header = "=====================================================================================\n";

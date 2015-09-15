@@ -21,7 +21,7 @@ public class BibliotecaAppTest {
         add(book2);
     }};
     Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>());
-    BibliotecaView bibliotecaView = new BibliotecaView(bibilioteca);
+    BookView bookView = new BookView(bibilioteca);
     ArrayList<String> listOfMenuOptions = new ArrayList<String>() {{
         add("1. List all the books");
         add("2. Quit");
@@ -44,12 +44,12 @@ public class BibliotecaAppTest {
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
         Display display = new Display(printStream, System.in);
-        ListBooksMenuOption listBooksMenuOption = new ListBooksMenuOption(bibliotecaView, display);
+        ListBooksMenuOption listBooksMenuOption = new ListBooksMenuOption(bookView, display);
         when(menuOptionController.getMenuOption("1")).thenReturn(listBooksMenuOption);
         exit.expectSystemExit();
 
         bibliotecaApp.start();
-        assertEquals(bibliotecaView.getFormattedListOfBooks(), outContent.toString());
+        assertEquals(bookView.getFormattedListOfItems(), outContent.toString());
     }
 
     @Test

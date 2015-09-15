@@ -2,24 +2,24 @@ package com.thoughtworks.biblioteca;
 
 import java.util.List;
 
-public class BibliotecaView {
-    private Biblioteca biblioteca;
+public class BookView implements LibraryView{
+    private Biblioteca bookLibraryData;
 
-    public BibliotecaView(Biblioteca biblioteca) {
-        this.biblioteca = biblioteca;
+    public BookView(Biblioteca bookLibraryData) {
+        this.bookLibraryData = bookLibraryData;
     }
 
-    public String getFormattedListOfBooks() {
-        List<LibraryItem> availableBooks = biblioteca.getAvailableItems();
+    public String getFormattedListOfItems() {
+        List<LibraryItem> availableBooks = bookLibraryData.getAvailableItems();
         String booksHeader = "=====================================================================================\n";
-        booksHeader += getBookDetailsHeader(availableBooks.get(0));
+        booksHeader += getItemDetailsHeader(availableBooks.get(0));
         booksHeader += "=====================================================================================\n";
-        String bookDetails = getBookDetails(availableBooks);
+        String bookDetails = getItemDetails(availableBooks);
         String bookFooter = "=====================================================================================\n";
         return booksHeader + bookDetails + bookFooter;
     }
 
-    private String getBookDetails(List<LibraryItem> books) {
+    private String getItemDetails(List<LibraryItem> books) {
         String bookDetails = "";
         for (LibraryItem bookItem : books) {
             Book book = (Book) bookItem;
@@ -28,7 +28,7 @@ public class BibliotecaView {
         return bookDetails;
     }
 
-    private String getBookDetailsHeader(LibraryItem book) {
+    private String getItemDetailsHeader(LibraryItem book) {
         return String.format("%-50s %-25s %-15s\n", book.getHeaderDetails());
     }
 }
