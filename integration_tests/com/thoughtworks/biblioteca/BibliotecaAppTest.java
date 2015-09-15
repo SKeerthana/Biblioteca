@@ -65,8 +65,8 @@ public class BibliotecaAppTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream("Harry Potter and the Chamber of Secrets".getBytes());
         System.setIn(inContent);
         Display display = new Display(printStream, inContent);
-        CheckoutMenuOption checkoutMenuOption = new CheckoutMenuOption(bibilioteca, display);
-        when(menuOptionController.getMenuOption("3")).thenReturn(checkoutMenuOption);
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, display);
+        when(menuOptionController.getMenuOption("3")).thenReturn(checkOutBooksMenuOption);
         exit.expectSystemExit();
 
         bibliotecaApp.start();

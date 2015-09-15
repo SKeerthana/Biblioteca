@@ -30,11 +30,13 @@ public class MenuOptionController {
             case "2":
                 return new QuitMenuOption();
             case "3":
-                return new CheckoutMenuOption(bookLibraryData, display);
+                return new CheckOutBooksMenuOption(bookLibraryData, display);
             case "4":
                 return new ReturnBookOption(bookLibraryData, display);
             case "5":
                 return new ListLibraryItemMenuOption(new MovieView(movieLibraryData), display);
+            case "6":
+                return new CheckOutBooksMenuOption(movieLibraryData, display);
             default:
                 return new InvalidMenuOption(display);
         }

@@ -13,6 +13,7 @@ public class BibliotecaApp {
         listOfMenuOptions.add("2. Quit");
         listOfMenuOptions.add("3. Checkout books");
         listOfMenuOptions.add("4. Return books");
+        listOfMenuOptions.add("5. List all the movies");
 
         Menu menu = new Menu(listOfMenuOptions);
         Display display = new Display(System.out, System.in);
@@ -30,7 +31,7 @@ public class BibliotecaApp {
         ArrayList<LibraryItem> listOfAvailableBooks = generateListOfBooks();
         ArrayList<LibraryItem> listOfMoviesAvailable = generateListOfMovies();
         Biblioteca bookLibraryData = new Biblioteca(listOfAvailableBooks, new ArrayList<LibraryItem>());
-        Biblioteca movieLibraryData = new Biblioteca(listOfAvailableBooks, new ArrayList<LibraryItem>());
+        Biblioteca movieLibraryData = new Biblioteca(listOfMoviesAvailable, new ArrayList<LibraryItem>());
         MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, display);
 
         display.printMessage("Welcome to Bibliotica\n");
@@ -43,7 +44,12 @@ public class BibliotecaApp {
     }
 
     private ArrayList<LibraryItem> generateListOfMovies() {
-        return null;
+        Movie movie1 = new Movie("Vishvaroopam", 2013, "Kamalhasan", 10);
+        Movie movie2 = new Movie("The Dark Knight Returns", 2013, "Frank Miller", 10);
+        ArrayList<LibraryItem> availableMovieList = new ArrayList<LibraryItem>();
+        availableMovieList.add(movie1);
+        availableMovieList.add(movie2);
+        return availableMovieList;
     }
 
     private ArrayList<LibraryItem> generateListOfBooks() {

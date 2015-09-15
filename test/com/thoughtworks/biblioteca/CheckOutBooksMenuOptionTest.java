@@ -11,7 +11,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-public class CheckoutMenuOptionTest {
+public class CheckOutBooksMenuOptionTest {
     Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
     Book book2 = new Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998);
     ArrayList<LibraryItem> listOfBooks = new ArrayList<LibraryItem>() {{
@@ -30,9 +30,9 @@ public class CheckoutMenuOptionTest {
         Display display = new Display(printStream, inContent);
         Book bookToSearch = new Book(input, null, 0);
         System.setIn(inContent);
-        CheckoutMenuOption checkoutMenuOption = new CheckoutMenuOption(bibilioteca, display);
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, display);
 
-        checkoutMenuOption.performOperation();
+        checkOutBooksMenuOption.performOperation();
 
         assertFalse(bibilioteca.containsBookInAvailableList(bookToSearch));
     }
@@ -46,10 +46,10 @@ public class CheckoutMenuOptionTest {
         System.setOut(printStream);
         Display display = new Display(printStream, inContent);
         System.setIn(inContent);
-        CheckoutMenuOption checkoutMenuOption = new CheckoutMenuOption(bibilioteca, display);
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, display);
         List<LibraryItem> availableBooks= bibilioteca.getAvailableItems();
 
-        checkoutMenuOption.performOperation();
+        checkOutBooksMenuOption.performOperation();
 
         assertEquals(availableBooks, bibilioteca.getAvailableItems());
     }
@@ -63,9 +63,9 @@ public class CheckoutMenuOptionTest {
         System.setOut(printStream);
         Display display = new Display(printStream, inContent);
         System.setIn(inContent);
-        CheckoutMenuOption checkoutMenuOption = new CheckoutMenuOption(bibilioteca, display);
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, display);
 
-        checkoutMenuOption.performOperation();
+        checkOutBooksMenuOption.performOperation();
 
         assertEquals("Thank you! Enjoy the book\n", outContent.toString());
     }
@@ -79,9 +79,9 @@ public class CheckoutMenuOptionTest {
         System.setOut(printStream);
         Display display = new Display(printStream, inContent);
         System.setIn(inContent);
-        CheckoutMenuOption checkoutMenuOption = new CheckoutMenuOption(bibilioteca, display);
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, display);
 
-        checkoutMenuOption.performOperation();
+        checkOutBooksMenuOption.performOperation();
 
         assertEquals("That book is not available\n", outContent.toString());
     }

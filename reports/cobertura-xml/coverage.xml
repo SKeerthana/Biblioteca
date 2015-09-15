@@ -400,7 +400,7 @@
 						<line number="32" hits="5" branch="false"/>
 					</lines>
 				</class>
-				<class name="com.thoughtworks.biblioteca.CheckoutMenuOption" filename="com/thoughtworks/biblioteca/CheckoutMenuOption.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
+				<class name="com.thoughtworks.biblioteca.CheckOutBooksMenuOption" filename="com/thoughtworks/biblioteca/CheckoutMenuOption.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Biblioteca;Lcom/thoughtworks/biblioteca/Display;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>

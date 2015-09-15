@@ -14,7 +14,7 @@ public class Biblioteca {
         this.checkedOutItems = checkedOutItems;
     }
 
-    public boolean containsBookInAvailableList(Book bookName) {
+    public boolean containsBookInAvailableList(LibraryItem bookName) {
         if (availableItems.contains(bookName))
             return true;
         return false;
@@ -26,7 +26,7 @@ public class Biblioteca {
         return false;
     }
 
-    public void checkOutBook(Book bookName) {
+    public void checkOutBook(LibraryItem bookName) {
         int index = availableItems.indexOf(bookName);
         checkedOutItems.add(availableItems.get(index));
         availableItems.remove(bookName);
