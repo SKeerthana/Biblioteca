@@ -10,7 +10,7 @@ public class BibliotecaView {
     }
 
     public String getFormattedListOfBooks() {
-        List<Book> availableBooks = biblioteca.getAvailableBooks();
+        List<LibraryItem> availableBooks = biblioteca.getAvailableItems();
         String booksHeader = "=====================================================================================\n";
         booksHeader += getBookDetailsHeader(availableBooks.get(0));
         booksHeader += "=====================================================================================\n";
@@ -19,14 +19,16 @@ public class BibliotecaView {
         return booksHeader + bookDetails + bookFooter;
     }
 
-    private String getBookDetails(List<Book> books) {
+    private String getBookDetails(List<LibraryItem> books) {
         String bookDetails = "";
-        for (Book book : books)
+        for (LibraryItem bookItem : books) {
+            Book book = (Book) bookItem;
             bookDetails += String.format("%-50s %-25s %-15s\n", book.getBookName(), book.getAuthor(), book.getYearPublished());
+        }
         return bookDetails;
     }
 
-    private String getBookDetailsHeader(Book book) {
+    private String getBookDetailsHeader(LibraryItem book) {
         return String.format("%-50s %-25s %-15s\n", book.getHeaderDetails());
     }
 }

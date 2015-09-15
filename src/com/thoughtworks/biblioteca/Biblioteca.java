@@ -6,39 +6,39 @@ import java.util.List;
 //Bibilioteca contains the list of available and checked out books
 public class Biblioteca {
 
-    private ArrayList<Book> availableBooks;
-    private ArrayList<Book> checkedoutBooks;
+    private ArrayList<LibraryItem> availableItems;
+    private ArrayList<LibraryItem> checkedOutItems;
 
-    public Biblioteca(ArrayList<Book> availableBooks, ArrayList<Book> checkedoutBooks) {
-        this.availableBooks = availableBooks;
-        this.checkedoutBooks = checkedoutBooks;
+    public Biblioteca(ArrayList<LibraryItem> availableItems, ArrayList<LibraryItem> checkedOutItems) {
+        this.availableItems = availableItems;
+        this.checkedOutItems = checkedOutItems;
     }
 
     public boolean containsBookInAvailableList(Book bookName) {
-        if (availableBooks.contains(bookName))
+        if (availableItems.contains(bookName))
             return true;
         return false;
     }
 
     public boolean containsBookInCheckedOutList(Book bookName) {
-        if (checkedoutBooks.contains(bookName))
+        if (checkedOutItems.contains(bookName))
             return true;
         return false;
     }
 
     public void checkOutBook(Book bookName) {
-        int index = availableBooks.indexOf(bookName);
-        checkedoutBooks.add(availableBooks.get(index));
-        availableBooks.remove(bookName);
+        int index = availableItems.indexOf(bookName);
+        checkedOutItems.add(availableItems.get(index));
+        availableItems.remove(bookName);
     }
 
     public void returnBook(Book bookToBeReturned) {
-        int index = checkedoutBooks.indexOf(bookToBeReturned);
-        availableBooks.add(checkedoutBooks.get(index));
-        checkedoutBooks.remove(bookToBeReturned);
+        int index = checkedOutItems.indexOf(bookToBeReturned);
+        availableItems.add(checkedOutItems.get(index));
+        checkedOutItems.remove(bookToBeReturned);
     }
 
-    public List<Book> getAvailableBooks() {
-        return availableBooks;
+    public List<LibraryItem> getAvailableItems() {
+        return availableItems;
     }
 }

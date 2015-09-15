@@ -12,11 +12,11 @@ public class BibliotecaTest {
 
     Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
     Book book2 = new Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998);
-    ArrayList<Book> listOfBooks = new ArrayList<Book>() {{
+    ArrayList<LibraryItem> listOfBooks = new ArrayList<LibraryItem>() {{
         add(book1);
         add(book2);
     }};
-    Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>());
+    Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>());
 
     @Test
     public void shouldReturnTrueIfBookExistsInBookList() {
@@ -45,7 +45,7 @@ public class BibliotecaTest {
     @Test
     public void shouldRemoveBookFromCheckoutListWhenItIsReturned() {
         Book bookToReturn = new Book("My experiments with Truth", null, 0);
-        Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>(){{add(book1);}});
+        Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>(){{add(book1);}});
         bibilioteca.returnBook(bookToReturn);
         assertFalse(bibilioteca.containsBookInCheckedOutList(bookToReturn));
     }
@@ -53,7 +53,7 @@ public class BibliotecaTest {
     @Test
     public void shouldAddBookToAvailableListWhenBookIsReturned() {
         Book bookToReturn = new Book("My experiments with Truth", null, 0);
-        Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>(){{add(book1);}});
+        Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>(){{add(book1);}});
         bibilioteca.returnBook(bookToReturn);
         assertTrue(bibilioteca.containsBookInAvailableList(bookToReturn));
     }

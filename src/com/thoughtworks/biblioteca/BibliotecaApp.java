@@ -27,9 +27,11 @@ public class BibliotecaApp {
     }
 
     public void start() {
-        ArrayList<Book> listOfAvailableBooks = generateListOfBooks();
-        Biblioteca biblioteca = new Biblioteca(listOfAvailableBooks, new ArrayList<Book>());
-        MenuOptionController menuOptionController = new MenuOptionController(menu, biblioteca, display);
+        ArrayList<LibraryItem> listOfAvailableBooks = generateListOfBooks();
+        ArrayList<LibraryItem> listOfMoviesAvailable = generateListOfMovies();
+        Biblioteca bookLibraryData = new Biblioteca(listOfAvailableBooks, new ArrayList<LibraryItem>());
+        Biblioteca movieLibraryData = new Biblioteca(listOfAvailableBooks, new ArrayList<LibraryItem>());
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, display);
 
         display.printMessage("Welcome to Bibliotica\n");
 
@@ -40,10 +42,14 @@ public class BibliotecaApp {
         }
     }
 
-    private ArrayList<Book> generateListOfBooks() {
+    private ArrayList<LibraryItem> generateListOfMovies() {
+        return null;
+    }
+
+    private ArrayList<LibraryItem> generateListOfBooks() {
         Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
         Book book2 = new Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998);
-        ArrayList<Book> listOfBooks = new ArrayList<>();
+        ArrayList<LibraryItem> listOfBooks = new ArrayList<>();
         listOfBooks.add(book1);
         listOfBooks.add(book2);
         return listOfBooks;

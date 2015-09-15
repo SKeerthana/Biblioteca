@@ -11,10 +11,10 @@ import static org.junit.Assert.assertEquals;
 public class ListBooksMenuOptionTest {
 
     Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
-    ArrayList<Book> listOfBooks = new ArrayList<Book>() {{
+    ArrayList<LibraryItem> listOfBooks = new ArrayList<LibraryItem>() {{
         add(book1);
     }};
-    Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>());
+    Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>());
 
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     PrintStream printStream = new PrintStream(outContent);

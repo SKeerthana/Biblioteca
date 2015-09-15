@@ -3,12 +3,14 @@ package com.thoughtworks.biblioteca;
 //based on the option delegates the functionality
 public class MenuOptionController {
     private Menu menu;
-    private Biblioteca biblioteca;
+    private Biblioteca bookLibraryData;
+    private Biblioteca movieLibraryData;
     private Display display;
 
-    public MenuOptionController(Menu menu, Biblioteca biblioteca, Display display) {
+    public MenuOptionController(Menu menu, Biblioteca bookLibraryData, Biblioteca movieLibraryData, Display display) {
         this.menu = menu;
-        this.biblioteca = biblioteca;
+        this.bookLibraryData = bookLibraryData;
+        this.movieLibraryData = movieLibraryData;
         this.display = display;
     }
 
@@ -24,13 +26,13 @@ public class MenuOptionController {
     public MenuOption getMenuOption(String option) {
         switch (option) {
             case "1":
-                return new ListBooksMenuOption(new BibliotecaView(biblioteca), display);
+                return new ListBooksMenuOption(new BibliotecaView(bookLibraryData), display);
             case "2":
                 return new QuitMenuOption();
             case "3":
-                return new CheckoutMenuOption(biblioteca, display);
+                return new CheckoutMenuOption(bookLibraryData, display);
             case "4":
-                return new ReturnBookOption(biblioteca, display);
+                return new ReturnBookOption(bookLibraryData, display);
             default:
                 return new InvalidMenuOption(display);
         }

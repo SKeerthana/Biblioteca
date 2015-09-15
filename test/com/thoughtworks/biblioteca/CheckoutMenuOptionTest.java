@@ -14,11 +14,11 @@ import static org.junit.Assert.assertFalse;
 public class CheckoutMenuOptionTest {
     Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
     Book book2 = new Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998);
-    ArrayList<Book> listOfBooks = new ArrayList<Book>() {{
+    ArrayList<LibraryItem> listOfBooks = new ArrayList<LibraryItem>() {{
         add(book1);
         add(book2);
     }};
-    Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<Book>());
+    Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>());
 
     @Test
     public void shouldCheckoutBookIfTheBookListContains() {
@@ -47,11 +47,11 @@ public class CheckoutMenuOptionTest {
         Display display = new Display(printStream, inContent);
         System.setIn(inContent);
         CheckoutMenuOption checkoutMenuOption = new CheckoutMenuOption(bibilioteca, display);
-        List<Book> availableBooks= bibilioteca.getAvailableBooks();
+        List<LibraryItem> availableBooks= bibilioteca.getAvailableItems();
 
         checkoutMenuOption.performOperation();
 
-        assertEquals(availableBooks, bibilioteca.getAvailableBooks());
+        assertEquals(availableBooks, bibilioteca.getAvailableItems());
     }
 
     @Test
