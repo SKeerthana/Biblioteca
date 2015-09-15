@@ -6,7 +6,9 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.List;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
 public class CheckOutMoviesMenuOptionTest {
@@ -19,19 +21,37 @@ public class CheckOutMoviesMenuOptionTest {
     Biblioteca movieLibraryData = new Biblioteca(availableListOfMovies, new ArrayList<LibraryItem>());
 
     @Test
-    public void shouldCheckoutBookIfTheBookListContains() {
+    public void shouldCheckoutMovieIfTheMovieIsInAvailableList() {
         String input = "Vishvaroopam";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
         Display display = new Display(printStream, inContent);
-        Book bookToSearch = new Book(input, null, 0);
+        Movie movie = new Movie("Vishvaroopam", 0, null, 0);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(movieLibraryData, display);
+        CheckOutMoviesMenuOption checkOutMoviesMenuOption = new CheckOutMoviesMenuOption(movieLibraryData, display);
 
-        checkOutBooksMenuOption.performOperation();
+        checkOutMoviesMenuOption.performOperation();
 
-        assertFalse(movieLibraryData.containsBookInAvailableList(bookToSearch));
+        assertFalse(movieLibraryData.containsLibraryItemInAvailableList(movie));
+    }
+
+    @Test
+    public void shouldNotCheckoutMovieIfTheMovieListDoesNotContain() {
+        String input = "Vishvaroopam";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        Display display = new Display(printStream, inContent);
+        Movie movie = new Movie("Vishvaroopam", 0, null, 0);
+        System.setIn(inContent);
+        CheckOutMoviesMenuOption checkOutMoviesMenuOption = new CheckOutMoviesMenuOption(movieLibraryData, display);
+        List<LibraryItem> availableItems= movieLibraryData.getAvailableItems();
+
+        checkOutMoviesMenuOption.performOperation();
+
+        assertEquals(availableItems, movieLibraryData.getAvailableItems());
     }
 }

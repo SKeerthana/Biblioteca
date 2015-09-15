@@ -14,28 +14,28 @@ public class Biblioteca {
         this.checkedOutItems = checkedOutItems;
     }
 
-    public boolean containsBookInAvailableList(LibraryItem bookName) {
-        if (availableItems.contains(bookName))
+    public boolean containsLibraryItemInAvailableList(LibraryItem libraryItem) {
+        if (availableItems.contains(libraryItem))
             return true;
         return false;
     }
 
-    public boolean containsBookInCheckedOutList(Book bookName) {
-        if (checkedOutItems.contains(bookName))
+    public boolean containsLibraryItemInCheckedOutList(Book libraryItem) {
+        if (checkedOutItems.contains(libraryItem))
             return true;
         return false;
     }
 
-    public void checkOutBook(LibraryItem bookName) {
-        int index = availableItems.indexOf(bookName);
+    public void checkOutLibraryItem(LibraryItem libraryItem) {
+        int index = availableItems.indexOf(libraryItem);
         checkedOutItems.add(availableItems.get(index));
-        availableItems.remove(bookName);
+        availableItems.remove(libraryItem);
     }
 
-    public void returnBook(Book bookToBeReturned) {
-        int index = checkedOutItems.indexOf(bookToBeReturned);
+    public void returnLibraryItem(Book libraryItem) {
+        int index = checkedOutItems.indexOf(libraryItem);
         availableItems.add(checkedOutItems.get(index));
-        checkedOutItems.remove(bookToBeReturned);
+        checkedOutItems.remove(libraryItem);
     }
 
     public List<LibraryItem> getAvailableItems() {

@@ -34,7 +34,7 @@ public class CheckOutBooksMenuOptionTest {
 
         checkOutBooksMenuOption.performOperation();
 
-        assertFalse(bibilioteca.containsBookInAvailableList(bookToSearch));
+        assertFalse(bibilioteca.containsLibraryItemInAvailableList(bookToSearch));
     }
 
     @Test

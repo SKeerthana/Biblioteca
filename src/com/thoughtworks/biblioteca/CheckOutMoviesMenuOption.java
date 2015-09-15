@@ -13,8 +13,8 @@ public class CheckOutMoviesMenuOption implements MenuOption {
     public void performOperation() {
         String movieName = display.getInputFromUser();
         Movie movieTobeSearched = new Movie(movieName, 0, null, 0);
-        if (movieLibraryData.containsBookInAvailableList(movieTobeSearched)) {
-            movieLibraryData.checkOutBook(movieTobeSearched);
+        if (movieLibraryData.containsLibraryItemInAvailableList(movieTobeSearched)) {
+            movieLibraryData.checkOutLibraryItem(movieTobeSearched);
         }
     }
 }

@@ -20,42 +20,42 @@ public class BibliotecaTest {
 
     @Test
     public void shouldReturnTrueIfBookExistsInBookList() {
-        assertTrue(bibilioteca.containsBookInAvailableList(new Book("My experiments with Truth", "M.K.Gandhi", 1942)));
+        assertTrue(bibilioteca.containsLibraryItemInAvailableList(new Book("My experiments with Truth", "M.K.Gandhi", 1942)));
     }
 
     @Test
     public void shouldReturnFalseIfBookDoesNotExistsInBookList() {
-        assertFalse(bibilioteca.containsBookInAvailableList(new Book("My experiments", "M.K.Gandhi", 1942)));
+        assertFalse(bibilioteca.containsLibraryItemInAvailableList(new Book("My experiments", "M.K.Gandhi", 1942)));
     }
 
     @Test
     public void shouldRemoveBookFromAvailableList() {
         Book bookToSearch = new Book("My experiments with Truth", null, 0);
-        bibilioteca.checkOutBook(bookToSearch);
-        assertFalse(bibilioteca.containsBookInAvailableList(bookToSearch));
+        bibilioteca.checkOutLibraryItem(bookToSearch);
+        assertFalse(bibilioteca.containsLibraryItemInAvailableList(bookToSearch));
     }
 
     @Test
     public void shouldAddBookToCheckoutList() {
         Book bookToSearch = new Book("My experiments with Truth", null, 0);
-        bibilioteca.checkOutBook(bookToSearch);
-        assertTrue(bibilioteca.containsBookInCheckedOutList(bookToSearch));
+        bibilioteca.checkOutLibraryItem(bookToSearch);
+        assertTrue(bibilioteca.containsLibraryItemInCheckedOutList(bookToSearch));
     }
 
     @Test
     public void shouldRemoveBookFromCheckoutListWhenItIsReturned() {
         Book bookToReturn = new Book("My experiments with Truth", null, 0);
         Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>(){{add(book1);}});
-        bibilioteca.returnBook(bookToReturn);
-        assertFalse(bibilioteca.containsBookInCheckedOutList(bookToReturn));
+        bibilioteca.returnLibraryItem(bookToReturn);
+        assertFalse(bibilioteca.containsLibraryItemInCheckedOutList(bookToReturn));
     }
 
     @Test
     public void shouldAddBookToAvailableListWhenBookIsReturned() {
         Book bookToReturn = new Book("My experiments with Truth", null, 0);
         Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>(){{add(book1);}});
-        bibilioteca.returnBook(bookToReturn);
-        assertTrue(bibilioteca.containsBookInAvailableList(bookToReturn));
+        bibilioteca.returnLibraryItem(bookToReturn);
+        assertTrue(bibilioteca.containsLibraryItemInAvailableList(bookToReturn));
     }
 
 }
