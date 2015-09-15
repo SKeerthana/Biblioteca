@@ -45,7 +45,6 @@ public class CheckOutMoviesMenuOptionTest {
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
         Display display = new Display(printStream, inContent);
-        Movie movie = new Movie("Vishvaroopam", 0, null, 0);
         System.setIn(inContent);
         CheckOutMoviesMenuOption checkOutMoviesMenuOption = new CheckOutMoviesMenuOption(movieLibraryData, display);
         List<LibraryItem> availableItems= movieLibraryData.getAvailableItems();
