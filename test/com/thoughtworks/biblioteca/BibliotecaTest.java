@@ -19,43 +19,58 @@ public class BibliotecaTest {
     Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>());
 
     @Test
-    public void shouldReturnTrueIfBookExistsInBookList() {
-        assertTrue(bibilioteca.containsLibraryItemInAvailableList(new Book("My experiments with Truth", "M.K.Gandhi", 1942)));
+    public void shouldReturnIndexOfBookInAvailableList() {
+        assertEquals(0, bibilioteca.getIndexOfLibraryItemInAvailableList(new Book("My experiments with Truth", "M.K.Gandhi", 1942)));
     }
 
     @Test
-    public void shouldReturnFalseIfBookDoesNotExistsInBookList() {
-        assertFalse(bibilioteca.containsLibraryItemInAvailableList(new Book("My experiments", "M.K.Gandhi", 1942)));
+    public void shouldReturnNegativeIndexIfBookDoesNotExistsInAvailableList() {
+        assertEquals(-1, bibilioteca.getIndexOfLibraryItemInAvailableList(new Book("My experiments", "M.K.Gandhi", 1942)));
+    }
+
+    @Test
+    public void shouldReturnIndexOfBookInCheckOutList() {
+        Biblioteca bibilioteca = new Biblioteca(new ArrayList<LibraryItem>(), listOfBooks);
+
+        assertEquals(0, bibilioteca.getIndexOfLibraryItemInCheckedOutItems(new Book("My experiments with Truth", "M.K.Gandhi", 1942)));
+    }
+
+    @Test
+    public void shouldReturnNegativeIndexIfBookDoesNotExistsInCheckedOutList() {
+        Biblioteca bibilioteca = new Biblioteca(new ArrayList<LibraryItem>(), listOfBooks);
+
+        assertEquals(-1, bibilioteca.getIndexOfLibraryItemInAvailableList(new Book("My experiments", "M.K.Gandhi", 1942)));
     }
 
     @Test
     public void shouldRemoveBookFromAvailableList() {
-        Book bookToSearch = new Book("My experiments with Truth", null, 0);
-        bibilioteca.checkOutLibraryItem(bookToSearch);
-        assertFalse(bibilioteca.containsLibraryItemInAvailableList(bookToSearch));
+        bibilioteca.removeLibraryItemFromAvailableList(0);
+
+        assertEquals(-1, bibilioteca.getIndexOfLibraryItemInAvailableList(new Book("My experiments", "M.K.Gandhi", 1942)));
     }
 
     @Test
     public void shouldAddBookToCheckoutList() {
-        Book bookToSearch = new Book("My experiments with Truth", null, 0);
-        bibilioteca.checkOutLibraryItem(bookToSearch);
-        assertTrue(bibilioteca.containsLibraryItemInCheckedOutList(bookToSearch));
+        Book bookToAdd = new Book("My experiments", "M.K.Gandhi", 1942);
+
+        bibilioteca.addLibraryItemToCheckedOutList(bookToAdd);
+
+        assertEquals(0, bibilioteca.getIndexOfLibraryItemInCheckedOutItems(new Book("My experiments", "M.K.Gandhi", 1942)));
     }
 
     @Test
     public void shouldRemoveBookFromCheckoutListWhenItIsReturned() {
-        Book bookToReturn = new Book("My experiments with Truth", null, 0);
-        Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>(){{add(book1);}});
-        bibilioteca.returnLibraryItem(bookToReturn);
-        assertFalse(bibilioteca.containsLibraryItemInCheckedOutList(bookToReturn));
+        Biblioteca bibilioteca = new Biblioteca(new ArrayList<LibraryItem>(), listOfBooks);
+        bibilioteca.removeLibraryItemFromCheckedOutList(0);
+        assertEquals(-1, bibilioteca.getIndexOfLibraryItemInAvailableList(new Book("My experiments", "M.K.Gandhi", 1942)));
     }
 
     @Test
     public void shouldAddBookToAvailableListWhenBookIsReturned() {
-        Book bookToReturn = new Book("My experiments with Truth", null, 0);
-        Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>(){{add(book1);}});
-        bibilioteca.returnLibraryItem(bookToReturn);
-        assertTrue(bibilioteca.containsLibraryItemInAvailableList(bookToReturn));
-    }
+        Book bookToAdd = new Book("My experiments", "M.K.Gandhi", 1942);
 
+        bibilioteca.addLibraryItemToAvailableList(bookToAdd);
+
+        assertEquals(2, bibilioteca.getIndexOfLibraryItemInAvailableList(new Book("My experiments", "M.K.Gandhi", 1942)));
+    }
 }

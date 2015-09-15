@@ -10,6 +10,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
 
 public class CheckOutBooksMenuOptionTest {
     Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
@@ -30,11 +31,11 @@ public class CheckOutBooksMenuOptionTest {
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         Book bookToSearch = new Book(input, null, 0);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay);
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new UserInfo("", "", ""));
 
         checkOutBooksMenuOption.performOperation();
 
-        assertFalse(bibilioteca.containsLibraryItemInAvailableList(bookToSearch));
+        assertEquals(-1, bibilioteca.getIndexOfLibraryItemInAvailableList(bookToSearch));
     }
 
     @Test
@@ -46,7 +47,7 @@ public class CheckOutBooksMenuOptionTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay);
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new UserInfo("", "", ""));
         List<LibraryItem> availableBooks= bibilioteca.getAvailableItems();
 
         checkOutBooksMenuOption.performOperation();
@@ -63,7 +64,7 @@ public class CheckOutBooksMenuOptionTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay);
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new UserInfo("", "", ""));
 
         checkOutBooksMenuOption.performOperation();
 
@@ -79,7 +80,7 @@ public class CheckOutBooksMenuOptionTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay);
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new UserInfo("", "", ""));
 
         checkOutBooksMenuOption.performOperation();
 

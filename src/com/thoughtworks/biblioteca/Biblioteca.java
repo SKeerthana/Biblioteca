@@ -14,28 +14,28 @@ public class Biblioteca {
         this.checkedOutItems = checkedOutItems;
     }
 
-    public boolean containsLibraryItemInAvailableList(LibraryItem libraryItem) {
-        if (availableItems.contains(libraryItem))
-            return true;
-        return false;
+    public int getIndexOfLibraryItemInAvailableList(LibraryItem libraryItem) {
+        return availableItems.indexOf(libraryItem);
     }
 
-    public boolean containsLibraryItemInCheckedOutList(Book libraryItem) {
-        if (checkedOutItems.contains(libraryItem))
-            return true;
-        return false;
+    public LibraryItem removeLibraryItemFromAvailableList(int index) {
+        return availableItems.remove(index);
     }
 
-    public void checkOutLibraryItem(LibraryItem libraryItem) {
-        int index = availableItems.indexOf(libraryItem);
-        checkedOutItems.add(availableItems.get(index));
-        availableItems.remove(libraryItem);
+    public void addLibraryItemToCheckedOutList(LibraryItem libraryItem) {
+        checkedOutItems.add(libraryItem);
     }
 
-    public void returnLibraryItem(Book libraryItem) {
-        int index = checkedOutItems.indexOf(libraryItem);
-        availableItems.add(checkedOutItems.get(index));
-        checkedOutItems.remove(libraryItem);
+    public int getIndexOfLibraryItemInCheckedOutItems(LibraryItem libraryItem) {
+        return checkedOutItems.indexOf(libraryItem);
+    }
+
+    public LibraryItem removeLibraryItemFromCheckedOutList(int index) {
+        return checkedOutItems.remove(index);
+    }
+
+    public void addLibraryItemToAvailableList(LibraryItem libraryItem) {
+        availableItems.add(libraryItem);
     }
 
     public List<LibraryItem> getAvailableItems() {

@@ -20,4 +20,8 @@ public class UserInfo {
         UserInfo thatUserInfo = (UserInfo) that;
         return (thatUserInfo.userName.equals(userName));
     }
+
+    public String getUserNameHeader() {
+        return "USER NAME";
+    }
 }

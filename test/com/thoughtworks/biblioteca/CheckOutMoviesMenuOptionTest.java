@@ -28,13 +28,12 @@ public class CheckOutMoviesMenuOptionTest {
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
-        Movie movie = new Movie("Vishvaroopam", 0, null, 0);
         System.setIn(inContent);
         CheckOutMoviesMenuOption checkOutMoviesMenuOption = new CheckOutMoviesMenuOption(movieLibraryData, consoleDisplay);
 
         checkOutMoviesMenuOption.performOperation();
 
-        assertFalse(movieLibraryData.containsLibraryItemInAvailableList(movie));
+        assertEquals("Thank you! Enjoy the Movie\n", outContent.toString());
     }
 
     @Test

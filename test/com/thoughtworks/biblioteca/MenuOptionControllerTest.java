@@ -49,6 +49,7 @@ public class MenuOptionControllerTest {
         menuOptions += "2. Quit\n";
         menuOptions += "3. Checkout books\n";
         menuOptions += "4. Return books\n";
+
         assertEquals(menuOptions, outContent.toString());
     }
 
@@ -68,7 +69,9 @@ public class MenuOptionControllerTest {
     @Test
     public void shouldHandleInvalidMenuOption() {
         MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay);
+
         menuOptionController.handleMenuOption("2382");
+
         assertEquals("Select a valid option!\n", outContent.toString());
     }
 
@@ -98,7 +101,9 @@ public class MenuOptionControllerTest {
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
         MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay);
+
         menuOptionController.handleMenuOption("4");
+
         assertEquals("That is not a valid book to return.\n", outContent.toString());
         }
 
@@ -119,12 +124,14 @@ public class MenuOptionControllerTest {
     public void shouldCallCheckOutMovieForOption6() {
         String input = "Vishvaroopam";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        ConsoleDisplay consoleDisplay = new ConsoleDisplay(System.out, inContent);
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
         MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay);
-        Movie movieCheckedOut = new Movie("Vishvaroopam", 0, null, 0);
         menuOptionController.handleMenuOption("6");
 
-        assertFalse(movieLibraryData.containsLibraryItemInAvailableList(movieCheckedOut));
+        assertEquals("Thank you! Enjoy the Movie\n", outContent.toString());
     }
 }
