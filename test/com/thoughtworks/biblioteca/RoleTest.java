@@ -40,4 +40,19 @@ public class RoleTest {
         Role role = Role.USER;
         assertEquals(menuList, role.getMenuOptions());
     }
+
+    @Test
+    public void shouldReturnGuestOptionsWhenGuestIsSet() {
+        ArrayList<String> menuList = new ArrayList<String>() {{
+            add("List Books");
+            add("Quit");
+            add("CheckOut Book");
+            add("Return Book");
+            add("List Movies");
+            add("CheckOut Movie");
+            add("Log in");
+        }};
+        Role role = Role.GUEST;
+        assertEquals(menuList, role.getMenuOptions());
+    }
 }

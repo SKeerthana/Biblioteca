@@ -33,6 +33,8 @@ public enum Role {
                 add("Log out");
             }};
         }
+    },
+    GUEST {
     };
 
     public List<String> getMenuOptions() {
