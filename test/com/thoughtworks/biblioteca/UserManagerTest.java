@@ -11,7 +11,7 @@ public class UserManagerTest {
 
     @Test
     public void shouldLoginForValidCredentials() {
-        final UserInfo userInfo1 = new UserInfo("abc", "abc", "abc");
+        final UserInfo userInfo1 = new UserInfo("abc", "abc", "abc", "", Role.ADMIN);
         HashMap<String, UserInfo> validUsers = new HashMap<String, UserInfo>() {{
             put("1234-122", userInfo1);
         }};
@@ -22,7 +22,7 @@ public class UserManagerTest {
 
     @Test
     public void shouldNotLoginForInValidLibraryNumber() {
-        final UserInfo userInfo1 = new UserInfo("abc", "abc", "abc");
+        final UserInfo userInfo1 = new UserInfo("abc", "abc", "abc", "", Role.ADMIN);
         HashMap<String, UserInfo> validUsers = new HashMap<String, UserInfo>() {{
             put("1234-122", userInfo1);
         }};
@@ -33,7 +33,7 @@ public class UserManagerTest {
 
     @Test
     public void shouldNotLoginForInValidPassword() {
-        final UserInfo userInfo1 = new UserInfo("abc", "abc", "abc");
+        final UserInfo userInfo1 = new UserInfo("abc", "abc", "abc", "", Role.ADMIN);
         HashMap<String, UserInfo> validUsers = new HashMap<String, UserInfo>() {{
             put("1234-122", userInfo1);
         }};
@@ -44,7 +44,7 @@ public class UserManagerTest {
 
     @Test
     public void shouldNotLoginForInValidCredentials() {
-        final UserInfo userInfo1 = new UserInfo("abc", "abc", "abc");
+        final UserInfo userInfo1 = new UserInfo("abc", "abc", "abc", "", Role.ADMIN);
         HashMap<String, UserInfo> validUsers = new HashMap<String, UserInfo>() {{
             put("1234-122", userInfo1);
         }};

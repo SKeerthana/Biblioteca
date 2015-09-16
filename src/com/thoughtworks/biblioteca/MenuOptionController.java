@@ -32,9 +32,9 @@ public class MenuOptionController {
             case "2":
                 return new QuitMenuOption();
             case "3":
-                return new CheckOutBooksMenuOption(bookLibraryData, consoleDisplay, new UserInfo("", "", ""));
+                return new CheckOutBooksMenuOption(bookLibraryData, consoleDisplay, new UserInfo("", "", "", "", Role.ADMIN));
             case "4":
-                return new ReturnBookOption(bookLibraryData, consoleDisplay, new UserInfo("", "", ""));
+                return new ReturnBookOption(bookLibraryData, consoleDisplay, new UserInfo("", "", "", "", Role.ADMIN));
             case "5":
                 return new ListLibraryItemMenuOption(new MovieView(movieLibraryData), consoleDisplay);
             case "6":

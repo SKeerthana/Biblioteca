@@ -31,7 +31,7 @@ public class CheckOutBooksMenuOptionTest {
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         Book bookToSearch = new Book(input, null, 0);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new UserInfo("", "", ""));
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new UserInfo("abc", "abc", "abc", "", Role.ADMIN));
 
         checkOutBooksMenuOption.performOperation();
 
@@ -47,7 +47,7 @@ public class CheckOutBooksMenuOptionTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new UserInfo("", "", ""));
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new UserInfo("abc", "abc", "abc", "", Role.ADMIN));
         List<LibraryItem> availableBooks= bibilioteca.getAvailableItems();
 
         checkOutBooksMenuOption.performOperation();
@@ -64,7 +64,7 @@ public class CheckOutBooksMenuOptionTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new UserInfo("", "", ""));
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new UserInfo("abc", "abc", "abc", "", Role.ADMIN));
 
         checkOutBooksMenuOption.performOperation();
 
@@ -80,7 +80,7 @@ public class CheckOutBooksMenuOptionTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new UserInfo("", "", ""));
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new UserInfo("abc", "abc", "abc", "", Role.ADMIN));
 
         checkOutBooksMenuOption.performOperation();
 
