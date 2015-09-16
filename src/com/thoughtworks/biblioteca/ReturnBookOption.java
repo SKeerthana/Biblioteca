@@ -4,12 +4,12 @@ package com.thoughtworks.biblioteca;
 public class ReturnBookOption implements MenuOption {
     private Biblioteca libraryBookData;
     private ConsoleDisplay consoleDisplay;
-    private UserInfo userInfo;
+    private User user;
 
-    public ReturnBookOption(Biblioteca libraryBookData, ConsoleDisplay consoleDisplay, UserInfo userInfo) {
+    public ReturnBookOption(Biblioteca libraryBookData, ConsoleDisplay consoleDisplay, User user) {
         this.libraryBookData = libraryBookData;
         this.consoleDisplay = consoleDisplay;
-        this.userInfo = userInfo;
+        this.user = user;
     }
 
     @Override

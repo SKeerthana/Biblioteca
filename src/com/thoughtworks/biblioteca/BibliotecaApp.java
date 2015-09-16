@@ -32,11 +32,11 @@ public class BibliotecaApp {
     public void start() {
         ArrayList<LibraryItem> listOfAvailableBooks = generateListOfBooks();
         ArrayList<LibraryItem> listOfMoviesAvailable = generateListOfMovies();
-        HashMap<String, UserInfo> listOfUsers = generateListOfValidUsers();
+        HashMap<String, User> listOfUsers = generateListOfValidUsers();
         Biblioteca bookLibraryData = new Biblioteca(listOfAvailableBooks, new ArrayList<LibraryItem>());
         Biblioteca movieLibraryData = new Biblioteca(listOfMoviesAvailable, new ArrayList<LibraryItem>());
-        UserManager userManager = new UserManager(listOfUsers);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userManager);
+        UserAuthenticator userAuthenticator = new UserAuthenticator(listOfUsers);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
 
         consoleDisplay.printMessage("Welcome to Bibliotica\n");
 
@@ -47,10 +47,10 @@ public class BibliotecaApp {
         }
     }
 
-    private HashMap<String, UserInfo> generateListOfValidUsers() {
-        HashMap<String, UserInfo> userInfos = new HashMap<>();
-        UserInfo normalUser = new UserInfo("lib-0001", "name", "abc", "abc@gmail.com", Role.USER);
-        UserInfo admin = new UserInfo("lib-0002", "name", "abc", "abc@gmail.com", Role.USER);
+    private HashMap<String, User> generateListOfValidUsers() {
+        HashMap<String, User> userInfos = new HashMap<>();
+        User normalUser = new User("lib-0001", "name", "abc", "abc@gmail.com", Role.USER);
+        User admin = new User("lib-0002", "name", "abc", "abc@gmail.com", Role.USER);
         userInfos.put("lib-0001", normalUser);
         userInfos.put("lib-0002", admin);
         return userInfos;

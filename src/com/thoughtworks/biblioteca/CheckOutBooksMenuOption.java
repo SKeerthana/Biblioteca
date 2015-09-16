@@ -4,12 +4,12 @@ package com.thoughtworks.biblioteca;
 public class CheckOutBooksMenuOption implements MenuOption{
     private Biblioteca libraryBookData;
     private ConsoleDisplay consoleDisplay;
-    private UserInfo userInfo;
+    private User user;
 
-    public CheckOutBooksMenuOption(Biblioteca libraryBookData, ConsoleDisplay consoleDisplay, UserInfo userInfo) {
+    public CheckOutBooksMenuOption(Biblioteca libraryBookData, ConsoleDisplay consoleDisplay, User user) {
         this.libraryBookData = libraryBookData;
         this.consoleDisplay = consoleDisplay;
-        this.userInfo = userInfo;
+        this.user = user;
     }
     @Override
     public void performOperation() {
@@ -20,7 +20,7 @@ public class CheckOutBooksMenuOption implements MenuOption{
         if(index != -1) {
             LibraryItem libraryItem = libraryBookData.removeLibraryItemFromAvailableList(index);
             Book book = (Book) libraryItem;
-            CheckedOutBook checkedOutBook = new CheckedOutBook(book, userInfo);
+            CheckedOutBook checkedOutBook = new CheckedOutBook(book, user);
             libraryBookData.addLibraryItemToCheckedOutList(checkedOutBook);
             consoleDisplay.printMessage("Thank you! Enjoy the book\n");
         }

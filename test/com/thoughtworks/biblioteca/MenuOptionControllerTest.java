@@ -39,16 +39,16 @@ public class MenuOptionControllerTest {
         add("4. Return books");
     }};
     private Menu menu = new Menu(listOfMenuOptions);
-    private UserInfo userInfo1 = new UserInfo("abc", "abc", "abc", "", Role.ADMIN);
-    private HashMap<String, UserInfo> validUsers = new HashMap<String, UserInfo>() {{
-        put("1234-122", userInfo1);
+    private User user1 = new User("abc", "abc", "abc", "", Role.ADMIN);
+    private HashMap<String, User> validUsers = new HashMap<String, User>() {{
+        put("1234-122", user1);
     }};
-    private UserManager userManager = new UserManager(validUsers);
+    private UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
     @Test
     public void shouldDisplayMenuOptions() {
         System.setOut(printStream);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userManager);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
         menuOptionController.displayMenuOption();
         String menuOptions = "Choose one of the menu option :\n";
         menuOptions += "List Books\n";
@@ -68,7 +68,7 @@ public class MenuOptionControllerTest {
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userManager);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
 
         menuOptionController.handleMenuOption("1");
 
@@ -77,7 +77,7 @@ public class MenuOptionControllerTest {
 
     @Test
     public void shouldHandleInvalidMenuOption() {
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userManager);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
 
         menuOptionController.handleMenuOption("2382");
 
@@ -93,7 +93,7 @@ public class MenuOptionControllerTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userManager);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
 
         menuOptionController.handleMenuOption("3");
 
@@ -109,7 +109,7 @@ public class MenuOptionControllerTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userManager);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
 
         menuOptionController.handleMenuOption("4");
 
@@ -122,7 +122,7 @@ public class MenuOptionControllerTest {
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userManager);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
 
         menuOptionController.handleMenuOption("5");
 
@@ -138,7 +138,7 @@ public class MenuOptionControllerTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userManager);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
         menuOptionController.handleMenuOption("6");
 
         assertEquals("Thank you! Enjoy the Movie\n", outContent.toString());
@@ -153,7 +153,7 @@ public class MenuOptionControllerTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userManager);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
         menuOptionController.handleMenuOption("7");
 
         assertEquals("Enter Library Number : Enter Password : Login Successful\n", outContent.toString());

@@ -28,7 +28,7 @@ public class MenuTest {
         menuOptions += "List Movies\n";
         menuOptions += "CheckOut Movie\n";
         menuOptions += "Log in\n";
-        assertEquals(menuOptions, menu.getMenuOptions(new UserInfo("lib-0001", "name", "abc", "abc@gmail.com", Role.GUEST)));
+        assertEquals(menuOptions, menu.getMenuOptions(new User("lib-0001", "name", "abc", "abc@gmail.com", Role.GUEST)));
     }
 
     @Test
@@ -43,7 +43,7 @@ public class MenuTest {
         menuOptions += "CheckOut Movie\n";
         menuOptions += "User Information\n";
         menuOptions += "Log out\n";
-        assertEquals(menuOptions, menu.getMenuOptions(new UserInfo("lib-0001", "name", "abc", "abc@gmail.com", Role.USER)));
+        assertEquals(menuOptions, menu.getMenuOptions(new User("lib-0001", "name", "abc", "abc@gmail.com", Role.USER)));
     }
 
     @Test
@@ -59,7 +59,7 @@ public class MenuTest {
         menuOptions += "User Information\n";
         menuOptions += "Book Status\n";
         menuOptions += "Log out\n";
-        assertEquals(menuOptions, menu.getMenuOptions(new UserInfo("lib-0001", "name", "abc", "abc@gmail.com", Role.ADMIN)));
+        assertEquals(menuOptions, menu.getMenuOptions(new User("lib-0001", "name", "abc", "abc@gmail.com", Role.ADMIN)));
     }
 
     @Test

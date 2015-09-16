@@ -6,20 +6,20 @@ public class MenuOptionController {
     private Biblioteca bookLibraryData;
     private Biblioteca movieLibraryData;
     private ConsoleDisplay consoleDisplay;
-    private UserManager userManager;
-    private UserInfo userInfo;
+    private UserAuthenticator userAuthenticator;
+    private User user;
 
-    public MenuOptionController(Menu menu, Biblioteca bookLibraryData, Biblioteca movieLibraryData, ConsoleDisplay consoleDisplay, UserManager userManager) {
+    public MenuOptionController(Menu menu, Biblioteca bookLibraryData, Biblioteca movieLibraryData, ConsoleDisplay consoleDisplay, UserAuthenticator userAuthenticator) {
         this.menu = menu;
         this.bookLibraryData = bookLibraryData;
         this.movieLibraryData = movieLibraryData;
         this.consoleDisplay = consoleDisplay;
-        this.userManager = userManager;
-        this.userInfo = new UserInfo("lib-0001", "name", "abc", "abc@gmail.com", Role.GUEST);
+        this.userAuthenticator = userAuthenticator;
+        this.user = new User("lib-0001", "name", "abc", "abc@gmail.com", Role.GUEST);
     }
 
     public void displayMenuOption() {
-        consoleDisplay.printMessage(menu.getMenuOptions(userInfo));
+        consoleDisplay.printMessage(menu.getMenuOptions(user));
     }
 
     public void handleMenuOption(String option) {
@@ -34,15 +34,15 @@ public class MenuOptionController {
             case "2":
                 return new QuitMenuOption();
             case "3":
-                return new CheckOutBooksMenuOption(bookLibraryData, consoleDisplay, new UserInfo("", "", "", "", Role.ADMIN));
+                return new CheckOutBooksMenuOption(bookLibraryData, consoleDisplay, new User("", "", "", "", Role.ADMIN));
             case "4":
-                return new ReturnBookOption(bookLibraryData, consoleDisplay, new UserInfo("", "", "", "", Role.ADMIN));
+                return new ReturnBookOption(bookLibraryData, consoleDisplay, new User("", "", "", "", Role.ADMIN));
             case "5":
                 return new ListLibraryItemMenuOption(new MovieView(movieLibraryData), consoleDisplay);
             case "6":
                 return new CheckOutMoviesMenuOption(movieLibraryData, consoleDisplay);
             case "7":
-                return new LoginMenuOption(consoleDisplay, userManager);
+                return new LoginMenuOption(consoleDisplay, userAuthenticator);
             default:
                 return new InvalidMenuOption(consoleDisplay);
         }

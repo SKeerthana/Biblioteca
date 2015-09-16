@@ -31,7 +31,7 @@ public class ReturnBookOptionTest {
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
 
-        ReturnBookOption returnBookOption = new ReturnBookOption(bibilioteca, consoleDisplay, new UserInfo("", "", "", "", Role.ADMIN));
+        ReturnBookOption returnBookOption = new ReturnBookOption(bibilioteca, consoleDisplay, new User("", "", "", "", Role.ADMIN));
         returnBookOption.performOperation();
 
         assertEquals("Thank you for returning the book.\n", outContent.toString());
@@ -47,7 +47,7 @@ public class ReturnBookOptionTest {
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
 
-        ReturnBookOption returnBookOption = new ReturnBookOption(bibilioteca, consoleDisplay, new UserInfo("", "", "", "", Role.ADMIN));
+        ReturnBookOption returnBookOption = new ReturnBookOption(bibilioteca, consoleDisplay, new User("", "", "", "", Role.ADMIN));
         returnBookOption.performOperation();
 
         assertEquals("That is not a valid book to return.\n", outContent.toString());

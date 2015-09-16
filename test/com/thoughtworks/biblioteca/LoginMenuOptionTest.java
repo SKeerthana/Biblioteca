@@ -10,9 +10,9 @@ import java.util.HashMap;
 import static org.junit.Assert.assertEquals;
 
 public class LoginMenuOptionTest {
-    private  UserInfo userInfo1 = new UserInfo("1234-122", "abc", "abc", "abc@gmail.com", Role.ADMIN);
-    HashMap<String, UserInfo> validUsers = new HashMap<String, UserInfo>() {{
-        put("1234-122", userInfo1);
+    private User user1 = new User("1234-122", "abc", "abc", "abc@gmail.com", Role.ADMIN);
+    HashMap<String, User> validUsers = new HashMap<String, User>() {{
+        put("1234-122", user1);
     }};
 
     @Test
@@ -24,9 +24,9 @@ public class LoginMenuOptionTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
-        UserManager userManager = new UserManager(validUsers);
+        UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
-        LoginMenuOption loginMenuOption = new LoginMenuOption(consoleDisplay, userManager);
+        LoginMenuOption loginMenuOption = new LoginMenuOption(consoleDisplay, userAuthenticator);
 
         loginMenuOption.performOperation();
 
@@ -42,9 +42,9 @@ public class LoginMenuOptionTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
-        UserManager userManager = new UserManager(validUsers);
+        UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
-        LoginMenuOption loginMenuOption = new LoginMenuOption(consoleDisplay, userManager);
+        LoginMenuOption loginMenuOption = new LoginMenuOption(consoleDisplay, userAuthenticator);
 
         loginMenuOption.performOperation();
 

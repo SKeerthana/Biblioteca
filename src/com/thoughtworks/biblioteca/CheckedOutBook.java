@@ -3,17 +3,17 @@ package com.thoughtworks.biblioteca;
 import org.apache.commons.lang3.ArrayUtils;
 
 public class CheckedOutBook extends Book{
-    private UserInfo userInfo;
+    private User user;
 
-    public CheckedOutBook(Book book, UserInfo userInfo) {
+    public CheckedOutBook(Book book, User user) {
         super(book);
-        this.userInfo = userInfo;
+        this.user = user;
     }
 
     @Override
     public String[] getHeaderDetails() {
         String[] bookHeaderDetails = super.getHeaderDetails();
-        String[] userHeaderDetails = new String[]{userInfo.getUserNameHeader()};
+        String[] userHeaderDetails = new String[]{user.getUserNameHeader()};
         return ArrayUtils.addAll(bookHeaderDetails, userHeaderDetails);
     }
 }

@@ -67,11 +67,11 @@
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> start() {</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;33</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        ArrayList&lt;LibraryItem&gt; listOfAvailableBooks = generateListOfBooks();</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;34</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        ArrayList&lt;LibraryItem&gt; listOfMoviesAvailable = generateListOfMovies();</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;35</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        HashMap&lt;String, UserInfo&gt; listOfUsers = generateListOfValidUsers();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;35</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        HashMap&lt;String, User&gt; listOfUsers = generateListOfValidUsers();</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;36</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        Biblioteca bookLibraryData = <span class="keyword">new</span> Biblioteca(listOfAvailableBooks, <span class="keyword">new</span> ArrayList&lt;LibraryItem&gt;());</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;37</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        Biblioteca movieLibraryData = <span class="keyword">new</span> Biblioteca(listOfMoviesAvailable, <span class="keyword">new</span> ArrayList&lt;LibraryItem&gt;());</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;38</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        UserManager userManager = <span class="keyword">new</span> UserManager(listOfUsers);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;39</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        MenuOptionController menuOptionController = <span class="keyword">new</span> MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userManager);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;38</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        UserAuthenticator userAuthenticator = <span class="keyword">new</span> UserAuthenticator(listOfUsers);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;39</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        MenuOptionController menuOptionController = <span class="keyword">new</span> MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;40</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;41</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        consoleDisplay.printMessage(<span class="string">"Welcome to Bibliotica\n"</span>);</pre></td></tr>
@@ -88,10 +88,10 @@
 <tr>  <td class="numLine">&nbsp;49</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;50</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> HashMap&lt;String, UserInfo&gt; generateListOfValidUsers() {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;51</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        HashMap&lt;String, UserInfo&gt; userInfos = <span class="keyword">new</span> HashMap&lt;&gt;();</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;52</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        UserInfo normalUser = <span class="keyword">new</span> UserInfo(<span class="string">"lib-0001"</span>, <span class="string">"name"</span>, <span class="string">"abc"</span>, <span class="string">"abc@gmail.com"</span>, Role.USER);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;53</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        UserInfo admin = <span class="keyword">new</span> UserInfo(<span class="string">"lib-0002"</span>, <span class="string">"name"</span>, <span class="string">"abc"</span>, <span class="string">"abc@gmail.com"</span>, Role.USER);</pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> HashMap&lt;String, User&gt; generateListOfValidUsers() {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;51</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        HashMap&lt;String, User&gt; userInfos = <span class="keyword">new</span> HashMap&lt;&gt;();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;52</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        User normalUser = <span class="keyword">new</span> User(<span class="string">"lib-0001"</span>, <span class="string">"name"</span>, <span class="string">"abc"</span>, <span class="string">"abc@gmail.com"</span>, Role.USER);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;53</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        User admin = <span class="keyword">new</span> User(<span class="string">"lib-0002"</span>, <span class="string">"name"</span>, <span class="string">"abc"</span>, <span class="string">"abc@gmail.com"</span>, Role.USER);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;54</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        userInfos.put(<span class="string">"lib-0001"</span>, normalUser);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;55</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        userInfos.put(<span class="string">"lib-0002"</span>, admin);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;56</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> userInfos;</pre></td></tr>
@@ -125,6 +125,6 @@
   <td class="src"><pre class="src">&nbsp;}</pre></td></tr>
 </table>
 
-<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 2.1.1 on 16/9/15 4:52 PM.</div>
+<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 2.1.1 on 16/9/15 5:13 PM.</div>
 </body>
 </html>
