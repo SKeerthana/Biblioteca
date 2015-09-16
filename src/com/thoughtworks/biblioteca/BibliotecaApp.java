@@ -48,7 +48,12 @@ public class BibliotecaApp {
     }
 
     private HashMap<String, UserInfo> generateListOfValidUsers() {
-        return null;
+        HashMap<String, UserInfo> userInfos = new HashMap<>();
+        UserInfo normalUser = new UserInfo("lib-0001", "name", "abc", "abc@gmail.com", Role.USER);
+        UserInfo admin = new UserInfo("lib-0002", "name", "abc", "abc@gmail.com", Role.USER);
+        userInfos.put("lib-0001", normalUser);
+        userInfos.put("lib-0002", admin);
+        return userInfos;
     }
 
     private ArrayList<LibraryItem> generateListOfMovies() {
