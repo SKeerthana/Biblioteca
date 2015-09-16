@@ -18,14 +18,17 @@ public class MenuTest {
     }};
 
     @Test
-    public void shouldReturnTheListOFMenuOptions() {
+    public void shouldReturnTheListOfMenuOptionsForGuestUsers() {
         Menu menu = new Menu(listOfMenuOptions);
         String menuOptions = "Choose one of the menu option :\n";
-        menuOptions += "1. List all the books\n";
-        menuOptions += "2. Quit\n";
-        menuOptions += "3. Checkout books\n";
-        menuOptions += "4. Return books\n";
-        assertEquals(menuOptions, menu.getMenuOptions());
+        menuOptions += "List Books\n";
+        menuOptions += "Quit\n";
+        menuOptions += "CheckOut Book\n";
+        menuOptions += "Return Book\n";
+        menuOptions += "List Movies\n";
+        menuOptions += "CheckOut Movie\n";
+        menuOptions += "Log in\n";
+        assertEquals(menuOptions, menu.getMenuOptions(new UserInfo("lib-0001", "name", "abc", "abc@gmail.com", Role.GUEST)));
     }
 
     @Test

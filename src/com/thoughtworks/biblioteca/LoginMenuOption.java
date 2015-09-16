@@ -15,7 +15,7 @@ public class LoginMenuOption implements MenuOption {
         String libraryNumber = consoleDisplay.getInputFromUser();
         consoleDisplay.printMessage("Enter Password : ");
         String password = consoleDisplay.getInputFromUser();
-        if(userManager.authenticate(libraryNumber, password))
+        if (userManager.authenticate(libraryNumber, password))
             consoleDisplay.printMessage("Login Successful\n");
     }
 }

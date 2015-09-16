@@ -1,5 +1,7 @@
 package com.thoughtworks.biblioteca;
 
+import java.util.ArrayList;
+
 public class UserInfo {
     private String libraryNumber;
     private String userName;
@@ -31,5 +33,9 @@ public class UserInfo {
 
     public boolean validate(String password) {
         return this.password.equals(password);
+    }
+
+    public ArrayList<String> getMenuOptions() {
+        return role.getMenuOptions();
     }
 }

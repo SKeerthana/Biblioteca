@@ -12,7 +12,9 @@ public class UserManager {
     public boolean authenticate(String libraryNumber, String password) {
         if (listOfUsers.containsKey(libraryNumber)) {
             UserInfo userInfo = listOfUsers.get(libraryNumber);
-            return userInfo.validate(password);
+            if (userInfo.validate(password)) {
+                return true;
+            }
         }
         return false;
     }

@@ -6,7 +6,7 @@ import java.util.List;
 public enum Role {
     ADMIN {
         @Override
-        public List<String> getMenuOptions() {
+        public ArrayList<String> getMenuOptions() {
             return new ArrayList<String>() {{
                 add("List Books");
                 add("Quit");
@@ -21,7 +21,7 @@ public enum Role {
         }
     }, USER {
         @Override
-        public List<String> getMenuOptions() {
+        public ArrayList<String> getMenuOptions() {
             return new ArrayList<String>() {{
                 add("List Books");
                 add("Quit");
@@ -37,7 +37,7 @@ public enum Role {
     GUEST {
     };
 
-    public List<String> getMenuOptions() {
+    public ArrayList<String> getMenuOptions() {
         return new ArrayList<String>() {{
             add("List Books");
             add("Quit");

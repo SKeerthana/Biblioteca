@@ -7,6 +7,7 @@ public class MenuOptionController {
     private Biblioteca movieLibraryData;
     private ConsoleDisplay consoleDisplay;
     private UserManager userManager;
+    private UserInfo userInfo;
 
     public MenuOptionController(Menu menu, Biblioteca bookLibraryData, Biblioteca movieLibraryData, ConsoleDisplay consoleDisplay, UserManager userManager) {
         this.menu = menu;
@@ -14,10 +15,11 @@ public class MenuOptionController {
         this.movieLibraryData = movieLibraryData;
         this.consoleDisplay = consoleDisplay;
         this.userManager = userManager;
+        this.userInfo = new UserInfo("lib-0001", "name", "abc", "abc@gmail.com", Role.GUEST);
     }
 
     public void displayMenuOption() {
-        consoleDisplay.printMessage(menu.getMenuOptions());
+        consoleDisplay.printMessage(menu.getMenuOptions(userInfo));
     }
 
     public void handleMenuOption(String option) {

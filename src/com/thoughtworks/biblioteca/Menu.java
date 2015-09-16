@@ -6,12 +6,14 @@ import java.util.ArrayList;
 public class Menu {
     private ArrayList<String> listOfMenuOptions;
 
-    public Menu(ArrayList<String> listOfMenuOptions) {
+    public Menu(ArrayList<String> listOfMenuOptions)
+    {
         this.listOfMenuOptions = listOfMenuOptions;
     }
 
-    public String getMenuOptions() {
+    public String getMenuOptions(UserInfo userInfo) {
         String menuOptions = "Choose one of the menu option :\n";
+        listOfMenuOptions = userInfo.getMenuOptions();
         for (String menuOption : listOfMenuOptions) {
             menuOptions += menuOption + "\n";
         }
