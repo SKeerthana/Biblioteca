@@ -16,7 +16,9 @@ public class RoleTest {
             add("Return Book");
             add("List Movies");
             add("CheckOut Movie");
-            add("Log in");
+            add("User Information");
+            add("Book Status");
+            add("Log out");
         }};
         Role role = Role.ADMIN;
         assertEquals(menuList, role.getMenuOptions());
