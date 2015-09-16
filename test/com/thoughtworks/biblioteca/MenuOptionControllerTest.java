@@ -140,4 +140,19 @@ public class MenuOptionControllerTest {
 
         assertEquals("Thank you! Enjoy the Movie\n", outContent.toString());
     }
+
+    @Test
+    public void shouldCallLoginMenuOptionForOption7() {
+        String input = "1234-122" + "\n" + "abc";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
+        System.setIn(inContent);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userManager);
+        menuOptionController.handleMenuOption("7");
+
+        assertEquals("Enter Library Number : Enter Password : Login Successful\n", outContent.toString());
+    }
 }
