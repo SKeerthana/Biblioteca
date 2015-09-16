@@ -11,7 +11,7 @@ public class LoginMenuOption implements MenuOption {
 
     @Override
     public void performOperation() {
-        if(userManager.login("", ""))
+        if(userManager.authenticate("", ""))
             consoleDisplay.printMessage("Login Successful");
     }
 }

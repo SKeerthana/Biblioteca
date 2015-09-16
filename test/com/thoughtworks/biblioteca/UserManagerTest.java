@@ -16,6 +16,6 @@ public class UserManagerTest {
         }};
         UserManager userManager = new UserManager(validUsers);
 
-        assertTrue(userManager.login("abc", "abc"));
+        assertTrue(userManager.authenticate("1234-122", "abc"));
     }
 }

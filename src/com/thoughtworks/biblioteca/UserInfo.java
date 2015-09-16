@@ -24,4 +24,8 @@ public class UserInfo {
     public String getUserNameHeader() {
         return "USER NAME";
     }
+
+    public boolean validate(String password) {
+        return true;
+    }
 }
