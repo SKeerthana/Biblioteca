@@ -19,6 +19,20 @@ public enum Role {
                 add("Log out");
             }};
         }
+    }, USER {
+        @Override
+        public List<String> getMenuOptions() {
+            return new ArrayList<String>() {{
+                add("List Books");
+                add("Quit");
+                add("CheckOut Book");
+                add("Return Book");
+                add("List Movies");
+                add("CheckOut Movie");
+                add("User Information");
+                add("Log out");
+            }};
+        }
     };
 
     public List<String> getMenuOptions() {
