@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 public class UserInfoTest {
     @Test
@@ -36,5 +37,11 @@ public class UserInfoTest {
     public void shouldCompareWithItself() {
         UserInfo userInfo1 = new UserInfo("ABC", "ABC", "abc@gmail.com");
         assertEquals(userInfo1, userInfo1);
+    }
+
+    @Test
+    public void shouldReturnTrueForSamePassword() {
+        UserInfo userInfo1 = new UserInfo("ABC", "ABC", "abc@gmail.com");
+        assertTrue(userInfo1.validate("ABC"));
     }
 }

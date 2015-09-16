@@ -26,6 +26,6 @@ public class UserInfo {
     }
 
     public boolean validate(String password) {
-        return true;
+        return this.password.equals(password);
     }
 }

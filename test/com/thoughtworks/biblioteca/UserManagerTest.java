@@ -30,4 +30,15 @@ public class UserManagerTest {
 
         assertFalse(userManager.authenticate("1234-123", "abc"));
     }
+
+    @Test
+    public void shouldNotLoginForInValidPassword() {
+        final UserInfo userInfo1 = new UserInfo("abc", "abc", "abc");
+        HashMap<String, UserInfo> validUsers = new HashMap<String, UserInfo>() {{
+            put("1234-122", userInfo1);
+        }};
+        UserManager userManager = new UserManager(validUsers);
+
+        assertFalse(userManager.authenticate("1234-123", "abc"));
+    }
 }
