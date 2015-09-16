@@ -7,11 +7,11 @@ import java.util.Scanner;
 //for getting input from user and displaying output.
 public class ConsoleDisplay {
     private PrintStream printStream;
-    private InputStream inputStream;
+    private Scanner scanner;
 
     public ConsoleDisplay(PrintStream printStream, InputStream inputStream) {
         this.printStream = printStream;
-        this.inputStream = inputStream;
+        this.scanner = new Scanner(inputStream);
     }
 
     public void printMessage(String message) {
@@ -19,8 +19,7 @@ public class ConsoleDisplay {
     }
 
     public String getInputFromUser() {
-        Scanner sc = new Scanner(inputStream);
-        return sc.nextLine();
+        return scanner.nextLine();
     }
 
 }

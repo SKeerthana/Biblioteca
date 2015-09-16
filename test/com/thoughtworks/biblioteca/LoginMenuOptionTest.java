@@ -2,6 +2,7 @@ package com.thoughtworks.biblioteca;
 
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.HashMap;
@@ -19,12 +20,16 @@ public class LoginMenuOptionTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
+        String input = "1234-122" + "\n" + "abc";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
         UserManager userManager = new UserManager(validUsers);
+
         LoginMenuOption loginMenuOption = new LoginMenuOption(consoleDisplay, userManager);
 
         loginMenuOption.performOperation();
 
-        assertEquals("Login Successful", outContent.toString());
+        assertEquals("Enter Library Number : Enter Password : Login Successful", outContent.toString());
     }
 }
