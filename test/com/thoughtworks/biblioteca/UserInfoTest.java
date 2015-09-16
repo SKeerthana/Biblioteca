@@ -2,9 +2,7 @@ package com.thoughtworks.biblioteca;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class UserInfoTest {
     @Test
@@ -43,5 +41,11 @@ public class UserInfoTest {
     public void shouldReturnTrueForSamePassword() {
         UserInfo userInfo1 = new UserInfo("ABC", "ABC", "abc@gmail.com");
         assertTrue(userInfo1.validate("ABC"));
+    }
+
+    @Test
+    public void shouldReturnFlaseForDifferentPassword() {
+        UserInfo userInfo1 = new UserInfo("ABC", "ABC", "abc@gmail.com");
+        assertFalse(userInfo1.validate("ABC12"));
     }
 }
