@@ -60,4 +60,12 @@ public class User {
     public String getEmailId() {
         return emailId;
     }
+
+    public String[] getHeaderDetails() {
+        String[] bookHeaderInfo = new String[3];
+        bookHeaderInfo[0] = "USER NAME";
+        bookHeaderInfo[1] = "EMAIL ID";
+        bookHeaderInfo[2] = "PHONE NUMBER";
+        return bookHeaderInfo;
+    }
 }

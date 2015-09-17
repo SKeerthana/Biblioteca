@@ -8,6 +8,11 @@ public class UserView {
     }
 
     public String getFormattedUserDetails() {
-        return String.format("%-50s %-25s %-15s\n", user.getUserName(), user.getEmailId(), user.getPhoneNumber());
+        String userDetailsToDisplay = "=====================================================================================";
+        userDetailsToDisplay += String.format("%-50s %-25s %-15s\n", user.getHeaderDetails());
+        userDetailsToDisplay += "=====================================================================================";
+        userDetailsToDisplay += String.format("%-50s %-25s %-15s\n", user.getUserName(), user.getEmailId(), user.getPhoneNumber());
+        userDetailsToDisplay += "=====================================================================================";
+        return userDetailsToDisplay;
     }
 }

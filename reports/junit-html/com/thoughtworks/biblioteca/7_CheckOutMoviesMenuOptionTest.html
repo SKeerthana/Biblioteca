@@ -53,7 +53,11 @@
     
         cur['file.separator'] = '/';
     
+        cur['ftp.nonProxyHosts'] = 'local|*.local|169.254/16|*.169.254/16';
+    
         cur['gopherProxySet'] = 'false';
+    
+        cur['http.nonProxyHosts'] = 'local|*.local|169.254/16|*.169.254/16';
     
         cur['instrumented.dir'] = 'instrumented';
     
@@ -125,6 +129,8 @@
     
         cur['reports.xml.dir'] = 'reports/junit-xml';
     
+        cur['socksNonProxyHosts'] = 'local|*.local|169.254/16|*.169.254/16';
+    
         cur['src.dir'] = 'src';
     
         cur['sun.arch.data.model'] = '64';
@@ -139,7 +145,7 @@
     
         cur['sun.io.unicode.encoding'] = 'UnicodeBig';
     
-        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.CheckOutMoviesMenuOptionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.CheckOutMoviesMenuOptionTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher4252439071651539436.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit6509035154430226446.properties';
+        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.thoughtworks.biblioteca.CheckOutMoviesMenuOptionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/keerthas/IdeaProjects/Biblioteca/reports/junit-xml/TEST-com.thoughtworks.biblioteca.CheckOutMoviesMenuOptionTest.xml crashfile=/Users/keerthas/IdeaProjects/Biblioteca/junitvmwatcher3536298569591997276.properties propsfile=/Users/keerthas/IdeaProjects/Biblioteca/junit3896211126880137907.properties';
     
         cur['sun.java.launcher'] = 'SUN_STANDARD';
     
@@ -208,7 +214,7 @@
 <th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th>Skipped</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
 </tr>
 <tr valign="top" class="Pass">
-<td><a title="Display all tests" href="7_CheckOutMoviesMenuOptionTest.html">CheckOutMoviesMenuOptionTest</a></td><td><a title="Display all tests" href="7_CheckOutMoviesMenuOptionTest.html">2</a></td><td>0</td><td>0</td><td>0</td><td>0.239</td><td>2015-09-17T18:20:44</td><td>INkeerthas.local</td>
+<td><a title="Display all tests" href="7_CheckOutMoviesMenuOptionTest.html">CheckOutMoviesMenuOptionTest</a></td><td><a title="Display all tests" href="7_CheckOutMoviesMenuOptionTest.html">2</a></td><td>0</td><td>0</td><td>0</td><td>0.241</td><td>2015-09-17T18:43:58</td><td>INkeerthas.local</td>
 </tr>
 </table>
 <h2>Tests</h2>
@@ -220,7 +226,7 @@
 <td><a name="shouldNotCheckoutMovieIfTheMovieListDoesNotContain"></a>shouldNotCheckoutMovieIfTheMovieListDoesNotContain</td><td>Success</td><td></td><td>0.005</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="shouldCheckoutMovieIfTheMovieIsInAvailableList"></a>shouldCheckoutMovieIfTheMovieIsInAvailableList</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="shouldCheckoutMovieIfTheMovieIsInAvailableList"></a>shouldCheckoutMovieIfTheMovieIsInAvailableList</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 </table>
 <div class="Properties">
