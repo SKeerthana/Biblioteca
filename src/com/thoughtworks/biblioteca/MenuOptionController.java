@@ -7,7 +7,7 @@ public class MenuOptionController {
     private Biblioteca movieLibraryData;
     private ConsoleDisplay consoleDisplay;
     private UserAuthenticator userAuthenticator;
-    private User user;
+    private User currentUser;
 
     public MenuOptionController(Menu menu, Biblioteca bookLibraryData, Biblioteca movieLibraryData, ConsoleDisplay consoleDisplay, UserAuthenticator userAuthenticator) {
         this.menu = menu;
@@ -15,11 +15,11 @@ public class MenuOptionController {
         this.movieLibraryData = movieLibraryData;
         this.consoleDisplay = consoleDisplay;
         this.userAuthenticator = userAuthenticator;
-        this.user = new User("lib-0001", "name", "abc", "abc@gmail.com", Role.GUEST);
+        this.currentUser = new User("lib-0001", "name", "abc", "abc@gmail.com", new GuestRole());
     }
 
     public void displayMenuOption() {
-        consoleDisplay.printMessage(menu.getMenuOptions(user));
+        consoleDisplay.printMessage(menu.getMenuOptions(currentUser));
     }
 
     public void handleMenuOption(String option) {
@@ -34,9 +34,9 @@ public class MenuOptionController {
             case "2":
                 return new QuitMenuOption();
             case "3":
-                return new CheckOutBooksMenuOption(bookLibraryData, consoleDisplay, new User("", "", "", "", Role.ADMIN));
+                return new CheckOutBooksMenuOption(bookLibraryData, consoleDisplay, currentUser);
             case "4":
-                return new ReturnBookOption(bookLibraryData, consoleDisplay, new User("", "", "", "", Role.ADMIN));
+                return new ReturnBookOption(bookLibraryData, consoleDisplay, currentUser);
             case "5":
                 return new ListLibraryItemMenuOption(new MovieView(movieLibraryData), consoleDisplay);
             case "6":

@@ -7,9 +7,9 @@ public class User {
     private String userName;
     private String password;
     private String emailId;
-    private Role role;
+    private UserRole role;
 
-    public User(String libraryNumber, String userName, String password, String emailId, Role role) {
+    public User(String libraryNumber, String userName, String password, String emailId, UserRole role) {
         this.libraryNumber = libraryNumber;
         this.userName = userName;
         this.password = password;

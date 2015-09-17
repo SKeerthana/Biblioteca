@@ -21,8 +21,7 @@ public class RoleTest {
             add("Book Status");
             add("Log out");
         }};
-        Role role = Role.ADMIN;
-        assertEquals(menuList, role.getMenuOptions());
+        assertEquals(menuList, new AdminRole().getMenuOptions());
     }
 
     @Test
@@ -37,8 +36,7 @@ public class RoleTest {
             add("User Information");
             add("Log out");
         }};
-        Role role = Role.USER;
-        assertEquals(menuList, role.getMenuOptions());
+        assertEquals(menuList, new LoggedInUserRole().getMenuOptions());
     }
 
     @Test
@@ -52,7 +50,6 @@ public class RoleTest {
             add("CheckOut Movie");
             add("Log in");
         }};
-        Role role = Role.GUEST;
-        assertEquals(menuList, role.getMenuOptions());
+        assertEquals(menuList, new GuestRole().getMenuOptions());
     }
 }

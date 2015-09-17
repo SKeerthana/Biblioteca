@@ -20,6 +20,7 @@ public class CheckOutBooksMenuOptionTest {
         add(book2);
     }};
     Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>());
+    User currentUser = new User("abc", "abc", "abc", "", new AdminRole());
 
     @Test
     public void shouldCheckoutBookIfTheBookListContains() {
@@ -31,7 +32,7 @@ public class CheckOutBooksMenuOptionTest {
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         Book bookToSearch = new Book(input, null, 0);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new User("abc", "abc", "abc", "", Role.ADMIN));
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, currentUser);
 
         checkOutBooksMenuOption.performOperation();
 
@@ -47,7 +48,7 @@ public class CheckOutBooksMenuOptionTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new User("abc", "abc", "abc", "", Role.ADMIN));
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, currentUser);
         List<LibraryItem> availableBooks= bibilioteca.getAvailableItems();
 
         checkOutBooksMenuOption.performOperation();
@@ -64,7 +65,7 @@ public class CheckOutBooksMenuOptionTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new User("abc", "abc", "abc", "", Role.ADMIN));
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, currentUser);
 
         checkOutBooksMenuOption.performOperation();
 
@@ -80,7 +81,7 @@ public class CheckOutBooksMenuOptionTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new User("abc", "abc", "abc", "", Role.ADMIN));
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, currentUser);
 
         checkOutBooksMenuOption.performOperation();
 

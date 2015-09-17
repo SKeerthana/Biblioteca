@@ -39,7 +39,7 @@ public class MenuOptionControllerTest {
         add("4. Return books");
     }};
     private Menu menu = new Menu(listOfMenuOptions);
-    private User user1 = new User("abc", "abc", "abc", "", Role.ADMIN);
+    private User user1 = new User("abc", "abc", "abc", "", new AdminRole());
     private HashMap<String, User> validUsers = new HashMap<String, User>() {{
         put("1234-122", user1);
     }};

@@ -10,7 +10,7 @@ import java.util.HashMap;
 import static org.junit.Assert.assertEquals;
 
 public class LoginMenuOptionTest {
-    private User user1 = new User("1234-122", "abc", "abc", "abc@gmail.com", Role.ADMIN);
+    private User user1 = new User("1234-122", "abc", "abc", "abc@gmail.com", new AdminRole());
     HashMap<String, User> validUsers = new HashMap<String, User>() {{
         put("1234-122", user1);
     }};

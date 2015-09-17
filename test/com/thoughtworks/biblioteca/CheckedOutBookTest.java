@@ -10,7 +10,7 @@ public class CheckedOutBookTest {
     public void shouldReturnHeaderDetailsOfBookAndUserName() {
         String[] headerDetails = {"BOOK NAME", "AUTHOR", "YEAR", "USER NAME"};
         Book book = new Book("Abc", "Def", 1900);
-        User user = new User("abc", "abc", "abc", "", Role.ADMIN);
+        User user = new User("abc", "abc", "abc", "", new AdminRole());
         CheckedOutBook checkedOutBook = new CheckedOutBook(book, user);
         assertArrayEquals(headerDetails, checkedOutBook.getHeaderDetails());
     }

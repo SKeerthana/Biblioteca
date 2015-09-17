@@ -49,8 +49,8 @@ public class BibliotecaApp {
 
     private HashMap<String, User> generateListOfValidUsers() {
         HashMap<String, User> userInfos = new HashMap<>();
-        User normalUser = new User("lib-0001", "name", "abc", "abc@gmail.com", Role.USER);
-        User admin = new User("lib-0002", "name", "abc", "abc@gmail.com", Role.USER);
+        User normalUser = new User("lib-0001", "name", "abc", "abc@gmail.com", new LoggedInUserRole());
+        User admin = new User("lib-0002", "name", "abc", "abc@gmail.com", new LoggedInUserRole());
         userInfos.put("lib-0001", normalUser);
         userInfos.put("lib-0002", admin);
         return userInfos;
@@ -59,7 +59,7 @@ public class BibliotecaApp {
     private ArrayList<LibraryItem> generateListOfMovies() {
         Movie movie1 = new Movie("Vishvaroopam", 2013, "Kamalhasan", 10);
         Movie movie2 = new Movie("The Dark Knight Returns", 2013, "Frank Miller", 10);
-        ArrayList<LibraryItem> availableMovieList = new ArrayList<LibraryItem>();
+        ArrayList<LibraryItem> availableMovieList = new ArrayList<>();
         availableMovieList.add(movie1);
         availableMovieList.add(movie2);
         return availableMovieList;

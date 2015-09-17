@@ -8,12 +8,12 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class UserAuthenticatorTest {
+    private User currentUser = new User("abc", "abc", "abc", "", new AdminRole());
 
     @Test
     public void shouldLoginForValidCredentials() {
-        final User user1 = new User("abc", "abc", "abc", "", Role.ADMIN);
         HashMap<String, User> validUsers = new HashMap<String, User>() {{
-            put("1234-122", user1);
+            put("1234-122", currentUser);
         }};
         UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
@@ -22,9 +22,8 @@ public class UserAuthenticatorTest {
 
     @Test
     public void shouldNotLoginForInValidLibraryNumber() {
-        final User user1 = new User("abc", "abc", "abc", "", Role.ADMIN);
         HashMap<String, User> validUsers = new HashMap<String, User>() {{
-            put("1234-122", user1);
+            put("1234-122", currentUser);
         }};
         UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
@@ -33,9 +32,8 @@ public class UserAuthenticatorTest {
 
     @Test
     public void shouldNotLoginForInValidPassword() {
-        final User user1 = new User("abc", "abc", "abc", "", Role.ADMIN);
         HashMap<String, User> validUsers = new HashMap<String, User>() {{
-            put("1234-122", user1);
+            put("1234-122", currentUser);
         }};
         UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
@@ -44,9 +42,8 @@ public class UserAuthenticatorTest {
 
     @Test
     public void shouldNotLoginForInValidCredentials() {
-        final User user1 = new User("abc", "abc", "abc", "", Role.ADMIN);
         HashMap<String, User> validUsers = new HashMap<String, User>() {{
-            put("1234-122", user1);
+            put("1234-122", currentUser);
         }};
         UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
