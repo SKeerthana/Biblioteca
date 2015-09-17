@@ -156,7 +156,7 @@ public class MenuOptionControllerTest {
         MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
         menuOptionController.handleMenuOption("7");
 
-        assertEquals("Enter Library Number : Enter Password : Login Successful\n", outContent.toString());
+        assertEquals("Enter library Number : Enter password : Login Successful\n", outContent.toString());
     }
 
     @Test

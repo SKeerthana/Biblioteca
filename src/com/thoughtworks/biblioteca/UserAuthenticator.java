@@ -9,13 +9,21 @@ public class UserAuthenticator {
         this.listOfUsers = listOfUsers;
     }
 
-    public boolean authenticate(String libraryNumber, String password) {
+    private User authenticate(String libraryNumber, String password) {
         if (listOfUsers.containsKey(libraryNumber)) {
             User user = listOfUsers.get(libraryNumber);
             if (user.validate(password)) {
-                return true;
+                return user;
             }
         }
-        return false;
+        return new User("", "", "", "", new GuestRole());
+    }
+
+    public User loginUser(ConsoleDisplay consoleDisplay) {
+        consoleDisplay.printMessage("Enter library Number : ");
+        String libraryNumber = consoleDisplay.getInputFromUser();
+        consoleDisplay.printMessage("Enter password : ");
+        String password = consoleDisplay.getInputFromUser();
+        return authenticate(libraryNumber, password);
     }
 }

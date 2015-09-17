@@ -11,11 +11,8 @@ public class LoginMenuOption implements MenuOption {
 
     @Override
     public void performOperation() {
-        consoleDisplay.printMessage("Enter Library Number : ");
-        String libraryNumber = consoleDisplay.getInputFromUser();
-        consoleDisplay.printMessage("Enter Password : ");
-        String password = consoleDisplay.getInputFromUser();
-        if (userAuthenticator.authenticate(libraryNumber, password))
+        User currentUser = userAuthenticator.loginUser(consoleDisplay);
+        if(currentUser.isCheckOutBookAllowed())
             consoleDisplay.printMessage("Login Successful\n");
     }
 }

@@ -30,7 +30,7 @@ public class LoginMenuOptionTest {
 
         loginMenuOption.performOperation();
 
-        assertEquals("Enter Library Number : Enter Password : Login Successful\n", outContent.toString());
+        assertEquals("Enter library Number : Enter password : Login Successful\n", outContent.toString());
     }
 
     @Test
@@ -48,6 +48,6 @@ public class LoginMenuOptionTest {
 
         loginMenuOption.performOperation();
 
-        assertEquals("Enter Library Number : Enter Password : ", outContent.toString());
+        assertEquals("Enter library Number : Enter password : ", outContent.toString());
     }
 }
