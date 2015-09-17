@@ -34,7 +34,9 @@ public class MenuOptionController {
             case "2":
                 return new QuitMenuOption();
             case "3":
-                return new CheckOutBooksMenuOption(bookLibraryData, consoleDisplay, currentUser);
+                if (currentUser.isCheckOutBookAllowed())
+                    return new CheckOutBooksMenuOption(bookLibraryData, consoleDisplay, currentUser);
+                break;
             case "4":
                 return new ReturnBookOption(bookLibraryData, consoleDisplay, currentUser);
             case "5":
@@ -43,8 +45,7 @@ public class MenuOptionController {
                 return new CheckOutMoviesMenuOption(movieLibraryData, consoleDisplay);
             case "7":
                 return new LoginMenuOption(consoleDisplay, userAuthenticator);
-            default:
-                return new InvalidMenuOption(consoleDisplay);
         }
+        return new InvalidMenuOption(consoleDisplay);
     }
 }

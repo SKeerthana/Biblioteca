@@ -97,7 +97,7 @@ public class MenuOptionControllerTest {
 
         menuOptionController.handleMenuOption("3");
 
-        assertEquals("That book is not available\n", outContent.toString());
+        assertEquals("Select a valid option!\n", outContent.toString());
     }
 
     @Test
@@ -157,5 +157,21 @@ public class MenuOptionControllerTest {
         menuOptionController.handleMenuOption("7");
 
         assertEquals("Enter Library Number : Enter Password : Login Successful\n", outContent.toString());
+    }
+
+    @Test
+    public void shouldNotAllowCheckOutForDefaultGuestUser() {
+        String input = "Harry Potter";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
+        System.setIn(inContent);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
+
+        menuOptionController.handleMenuOption("3");
+
+        assertEquals("Select a valid option!\n", outContent.toString());
     }
 }
