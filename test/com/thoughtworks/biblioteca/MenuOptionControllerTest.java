@@ -239,6 +239,19 @@ public class MenuOptionControllerTest {
         MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, guestUser);
         menuOptionController.handleMenuOption("7");
 
-        assertEquals("Enter library Number : Enter password : Login Successful\n", outContent.toString());
+        assertEquals("Enter library Number : Enter password : Login successful\n", outContent.toString());
+    }
+
+    @Test
+    public void shouldCallLogoutMenuOptionForOption8() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
+        User currentUser = new User("1234-122", "abc", "abc", "", new LoggedInUserRole());
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+        menuOptionController.handleMenuOption("8");
+
+        assertEquals("Logout successful\n", outContent.toString());
     }
 }

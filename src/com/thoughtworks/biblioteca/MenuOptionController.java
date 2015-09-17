@@ -59,6 +59,7 @@ public class MenuOptionController {
                 return new LoginMenuOption(consoleDisplay, currentUser);
             case "Log out":
                 currentUser = userAuthenticator.logOut();
+                return new LogoutMenuOption(consoleDisplay, currentUser);
             default:
                 return new InvalidMenuOption(consoleDisplay);
         }
