@@ -12,7 +12,7 @@ public class BookViewTest {
         add(book1);
     }};
     Book book2 = new Book("Good will hunting", "some person", 1998);
-    User user = new User("ABC", "ABC", "", "abc@gmail.com", new LoggedInUserRole());
+    User user = new User("ABC", "ABC", "", "abc@gmail.com", "9944172304", new LoggedInUserRole());
     CheckedOutBook checkedOutBook = new CheckedOutBook(book2, user);
     ArrayList<LibraryItem> checkedOutBooks = new ArrayList<LibraryItem>() {{
         add(checkedOutBook);

@@ -23,7 +23,7 @@ public class MenuOptionControllerTest {
         add(book2);
     }};
     Book book3 = new Book("Good will hunting", "some person", 1998);
-    private User currentUser = new User("1234-122", "abc", "abc", "", new LoggedInUserRole());
+    private User currentUser = new User("1234-122", "abc", "abc", "", "9944172304", new LoggedInUserRole());
     CheckedOutBook checkedOutBook = new CheckedOutBook(book3, currentUser);
     ArrayList<LibraryItem> checkedOutBooks = new ArrayList<LibraryItem>() {{
         add(checkedOutBook);
@@ -47,14 +47,14 @@ public class MenuOptionControllerTest {
         add("4. Return books");
     }};
     private Menu menu = new Menu(listOfMenuOptions);
-    private User adminUser = new User("admin-001", "", "", "", new AdminRole());
+    private User adminUser = new User("admin-001", "", "", "", "9944172304", new AdminRole());
     private HashMap<String, User> validUsers = new HashMap<String, User>() {{
         put("1234-122", currentUser);
         put("admin-001", adminUser);
     }};
     private UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
-    private User guestUser = new User("guest-001", "", "", "", new GuestRole());
+    private User guestUser = new User("guest-001", "", "", "", "9944172304", new GuestRole());
 
     @Test
     public void shouldDisplayMenuOptions() {
@@ -252,7 +252,7 @@ public class MenuOptionControllerTest {
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
-        User currentUser = new User("1234-122", "abc", "abc", "", new LoggedInUserRole());
+        User currentUser = new User("1234-122", "abc", "abc", "", "9944172304", new LoggedInUserRole());
         MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
 
         menuOptionController.handleMenuOption("8");

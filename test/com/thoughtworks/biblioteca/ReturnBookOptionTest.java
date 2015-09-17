@@ -13,7 +13,7 @@ import static org.junit.Assert.assertTrue;
 public class ReturnBookOptionTest {
     Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
     Book book2 = new Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998);
-    User currentlyLoggedInUser = new User("admin-001", "abc", "abc", "", new AdminRole());
+    User currentlyLoggedInUser = new User("admin-001", "abc", "abc", "", "9944172304", new AdminRole());
     CheckedOutBook checkedOutBook = new CheckedOutBook(book2, currentlyLoggedInUser);
     ArrayList<LibraryItem> listOfAvailableBooks = new ArrayList<LibraryItem>() {{
         add(book1);

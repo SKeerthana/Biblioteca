@@ -21,7 +21,7 @@ public class MovieView implements LibraryView {
 
     @Override
     public String getFormattedListOfCheckedOutItems() {
-        return null;
+        return "Feature not supported";
     }
 
     private String getItemDetails(List<LibraryItem> movies) {

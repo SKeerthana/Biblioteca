@@ -41,7 +41,7 @@ public class BibliotecaApp {
         Biblioteca movieLibraryData = new Biblioteca(listOfMoviesAvailable, new ArrayList<LibraryItem>());
         UserAuthenticator userAuthenticator = new UserAuthenticator(listOfUsers);
 
-        User guestUser = new User("guest-001", "", "", "", new GuestRole());
+        User guestUser = new User("guest-001", "", "", "", "", new GuestRole());
         Menu menu = new Menu(guestUser.getMenuOptions());
 
         return new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, guestUser);
@@ -49,8 +49,8 @@ public class BibliotecaApp {
 
     private HashMap<String, User> generateListOfValidUsers() {
         HashMap<String, User> userInfos = new HashMap<>();
-        User normalUser = new User("lib-0001", "name", "abc", "abc@gmail.com", new LoggedInUserRole());
-        User admin = new User("lib-0002", "name", "abc", "abc@gmail.com", new AdminRole());
+        User normalUser = new User("lib-0001", "name", "abc", "abc@gmail.com", "9944172304", new LoggedInUserRole());
+        User admin = new User("lib-0002", "name", "abc", "abc@gmail.com", "9944172304", new AdminRole());
         userInfos.put("lib-0001", normalUser);
         userInfos.put("lib-0002", admin);
 

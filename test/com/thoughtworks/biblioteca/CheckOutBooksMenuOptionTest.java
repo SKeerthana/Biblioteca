@@ -20,7 +20,7 @@ public class CheckOutBooksMenuOptionTest {
         add(book2);
     }};
     Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>());
-    User currentUser = new User("abc", "abc", "abc", "", new AdminRole());
+    User currentUser = new User("abc", "abc", "abc", "", "9944172304", new AdminRole());
 
     @Test
     public void shouldCheckoutBookIfTheBookListContains() {

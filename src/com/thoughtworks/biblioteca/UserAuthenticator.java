@@ -17,7 +17,7 @@ public class UserAuthenticator {
                 return user;
             }
         }
-        return new User("guest-001", "", "", "", new GuestRole());
+        return new User("guest-001", "", "", "", "", new GuestRole());
     }
 
     public User loginUser(ConsoleDisplay consoleDisplay) {
@@ -29,6 +29,6 @@ public class UserAuthenticator {
     }
 
     public User logOut() {
-        return new User("guest-001", "", "", "", new GuestRole());
+        return new User("guest-001", "", "", "", "", new GuestRole());
     }
 }

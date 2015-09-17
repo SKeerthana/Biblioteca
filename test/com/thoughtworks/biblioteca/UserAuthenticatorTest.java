@@ -10,8 +10,8 @@ import java.util.HashMap;
 import static org.junit.Assert.assertEquals;
 
 public class UserAuthenticatorTest {
-    private User currentUser = new User("1234-122", "abc", "abc", "", new AdminRole());
-    private User guestUser = new User("guest-001", "", "", "", new GuestRole());
+    private User currentUser = new User("1234-122", "abc", "abc", "", "9944172304", new AdminRole());
+    private User guestUser = new User("guest-001", "", "", "", "9944172304", new GuestRole());
 
     @Test
     public void shouldLoginForValidCredentials() {
