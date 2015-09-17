@@ -27,8 +27,8 @@ public class User {
         return (thatUser.libraryNumber.equals(libraryNumber));
     }
 
-    public String getUserNameHeader() {
-        return "USER NAME";
+    public String getLibraryNumberHeader() {
+        return "LIBRARY NUMBER";
     }
 
     public boolean validate(String password) {
@@ -41,5 +41,9 @@ public class User {
 
     public boolean isAuthenticatedUser() {
         return role.isAuthenticatedUser();
+    }
+
+    public String getLibraryNumber() {
+        return libraryNumber;
     }
 }

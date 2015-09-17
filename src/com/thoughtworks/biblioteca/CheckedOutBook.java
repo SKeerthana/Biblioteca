@@ -13,7 +13,11 @@ public class CheckedOutBook extends Book{
     @Override
     public String[] getHeaderDetails() {
         String[] bookHeaderDetails = super.getHeaderDetails();
-        String[] userHeaderDetails = new String[]{user.getUserNameHeader()};
+        String[] userHeaderDetails = new String[]{user.getLibraryNumberHeader()};
         return ArrayUtils.addAll(bookHeaderDetails, userHeaderDetails);
+    }
+
+    public User getUser() {
+        return user;
     }
 }

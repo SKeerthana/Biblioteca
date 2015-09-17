@@ -13,9 +13,9 @@ public class Book implements LibraryItem{
     }
 
     public Book(Book thatBook) {
-        thatBook.bookName = bookName;
-        thatBook.author = author;
-        thatBook.yearPublished = yearPublished;
+        bookName = thatBook.bookName;
+        author = thatBook.author;
+        yearPublished = thatBook.yearPublished;
     }
 
     public String[] getHeaderDetails() {

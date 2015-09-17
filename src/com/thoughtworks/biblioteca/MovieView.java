@@ -19,6 +19,11 @@ public class MovieView implements LibraryView {
         return movieHeader + movieDetails + movieFooter;
     }
 
+    @Override
+    public String getFormattedListOfCheckedOutItems() {
+        return null;
+    }
+
     private String getItemDetails(List<LibraryItem> movies) {
         String movieDetails = "";
         for (LibraryItem movieItem : movies) {

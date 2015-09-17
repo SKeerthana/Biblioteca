@@ -41,4 +41,8 @@ public class Biblioteca {
     public List<LibraryItem> getAvailableItems() {
         return availableItems;
     }
+
+    public ArrayList<LibraryItem> getCheckedOutItems() {
+        return checkedOutItems;
+    }
 }
