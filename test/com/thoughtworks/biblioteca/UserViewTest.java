@@ -10,6 +10,6 @@ public class UserViewTest {
     @Test
     public void shouldDisplayUserInformation() {
         UserView userView = new UserView(currentUser);
-        assertEquals("abc abc@gmail.com 9944172304", userView.getFormattedUserDetails());
+        assertEquals(String.format("%-50s %-25s %-15s\n" ,"abc", "abc@gmail.com", "9944172304"), userView.getFormattedUserDetails());
     }
 }
