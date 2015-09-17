@@ -272,4 +272,17 @@ public class MenuOptionControllerTest {
 
         assertEquals(bookView.getFormattedListOfCheckedOutItems(), outContent.toString());
     }
+
+    @Test
+    public void shouldDisplayUserInformationForOption7ForAdmin() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
+        UserView userView = new UserView(adminUser);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, adminUser);
+
+        menuOptionController.handleMenuOption("7");
+
+        assertEquals(userView.getFormattedUserDetails(), outContent.toString());
+    }
 }

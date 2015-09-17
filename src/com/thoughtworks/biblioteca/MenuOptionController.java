@@ -67,7 +67,10 @@ public class MenuOptionController {
             case "Log out":
                 currentUser = userAuthenticator.logOut();
                 return new LogoutMenuOption(consoleDisplay, currentUser);
-            
+
+            case "Book Status":
+                return new BookStatusMenuOption(new BookView(bookLibraryData), consoleDisplay);
+
             case "User Information":
                 return new UserInformationMenuOption(new UserView(currentUser), consoleDisplay);
         }
