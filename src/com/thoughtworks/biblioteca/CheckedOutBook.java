@@ -2,7 +2,7 @@ package com.thoughtworks.biblioteca;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-public class CheckedOutBook extends Book{
+public class CheckedOutBook extends Book {
     private User user;
 
     public CheckedOutBook(Book book, User user) {

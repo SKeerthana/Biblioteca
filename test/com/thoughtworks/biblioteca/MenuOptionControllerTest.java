@@ -23,8 +23,10 @@ public class MenuOptionControllerTest {
         add(book2);
     }};
     Book book3 = new Book("Good will hunting", "some person", 1998);
+    private User currentUser = new User("1234-122", "abc", "abc", "", new LoggedInUserRole());
+    CheckedOutBook checkedOutBook = new CheckedOutBook(book3, currentUser);
     ArrayList<LibraryItem> checkedOutBooks = new ArrayList<LibraryItem>() {{
-        add(book3);
+        add(checkedOutBook);
     }};
 
     Biblioteca bookLibraryData = new Biblioteca(listOfBooks, checkedOutBooks);
@@ -45,13 +47,13 @@ public class MenuOptionControllerTest {
         add("4. Return books");
     }};
     private Menu menu = new Menu(listOfMenuOptions);
-    private User user1 = new User("abc", "abc", "abc", "", new AdminRole());
+    private User adminUser = new User("admin-001", "", "", "", new AdminRole());
     private HashMap<String, User> validUsers = new HashMap<String, User>() {{
-        put("1234-122", user1);
+        put("1234-122", currentUser);
+        put("admin-001", adminUser);
     }};
     private UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
-    private User currentUser = new User("1234-122", "abc", "abc", "", new AdminRole());
     private User guestUser = new User("guest-001", "", "", "", new GuestRole());
 
     @Test
@@ -222,6 +224,7 @@ public class MenuOptionControllerTest {
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
         MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+
         menuOptionController.handleMenuOption("6");
 
         assertEquals("Thank you! Enjoy the Movie\n", outContent.toString());
@@ -237,21 +240,36 @@ public class MenuOptionControllerTest {
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
         MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, guestUser);
+
         menuOptionController.handleMenuOption("7");
 
         assertEquals("Enter library Number : Enter password : Login successful\n", outContent.toString());
     }
 
     @Test
-    public void shouldCallLogoutMenuOptionForOption8() {
+    public void shouldCallLogoutMenuOptionForOption8ForLoggedInUser() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
         User currentUser = new User("1234-122", "abc", "abc", "", new LoggedInUserRole());
         MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+
         menuOptionController.handleMenuOption("8");
 
         assertEquals("Logout successful\n", outContent.toString());
+    }
+
+    @Test
+    public void shouldDisplayBookStatusMenuOptionForOption8ForAdmin() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, adminUser);
+
+        menuOptionController.handleMenuOption("8");
+
+        assertEquals(bookView.getFormattedListOfCheckedOutItems(), outContent.toString());
     }
 }

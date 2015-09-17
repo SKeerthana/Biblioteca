@@ -16,7 +16,8 @@ public class ReturnBookOption implements MenuOption {
     public void performOperation() {
         String bookName = consoleDisplay.getInputFromUser();
         Book bookToBeReturned = new Book(bookName, null, 0);
-        int index = libraryBookData.getIndexOfLibraryItemInCheckedOutItems(bookToBeReturned);
+        CheckedOutBook checkedOutBook = new CheckedOutBook(bookToBeReturned, null);
+        int index = libraryBookData.getIndexOfLibraryItemInCheckedOutItems(checkedOutBook);
 
         if (index != -1) {
             LibraryItem libraryItem = libraryBookData.removeLibraryItemFromCheckedOutList(index);

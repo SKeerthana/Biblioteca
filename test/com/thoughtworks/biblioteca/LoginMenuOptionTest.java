@@ -7,57 +7,43 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.*;
 
 public class LoginMenuOptionTest {
 
     @Test
     public void shouldDisplayLoginSuccessfulForLoggedInUser() {
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        PrintStream printStream = new PrintStream(outContent);
-        System.setOut(printStream);
-        String input = "1234-122" + "\n" + "abc";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        System.setIn(inContent);
-        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
+        ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         User loggedInUser = new User("1234-122", "abc", "abc", "abc@gmail.com", new LoggedInUserRole());
         LoginMenuOption loginMenuOption = new LoginMenuOption(consoleDisplay, loggedInUser);
+        doNothing().when(consoleDisplay).printMessage("Login successful\n");
 
         loginMenuOption.performOperation();
 
-        assertEquals("Login successful\n", outContent.toString());
+        verify(consoleDisplay, times(1)).printMessage("Login successful\n");
     }
 
     @Test
     public void shouldDisplayLoginUnSuccessfulForGuestUser() {
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        PrintStream printStream = new PrintStream(outContent);
-        System.setOut(printStream);
-        String input = "1234-122" + "\n" + "abc12";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        System.setIn(inContent);
-        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
+        ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         User guestUser = new User("1234-122", "abc", "abc", "abc@gmail.com", new GuestRole());
         LoginMenuOption loginMenuOption = new LoginMenuOption(consoleDisplay, guestUser);
+        doNothing().when(consoleDisplay).printMessage("Login unsuccessful\n");
 
         loginMenuOption.performOperation();
 
-        assertEquals("Login unsuccessful\n", outContent.toString());
+        verify(consoleDisplay, times(1)).printMessage("Login unsuccessful\n");
     }
 
     @Test
-    public void shouldDisplayLoginSuccessfulForAdmin() {
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        PrintStream printStream = new PrintStream(outContent);
-        System.setOut(printStream);
-        String input = "1234-122" + "\n" + "abc12";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        System.setIn(inContent);
-        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
+    public void shouldDisplayLoginUnSuccessfulForAdmin() {
+        ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         User admin = new User("1234-122", "abc", "abc", "abc@gmail.com", new AdminRole());
         LoginMenuOption loginMenuOption = new LoginMenuOption(consoleDisplay, admin);
+        doNothing().when(consoleDisplay).printMessage("Login successful\n");
 
         loginMenuOption.performOperation();
 
-        assertEquals("Login successful\n", outContent.toString());
+        verify(consoleDisplay, times(1)).printMessage("Login successful\n");
     }
 }
