@@ -13,8 +13,8 @@ public class Menu {
     public String getMenuOptionsToDisplay(User user) {
         String menuOptions = "Choose one of the menu option :\n";
         listOfMenuOptions = user.getMenuOptions();
-        for (String menuOption : listOfMenuOptions) {
-            menuOptions += menuOption + "\n";
+        for (int index = 0; index < listOfMenuOptions.size(); index++) {
+            menuOptions += listOfMenuOptions.get(index) + "\n";
         }
         return menuOptions;
     }
