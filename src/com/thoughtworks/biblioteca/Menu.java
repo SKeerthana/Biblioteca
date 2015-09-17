@@ -10,7 +10,7 @@ public class Menu {
         this.listOfMenuOptions = listOfMenuOptions;
     }
 
-    public String getMenuOptions(User user) {
+    public String getMenuOptionsToDisplay(User user) {
         String menuOptions = "Choose one of the menu option :\n";
         listOfMenuOptions = user.getMenuOptions();
         for (String menuOption : listOfMenuOptions) {

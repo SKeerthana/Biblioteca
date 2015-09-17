@@ -22,4 +22,9 @@ public class LoggedInUserRole implements UserRole{
     public ArrayList<String> getMenuOptions() {
         return listOfMenuOptions;
     }
+
+    @Override
+    public boolean isCheckOutBookAllowed() {
+        return true;
+    }
 }

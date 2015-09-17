@@ -2,7 +2,7 @@ package com.thoughtworks.biblioteca;
 
 import java.util.ArrayList;
 
-public class GuestRole implements UserRole{
+public class GuestRole implements UserRole {
     private ArrayList<String> listOfMenuOptions;
 
     public GuestRole() {
@@ -20,5 +20,10 @@ public class GuestRole implements UserRole{
     @Override
     public ArrayList<String> getMenuOptions() {
         return listOfMenuOptions;
+    }
+
+    @Override
+    public boolean isCheckOutBookAllowed() {
+        return false;
     }
 }

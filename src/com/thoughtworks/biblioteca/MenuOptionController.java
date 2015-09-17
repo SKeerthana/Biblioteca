@@ -19,7 +19,7 @@ public class MenuOptionController {
     }
 
     public void displayMenuOption() {
-        consoleDisplay.printMessage(menu.getMenuOptions(currentUser));
+        consoleDisplay.printMessage(menu.getMenuOptionsToDisplay(currentUser));
     }
 
     public void handleMenuOption(String option) {

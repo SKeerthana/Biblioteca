@@ -5,8 +5,11 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class AdminRoleTest {
+    private AdminRole adminRole = new AdminRole();
+
     @Test
     public void shouldReturnListOfMenuOptions() {
         ArrayList<String> menuList = new ArrayList<String>() {{
@@ -20,7 +23,11 @@ public class AdminRoleTest {
             add("Book Status");
             add("Log out");
         }};
-        AdminRole adminRole = new AdminRole();
         assertEquals(menuList, adminRole.getMenuOptions());
+    }
+
+    @Test
+    public void shouldReturnTrueForCheckedBookAllowed() {
+        assertTrue(adminRole.isCheckOutBookAllowed());
     }
 }

@@ -23,4 +23,9 @@ public class AdminRole implements UserRole{
     public ArrayList<String> getMenuOptions() {
         return listOfMenuOptions;
     }
+
+    @Override
+    public boolean isCheckOutBookAllowed() {
+        return true;
+    }
 }

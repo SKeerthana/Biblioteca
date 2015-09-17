@@ -5,8 +5,11 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class LoggedInUserRoleTest {
+    private LoggedInUserRole loggedInUserRole = new LoggedInUserRole();
+
     @Test
     public void shouldReturnListOfMenuOptions() {
         ArrayList<String> menuList = new ArrayList<String>() {{
@@ -19,7 +22,11 @@ public class LoggedInUserRoleTest {
             add("User Information");
             add("Log out");
         }};
-        LoggedInUserRole loggedInUserRole = new LoggedInUserRole();
         assertEquals(menuList, loggedInUserRole.getMenuOptions());
+    }
+
+    @Test
+    public void shouldReturnTrueForCheckedBookAllowed() {
+        assertTrue(loggedInUserRole.isCheckOutBookAllowed());
     }
 }
