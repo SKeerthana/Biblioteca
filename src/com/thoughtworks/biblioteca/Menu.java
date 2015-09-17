@@ -14,7 +14,7 @@ public class Menu {
         String menuOptions = "Choose one of the menu option :\n";
         listOfMenuOptions = user.getMenuOptions();
         for (int index = 0; index < listOfMenuOptions.size(); index++) {
-            menuOptions += listOfMenuOptions.get(index) + "\n";
+            menuOptions += index+1 + ".\t" + listOfMenuOptions.get(index) + "\n";
         }
         return menuOptions;
     }
