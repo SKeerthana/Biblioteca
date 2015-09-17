@@ -11,23 +11,29 @@ public class BookView implements LibraryView {
 
     public String getFormattedListOfItems() {
         List<LibraryItem> availableBooks = bookLibraryData.getAvailableItems();
-        String booksHeader = "=====================================================================================\n";
-        booksHeader += getAvailableItemDetailsHeader(availableBooks.get(0));
-        booksHeader += "=====================================================================================\n";
-        String bookDetails = getAvailableItemDetails(availableBooks);
-        String bookFooter = "=====================================================================================\n";
-        return booksHeader + bookDetails + bookFooter;
+        if (availableBooks.size() > 0) {
+            String booksHeader = "=====================================================================================\n";
+            booksHeader += getAvailableItemDetailsHeader(availableBooks.get(0));
+            booksHeader += "=====================================================================================\n";
+            String bookDetails = getAvailableItemDetails(availableBooks);
+            String bookFooter = "=====================================================================================\n";
+            return booksHeader + bookDetails + bookFooter;
+        }
+        return "No books to display\n";
     }
 
     @Override
     public String getFormattedListOfCheckedOutItems() {
         List<LibraryItem> checkedOutItems = bookLibraryData.getCheckedOutItems();
-        String booksHeader = "==========================================================================================================================\n";
-        booksHeader += getCheckedOutItemDetailsHeader(checkedOutItems.get(0));
-        booksHeader += "==========================================================================================================================\n";
-        String bookDetails = getCheckOutItemDetails(checkedOutItems);
-        String bookFooter = "==========================================================================================================================\n";
-        return booksHeader + bookDetails + bookFooter;
+        if(checkedOutItems.size() > 0) {
+            String booksHeader = "==========================================================================================================================\n";
+            booksHeader += getCheckedOutItemDetailsHeader(checkedOutItems.get(0));
+            booksHeader += "==========================================================================================================================\n";
+            String bookDetails = getCheckOutItemDetails(checkedOutItems);
+            String bookFooter = "==========================================================================================================================\n";
+            return booksHeader + bookDetails + bookFooter;
+        }
+        return "No books to display\n";
     }
 
     private String getCheckOutItemDetails(List<LibraryItem> checkedOutItems) {

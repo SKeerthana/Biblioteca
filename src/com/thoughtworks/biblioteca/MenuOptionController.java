@@ -24,8 +24,10 @@ public class MenuOptionController {
 
     public void handleMenuOption(String option) {
         int indexOfOption = Integer.valueOf(option).intValue() - 1;
-        if (indexOfOption >= 0 && indexOfOption <= currentUser.getMenuOptions().size())
+
+        if (indexOfOption >= 0 && indexOfOption < currentUser.getMenuOptions().size())
             option = currentUser.getMenuOptions().get(indexOfOption);
+
         MenuOption menuOption = getMenuOption(option);
         menu.handleSelectedMenuOption(menuOption);
     }

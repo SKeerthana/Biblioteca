@@ -10,11 +10,11 @@ public class UserViewTest {
     @Test
     public void shouldDisplayUserInformation() {
         UserView userView = new UserView(currentUser);
-        String userDetailsToDisplay = "=====================================================================================";
+        String userDetailsToDisplay = "=====================================================================================\n";
         userDetailsToDisplay += String.format("%-50s %-25s %-15s\n", "USER NAME","EMAIL ID","PHONE NUMBER");
-        userDetailsToDisplay += "=====================================================================================";
+        userDetailsToDisplay += "=====================================================================================\n";
         userDetailsToDisplay += String.format("%-50s %-25s %-15s\n" ,"abc", "abc@gmail.com", "9944172304");
-        userDetailsToDisplay += "=====================================================================================";
+        userDetailsToDisplay += "=====================================================================================\n";
         assertEquals(userDetailsToDisplay, userView.getFormattedUserDetails());
     }
 }
