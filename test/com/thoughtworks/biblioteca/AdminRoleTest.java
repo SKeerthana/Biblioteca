@@ -28,6 +28,6 @@ public class AdminRoleTest {
 
     @Test
     public void shouldReturnTrueForCheckedBookAllowed() {
-        assertTrue(adminRole.isCheckOutBookAllowed());
+        assertTrue(adminRole.isAuthenticatedUser());
     }
 }

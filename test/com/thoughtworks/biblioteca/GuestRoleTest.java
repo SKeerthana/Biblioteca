@@ -26,6 +26,6 @@ public class GuestRoleTest {
 
     @Test
     public void shouldReturnFalseForCheckedBookAllowed() {
-        assertFalse(guestRole.isCheckOutBookAllowed());
+        assertFalse(guestRole.isAuthenticatedUser());
     }
 }

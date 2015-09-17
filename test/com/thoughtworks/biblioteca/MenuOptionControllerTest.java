@@ -141,7 +141,7 @@ public class MenuOptionControllerTest {
     }
 
     @Test
-    public void shouldCallReturnBookForOption4() {
+    public void shouldNotAllowGuestUserToReturnBookForOption4() {
         String input = "Harry Potter";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -153,7 +153,7 @@ public class MenuOptionControllerTest {
 
         menuOptionController.handleMenuOption("4");
 
-        assertEquals("That is not a valid book to return.\n", outContent.toString());
+        assertEquals("Select a valid option!\n", outContent.toString());
         }
 
     @Test

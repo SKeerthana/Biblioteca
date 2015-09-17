@@ -12,7 +12,7 @@ public class LoginMenuOption implements MenuOption {
     @Override
     public void performOperation() {
         User currentUser = userAuthenticator.loginUser(consoleDisplay);
-        if(currentUser.isCheckOutBookAllowed())
+        if(currentUser.isAuthenticatedUser())
             consoleDisplay.printMessage("Login Successful\n");
     }
 }

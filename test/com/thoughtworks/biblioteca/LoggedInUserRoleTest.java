@@ -27,6 +27,6 @@ public class LoggedInUserRoleTest {
 
     @Test
     public void shouldReturnTrueForCheckedBookAllowed() {
-        assertTrue(loggedInUserRole.isCheckOutBookAllowed());
+        assertTrue(loggedInUserRole.isAuthenticatedUser());
     }
 }

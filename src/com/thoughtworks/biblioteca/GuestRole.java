@@ -23,7 +23,7 @@ public class GuestRole implements UserRole {
     }
 
     @Override
-    public boolean isCheckOutBookAllowed() {
+    public boolean isAuthenticatedUser() {
         return false;
     }
 }

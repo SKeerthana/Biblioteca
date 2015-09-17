@@ -34,14 +34,16 @@ public class MenuOptionController {
             case "2":
                 return new QuitMenuOption();
             case "3":
-                if (!currentUser.isCheckOutBookAllowed())
+                if (!currentUser.isAuthenticatedUser())
                     currentUser = userAuthenticator.loginUser(consoleDisplay);
 
-                if (currentUser.isCheckOutBookAllowed())
+                if (currentUser.isAuthenticatedUser())
                     return new CheckOutBooksMenuOption(bookLibraryData, consoleDisplay, currentUser);
                 break;
             case "4":
-                return new ReturnBookOption(bookLibraryData, consoleDisplay, currentUser);
+                if (!currentUser.isAuthenticatedUser())
+                    return new ReturnBookOption(bookLibraryData, consoleDisplay, currentUser);
+                break;
             case "5":
                 return new ListLibraryItemMenuOption(new MovieView(movieLibraryData), consoleDisplay);
             case "6":

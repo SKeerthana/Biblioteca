@@ -39,7 +39,7 @@ public class User {
         return role.getMenuOptions();
     }
 
-    public boolean isCheckOutBookAllowed() {
-        return role.isCheckOutBookAllowed();
+    public boolean isAuthenticatedUser() {
+        return role.isAuthenticatedUser();
     }
 }

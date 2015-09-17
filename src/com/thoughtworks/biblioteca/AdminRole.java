@@ -25,7 +25,7 @@ public class AdminRole implements UserRole{
     }
 
     @Override
-    public boolean isCheckOutBookAllowed() {
+    public boolean isAuthenticatedUser() {
         return true;
     }
 }

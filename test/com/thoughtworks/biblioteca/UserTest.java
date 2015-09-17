@@ -54,6 +54,6 @@ public class UserTest {
     @Test
     public void shouldReturnTrueForCheckOutBookOptionForAdmin() {
         User user1 = new User("ABC12", "ABC23", "", "abc@gmail.com", adminRole);
-        assertTrue(user1.isCheckOutBookAllowed());
+        assertTrue(user1.isAuthenticatedUser());
     }
 }
