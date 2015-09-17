@@ -146,7 +146,7 @@ public class MenuOptionControllerTest {
     }
 
     @Test
-    public void shouldNotAllowGuestUserToReturnBookForOption4() {
+    public void shouldPromptLoginForGuestUserToReturnBookForOption4() {
         String input = "Harry Potter";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -154,7 +154,29 @@ public class MenuOptionControllerTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, guestUser);
+        UserAuthenticator mockUserAuthenticator = mock(UserAuthenticator.class);
+        when(mockUserAuthenticator.loginUser(consoleDisplay)).thenReturn(guestUser);
+
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, mockUserAuthenticator, guestUser);
+
+        menuOptionController.handleMenuOption("4");
+
+        assertEquals("Select a valid option!\n", outContent.toString());
+    }
+
+    @Test
+    public void shouldAllowReturnBookForGuestUserAfterSuccessfulLoginOption4() {
+        String input = "Harry Potter";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
+        System.setIn(inContent);
+        UserAuthenticator mockUserAuthenticator = mock(UserAuthenticator.class);
+        when(mockUserAuthenticator.loginUser(consoleDisplay)).thenReturn(guestUser);
+
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, mockUserAuthenticator, guestUser);
 
         menuOptionController.handleMenuOption("4");
 

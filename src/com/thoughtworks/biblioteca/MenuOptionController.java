@@ -41,6 +41,9 @@ public class MenuOptionController {
                     return new CheckOutBooksMenuOption(bookLibraryData, consoleDisplay, currentUser);
                 break;
             case "4":
+                if (!currentUser.isAuthenticatedUser())
+                    currentUser = userAuthenticator.loginUser(consoleDisplay);
+
                 if (currentUser.isAuthenticatedUser())
                     return new ReturnBookOption(bookLibraryData, consoleDisplay, currentUser);
                 break;

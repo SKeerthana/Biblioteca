@@ -6,46 +6,45 @@ import java.util.HashMap;
 //displays the welcome message and menu options
 public class BibliotecaApp {
     private ConsoleDisplay consoleDisplay;
-    private Menu menu;
 
     public static void main(String[] args) {
-        ArrayList<String> listOfMenuOptions = new ArrayList<String>();
-        listOfMenuOptions.add("1. List all the books");
-        listOfMenuOptions.add("2. Quit");
-        listOfMenuOptions.add("3. Checkout books");
-        listOfMenuOptions.add("4. Return books");
-        listOfMenuOptions.add("5. List all the movies");
-        listOfMenuOptions.add("6. Checkout movies");
-
-        Menu menu = new Menu(listOfMenuOptions);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(System.out, System.in);
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(menu, consoleDisplay);
-
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay);
         bibliotecaApp.start();
     }
 
-    public BibliotecaApp(Menu menu, ConsoleDisplay consoleDisplay) {
-        this.menu = menu;
+    public BibliotecaApp(ConsoleDisplay consoleDisplay) {
         this.consoleDisplay = consoleDisplay;
     }
 
     public void start() {
-        ArrayList<LibraryItem> listOfAvailableBooks = generateListOfBooks();
-        ArrayList<LibraryItem> listOfMoviesAvailable = generateListOfMovies();
-        HashMap<String, User> listOfUsers = generateListOfValidUsers();
-        Biblioteca bookLibraryData = new Biblioteca(listOfAvailableBooks, new ArrayList<LibraryItem>());
-        Biblioteca movieLibraryData = new Biblioteca(listOfMoviesAvailable, new ArrayList<LibraryItem>());
-        UserAuthenticator userAuthenticator = new UserAuthenticator(listOfUsers);
-        User guestUser = new User("guest-001", "", "", "", new GuestRole());
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, guestUser);
-
+        MenuOptionController menuOptionController = getMenuOptionController();
         consoleDisplay.printMessage("Welcome to Bibliotica\n");
 
         while (true) {
-            menuOptionController.displayMenuOption();
-            String option = consoleDisplay.getInputFromUser();
-            menuOptionController.handleMenuOption(option);
+            run(menuOptionController);
         }
+    }
+
+    private void run(MenuOptionController menuOptionController) {
+        menuOptionController.displayMenuOption();
+        String option = consoleDisplay.getInputFromUser();
+        menuOptionController.handleMenuOption(option);
+    }
+
+    private MenuOptionController getMenuOptionController() {
+        ArrayList<LibraryItem> listOfAvailableBooks = generateListOfBooks();
+        ArrayList<LibraryItem> listOfMoviesAvailable = generateListOfMovies();
+        HashMap<String, User> listOfUsers = generateListOfValidUsers();
+
+        Biblioteca bookLibraryData = new Biblioteca(listOfAvailableBooks, new ArrayList<LibraryItem>());
+        Biblioteca movieLibraryData = new Biblioteca(listOfMoviesAvailable, new ArrayList<LibraryItem>());
+        UserAuthenticator userAuthenticator = new UserAuthenticator(listOfUsers);
+
+        User guestUser = new User("guest-001", "", "", "", new GuestRole());
+        Menu menu = new Menu(guestUser.getMenuOptions());
+
+        return new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, guestUser);
     }
 
     private HashMap<String, User> generateListOfValidUsers() {
@@ -54,6 +53,7 @@ public class BibliotecaApp {
         User admin = new User("lib-0002", "name", "abc", "abc@gmail.com", new LoggedInUserRole());
         userInfos.put("lib-0001", normalUser);
         userInfos.put("lib-0002", admin);
+
         return userInfos;
     }
 
@@ -63,6 +63,7 @@ public class BibliotecaApp {
         ArrayList<LibraryItem> availableMovieList = new ArrayList<>();
         availableMovieList.add(movie1);
         availableMovieList.add(movie2);
+
         return availableMovieList;
     }
 
@@ -72,6 +73,7 @@ public class BibliotecaApp {
         ArrayList<LibraryItem> listOfBooks = new ArrayList<>();
         listOfBooks.add(book1);
         listOfBooks.add(book2);
+
         return listOfBooks;
     }
 }

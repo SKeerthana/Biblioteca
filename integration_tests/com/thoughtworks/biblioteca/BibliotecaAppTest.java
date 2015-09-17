@@ -37,7 +37,7 @@ public class BibliotecaAppTest {
     public void shouldDisplayListOfBooksOptionsAfterDisplayingWelcomeMessage() {
         ConsoleDisplay consoleDisplay1 = mock(ConsoleDisplay.class);
         when(consoleDisplay1.getInputFromUser()).thenReturn("1", "2");
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(menu, consoleDisplay1);
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay1);
         MenuOptionController menuOptionController = mock(MenuOptionController.class);
 
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -56,7 +56,7 @@ public class BibliotecaAppTest {
     public void shouldDisplaySuccessMessageWhenCheckOutIsSuccessful() {
         ConsoleDisplay consoleDisplay1 = mock(ConsoleDisplay.class);
         when(consoleDisplay1.getInputFromUser()).thenReturn("3", "2");
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(menu, consoleDisplay1);
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay1);
         MenuOptionController menuOptionController = mock(MenuOptionController.class);
 
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
