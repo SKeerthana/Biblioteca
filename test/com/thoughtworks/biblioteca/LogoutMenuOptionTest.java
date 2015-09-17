@@ -8,10 +8,10 @@ import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
 
-public class LoginMenuOptionTest {
+public class LogoutMenuOptionTest {
 
     @Test
-    public void shouldDisplayLoginSuccessfulForLoggedInUser() {
+    public void shouldDisplayLogoutUnSuccessfulForLoggedInUser() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
@@ -20,15 +20,15 @@ public class LoginMenuOptionTest {
         System.setIn(inContent);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
         User loggedInUser = new User("1234-122", "abc", "abc", "abc@gmail.com", new LoggedInUserRole());
-        LoginMenuOption loginMenuOption = new LoginMenuOption(consoleDisplay, loggedInUser);
+        LogoutMenuOption logoutMenuOption = new LogoutMenuOption(consoleDisplay, loggedInUser);
 
-        loginMenuOption.performOperation();
+        logoutMenuOption.performOperation();
 
-        assertEquals("Login successful\n", outContent.toString());
+        assertEquals("Logout unsuccessful\n", outContent.toString());
     }
 
     @Test
-    public void shouldDisplayLoginUnSuccessfulForGuestUser() {
+    public void shouldDisplayLogoutSuccessfulForGuestUser() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
@@ -37,15 +37,15 @@ public class LoginMenuOptionTest {
         System.setIn(inContent);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
         User guestUser = new User("1234-122", "abc", "abc", "abc@gmail.com", new GuestRole());
-        LoginMenuOption loginMenuOption = new LoginMenuOption(consoleDisplay, guestUser);
+        LogoutMenuOption logoutMenuOption = new LogoutMenuOption(consoleDisplay, guestUser);
 
-        loginMenuOption.performOperation();
+        logoutMenuOption.performOperation();
 
-        assertEquals("Login unsuccessful\n", outContent.toString());
+        assertEquals("Logout successful\n", outContent.toString());
     }
 
     @Test
-    public void shouldDisplayLoginSuccessfulForAdmin() {
+    public void shouldDisplayLogoutUnSuccessfulForAdmin() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
@@ -54,10 +54,10 @@ public class LoginMenuOptionTest {
         System.setIn(inContent);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
         User admin = new User("1234-122", "abc", "abc", "abc@gmail.com", new AdminRole());
-        LoginMenuOption loginMenuOption = new LoginMenuOption(consoleDisplay, admin);
+        LogoutMenuOption logoutMenuOption = new LogoutMenuOption(consoleDisplay, admin);
 
-        loginMenuOption.performOperation();
+        logoutMenuOption.performOperation();
 
-        assertEquals("Login successful\n", outContent.toString());
+        assertEquals("Logout unsuccessful\n", outContent.toString());
     }
 }

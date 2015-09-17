@@ -27,4 +27,8 @@ public class UserAuthenticator {
         String password = consoleDisplay.getInputFromUser();
         return authenticate(libraryNumber, password);
     }
+
+    public User logOut() {
+        return new User("guest-001", "", "", "", new GuestRole());
+    }
 }
