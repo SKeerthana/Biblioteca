@@ -24,7 +24,7 @@ public class User {
         if (that == null || that.getClass() != getClass())
             return false;
         User thatUser = (User) that;
-        return (thatUser.userName.equals(userName));
+        return (thatUser.libraryNumber.equals(libraryNumber));
     }
 
     public String getUserNameHeader() {

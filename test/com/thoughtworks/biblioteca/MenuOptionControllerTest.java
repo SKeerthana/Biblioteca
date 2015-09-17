@@ -9,7 +9,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class MenuOptionControllerTest {
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -45,10 +46,13 @@ public class MenuOptionControllerTest {
     }};
     private UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
+    private User currentUser = new User("1234-122", "abc", "abc", "", new AdminRole());
+    private User guestUser = new User("guest-001", "", "", "", new GuestRole());
+
     @Test
     public void shouldDisplayMenuOptions() {
         System.setOut(printStream);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, guestUser);
         menuOptionController.displayMenuOption();
         String menuOptions = "Choose one of the menu option :\n";
         menuOptions += "List Books\n";
@@ -68,7 +72,7 @@ public class MenuOptionControllerTest {
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
 
         menuOptionController.handleMenuOption("1");
 
@@ -77,7 +81,7 @@ public class MenuOptionControllerTest {
 
     @Test
     public void shouldHandleInvalidMenuOption() {
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
 
         menuOptionController.handleMenuOption("2382");
 
@@ -85,19 +89,55 @@ public class MenuOptionControllerTest {
     }
 
     @Test
-    public void shouldCallCheckOutBookForOption3() {
-        String input = "Harry Potter";
+    public void shouldAllowCheckOutBookForLoggedInUserForOption3() {
+        String input = "Harry Potter and the Chamber of Secrets";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+
+        menuOptionController.handleMenuOption("3");
+
+        assertEquals("Thank you! Enjoy the book\n", outContent.toString());
+    }
+
+    @Test
+    public void shouldPromptLoginForGuestUserForOption3() {
+        String input = "Harry Potter and the Chamber of Secrets";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
+        System.setIn(inContent);
+        UserAuthenticator mockUserAuthenticator = mock(UserAuthenticator.class);
+        when(mockUserAuthenticator.loginUser(consoleDisplay)).thenReturn(guestUser);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, mockUserAuthenticator, guestUser);
 
         menuOptionController.handleMenuOption("3");
 
         assertEquals("Select a valid option!\n", outContent.toString());
+    }
+
+    @Test
+    public void shouldAllowCheckOutBookAfterSuccessfulLoginByGuestUserForOption3() {
+        String input = "Harry Potter and the Chamber of Secrets";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
+        System.setIn(inContent);
+        UserAuthenticator mockUserAuthenticator = mock(UserAuthenticator.class);
+        when(mockUserAuthenticator.loginUser(consoleDisplay)).thenReturn(currentUser);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, mockUserAuthenticator, guestUser);
+
+        menuOptionController.handleMenuOption("3");
+
+        assertEquals("Thank you! Enjoy the book\n", outContent.toString());
     }
 
     @Test
@@ -109,7 +149,7 @@ public class MenuOptionControllerTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
 
         menuOptionController.handleMenuOption("4");
 
@@ -122,7 +162,7 @@ public class MenuOptionControllerTest {
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
 
         menuOptionController.handleMenuOption("5");
 
@@ -138,7 +178,7 @@ public class MenuOptionControllerTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
         menuOptionController.handleMenuOption("6");
 
         assertEquals("Thank you! Enjoy the Movie\n", outContent.toString());
@@ -153,25 +193,9 @@ public class MenuOptionControllerTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
         menuOptionController.handleMenuOption("7");
 
         assertEquals("Enter library Number : Enter password : Login Successful\n", outContent.toString());
-    }
-
-    @Test
-    public void shouldNotAllowCheckOutForDefaultGuestUser() {
-        String input = "Harry Potter";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        PrintStream printStream = new PrintStream(outContent);
-        System.setOut(printStream);
-        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
-        System.setIn(inContent);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
-
-        menuOptionController.handleMenuOption("3");
-
-        assertEquals("Select a valid option!\n", outContent.toString());
     }
 }

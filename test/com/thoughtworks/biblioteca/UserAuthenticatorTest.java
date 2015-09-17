@@ -10,8 +10,9 @@ import java.util.HashMap;
 import static org.junit.Assert.assertEquals;
 
 public class UserAuthenticatorTest {
-    private User currentUser = new User("abc", "abc", "abc", "", new AdminRole());
-    private User guestUser = new User("", "", "", "", new GuestRole());
+    private User currentUser = new User("1234-122", "abc", "abc", "", new AdminRole());
+    private User guestUser = new User("guest-001", "", "", "", new GuestRole());
+
     @Test
     public void shouldLoginForValidCredentials() {
         HashMap<String, User> validUsers = new HashMap<String, User>() {{
@@ -53,7 +54,7 @@ public class UserAuthenticatorTest {
     }
 
     @Test
-    public void shouldReturnLoggedInUserForValiUser() {
+    public void shouldReturnLoggedInUserForValidUser() {
         HashMap<String, User> validUsers = new HashMap<String, User>() {{
             put("1234-122", currentUser);
         }};

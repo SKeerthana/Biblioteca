@@ -36,7 +36,8 @@ public class BibliotecaApp {
         Biblioteca bookLibraryData = new Biblioteca(listOfAvailableBooks, new ArrayList<LibraryItem>());
         Biblioteca movieLibraryData = new Biblioteca(listOfMoviesAvailable, new ArrayList<LibraryItem>());
         UserAuthenticator userAuthenticator = new UserAuthenticator(listOfUsers);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator);
+        User guestUser = new User("guest-001", "", "", "", new GuestRole());
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, guestUser);
 
         consoleDisplay.printMessage("Welcome to Bibliotica\n");
 

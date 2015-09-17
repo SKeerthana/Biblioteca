@@ -9,13 +9,13 @@ public class MenuOptionController {
     private UserAuthenticator userAuthenticator;
     private User currentUser;
 
-    public MenuOptionController(Menu menu, Biblioteca bookLibraryData, Biblioteca movieLibraryData, ConsoleDisplay consoleDisplay, UserAuthenticator userAuthenticator) {
+    public MenuOptionController(Menu menu, Biblioteca bookLibraryData, Biblioteca movieLibraryData, ConsoleDisplay consoleDisplay, UserAuthenticator userAuthenticator, User currentUser) {
         this.menu = menu;
         this.bookLibraryData = bookLibraryData;
         this.movieLibraryData = movieLibraryData;
         this.consoleDisplay = consoleDisplay;
         this.userAuthenticator = userAuthenticator;
-        this.currentUser = new User("lib-0001", "name", "abc", "abc@gmail.com", new GuestRole());
+        this.currentUser = currentUser;
     }
 
     public void displayMenuOption() {
@@ -34,6 +34,9 @@ public class MenuOptionController {
             case "2":
                 return new QuitMenuOption();
             case "3":
+                if (!currentUser.isCheckOutBookAllowed())
+                    currentUser = userAuthenticator.loginUser(consoleDisplay);
+
                 if (currentUser.isCheckOutBookAllowed())
                     return new CheckOutBooksMenuOption(bookLibraryData, consoleDisplay, currentUser);
                 break;

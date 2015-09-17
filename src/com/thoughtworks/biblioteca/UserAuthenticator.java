@@ -2,6 +2,7 @@ package com.thoughtworks.biblioteca;
 
 import java.util.HashMap;
 
+//authenticates users using the list of predefined users
 public class UserAuthenticator {
     private HashMap<String, User> listOfUsers;
 
@@ -9,14 +10,14 @@ public class UserAuthenticator {
         this.listOfUsers = listOfUsers;
     }
 
-    private User authenticate(String libraryNumber, String password) {
+    public User authenticate(String libraryNumber, String password) {
         if (listOfUsers.containsKey(libraryNumber)) {
             User user = listOfUsers.get(libraryNumber);
             if (user.validate(password)) {
                 return user;
             }
         }
-        return new User("", "", "", "", new GuestRole());
+        return new User("guest-001", "", "", "", new GuestRole());
     }
 
     public User loginUser(ConsoleDisplay consoleDisplay) {
