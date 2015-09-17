@@ -2,17 +2,18 @@ package com.thoughtworks.biblioteca;
 
 public class LoginMenuOption implements MenuOption {
     private ConsoleDisplay consoleDisplay;
-    private UserAuthenticator userAuthenticator;
+    private User user;
 
-    public LoginMenuOption(ConsoleDisplay consoleDisplay, UserAuthenticator userAuthenticator) {
+    public LoginMenuOption(ConsoleDisplay consoleDisplay, User user) {
         this.consoleDisplay = consoleDisplay;
-        this.userAuthenticator = userAuthenticator;
+        this.user = user;
     }
 
     @Override
     public void performOperation() {
-        User currentUser = userAuthenticator.loginUser(consoleDisplay);
-        if(currentUser.isAuthenticatedUser())
-            consoleDisplay.printMessage("Login Successful\n");
+        if(user.isAuthenticatedUser())
+            consoleDisplay.printMessage("Login successful\n");
+        else
+            consoleDisplay.printMessage("Login unsuccessful\n");
     }
 }

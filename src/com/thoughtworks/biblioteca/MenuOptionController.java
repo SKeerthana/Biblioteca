@@ -53,10 +53,10 @@ public class MenuOptionController {
             case "List Movies":
                 return new ListLibraryItemMenuOption(new MovieView(movieLibraryData), consoleDisplay);
             case "CheckOut Movie":
-                
                 return new CheckOutMoviesMenuOption(movieLibraryData, consoleDisplay);
             case "Log in":
-                return new LoginMenuOption(consoleDisplay, userAuthenticator);
+                currentUser = userAuthenticator.loginUser(consoleDisplay);
+                return new LoginMenuOption(consoleDisplay, currentUser);
             default:
                 return new InvalidMenuOption(consoleDisplay);
         }
