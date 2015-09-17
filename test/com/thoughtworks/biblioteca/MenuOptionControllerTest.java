@@ -60,13 +60,13 @@ public class MenuOptionControllerTest {
         MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, guestUser);
         menuOptionController.displayMenuOption();
         String menuOptions = "Choose one of the menu option :\n";
-        menuOptions += "List Books\n";
-        menuOptions += "Quit\n";
-        menuOptions += "CheckOut Book\n";
-        menuOptions += "Return Book\n";
-        menuOptions += "List Movies\n";
-        menuOptions += "CheckOut Movie\n";
-        menuOptions += "Log in\n";
+        menuOptions += "1.\tList Books\n";
+        menuOptions += "2.\tQuit\n";
+        menuOptions += "3.\tCheckOut Book\n";
+        menuOptions += "4.\tReturn Book\n";
+        menuOptions += "5.\tList Movies\n";
+        menuOptions += "6.\tCheckOut Movie\n";
+        menuOptions += "7.\tLog in\n";
 
         assertEquals(menuOptions, outContent.toString());
     }
@@ -236,7 +236,7 @@ public class MenuOptionControllerTest {
         System.setOut(printStream);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, guestUser);
         menuOptionController.handleMenuOption("7");
 
         assertEquals("Enter library Number : Enter password : Login Successful\n", outContent.toString());

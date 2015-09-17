@@ -23,6 +23,7 @@ public class MenuTest {
         menuOptions += "5.\tList Movies\n";
         menuOptions += "6.\tCheckOut Movie\n";
         menuOptions += "7.\tLog in\n";
+
         assertEquals(menuOptions, menu.getMenuOptionsToDisplay(new User("lib-0001", "name", "abc", "abc@gmail.com", new GuestRole())));
     }
 
@@ -38,6 +39,7 @@ public class MenuTest {
         menuOptions += "6.\tCheckOut Movie\n";
         menuOptions += "7.\tUser Information\n";
         menuOptions += "8.\tLog out\n";
+
         assertEquals(menuOptions, menu.getMenuOptionsToDisplay(new User("lib-0001", "name", "abc", "abc@gmail.com", new LoggedInUserRole())));
     }
 
@@ -54,6 +56,7 @@ public class MenuTest {
         menuOptions += "7.\tUser Information\n";
         menuOptions += "8.\tBook Status\n";
         menuOptions += "9.\tLog out\n";
+
         assertEquals(menuOptions, menu.getMenuOptionsToDisplay(new User("lib-0001", "name", "abc", "abc@gmail.com", new AdminRole())));
     }
 
@@ -61,7 +64,9 @@ public class MenuTest {
     public void shouldHandleListOfBooksOption() {
         ListLibraryItemMenuOption listLibraryItemMenuOption = mock(ListLibraryItemMenuOption.class);
         Menu menu = new Menu(listOfMenuOptions);
+
         menu.handleSelectedMenuOption(listLibraryItemMenuOption);
+
         verify(listLibraryItemMenuOption).performOperation();
     }
 }

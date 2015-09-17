@@ -23,36 +23,42 @@ public class MenuOptionController {
     }
 
     public void handleMenuOption(String option) {
+        int indexOfOption = Integer.valueOf(option).intValue() - 1;
+        if (indexOfOption >= 0 && indexOfOption <= currentUser.getMenuOptions().size())
+            option = currentUser.getMenuOptions().get(indexOfOption);
         MenuOption menuOption = getMenuOption(option);
         menu.handleSelectedMenuOption(menuOption);
     }
 
     public MenuOption getMenuOption(String option) {
         switch (option) {
-            case "1":
+            case "List Books":
                 return new ListLibraryItemMenuOption(new BookView(bookLibraryData), consoleDisplay);
-            case "2":
+            case "Quit":
                 return new QuitMenuOption();
-            case "3":
+            case "CheckOut Book":
                 if (!currentUser.isAuthenticatedUser())
                     currentUser = userAuthenticator.loginUser(consoleDisplay);
 
                 if (currentUser.isAuthenticatedUser())
                     return new CheckOutBooksMenuOption(bookLibraryData, consoleDisplay, currentUser);
                 break;
-            case "4":
+            case "Return Book":
                 if (!currentUser.isAuthenticatedUser())
                     currentUser = userAuthenticator.loginUser(consoleDisplay);
 
                 if (currentUser.isAuthenticatedUser())
                     return new ReturnBookOption(bookLibraryData, consoleDisplay, currentUser);
                 break;
-            case "5":
+            case "List Movies":
                 return new ListLibraryItemMenuOption(new MovieView(movieLibraryData), consoleDisplay);
-            case "6":
+            case "CheckOut Movie":
+                
                 return new CheckOutMoviesMenuOption(movieLibraryData, consoleDisplay);
-            case "7":
+            case "Log in":
                 return new LoginMenuOption(consoleDisplay, userAuthenticator);
+            default:
+                return new InvalidMenuOption(consoleDisplay);
         }
         return new InvalidMenuOption(consoleDisplay);
     }
