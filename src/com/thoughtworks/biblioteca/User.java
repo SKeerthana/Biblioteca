@@ -38,4 +38,8 @@ public class User {
     public ArrayList<String> getMenuOptions() {
         return role.getMenuOptions();
     }
+
+    public boolean isCheckOutBookAllowed() {
+        return role.isCheckOutBookAllowed();
+    }
 }

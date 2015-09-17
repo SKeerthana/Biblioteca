@@ -6,6 +6,7 @@ import static org.junit.Assert.*;
 
 public class UserTest {
     AdminRole adminRole = new AdminRole();
+
     @Test
     public void shouldNotCompareWithNull() {
         User user = new User("ABC", "ABC", "", "abc@gmail.com", adminRole);
@@ -48,5 +49,11 @@ public class UserTest {
     public void shouldReturnFlaseForDifferentPassword() {
         User user1 = new User("ABC12", "ABC23", "", "abc@gmail.com", adminRole);
         assertFalse(user1.validate("ABC12"));
+    }
+
+    @Test
+    public void shouldReturnTrueForCheckOutBookOptionForAdmin() {
+        User user1 = new User("ABC12", "ABC23", "", "abc@gmail.com", adminRole);
+        assertTrue(user1.isCheckOutBookAllowed());
     }
 }
