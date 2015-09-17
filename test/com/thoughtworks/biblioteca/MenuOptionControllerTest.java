@@ -22,7 +22,12 @@ public class MenuOptionControllerTest {
         add(book1);
         add(book2);
     }};
-    Biblioteca bookLibraryData = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>());
+    Book book3 = new Book("Good will hunting", "some person", 1998);
+    ArrayList<LibraryItem> checkedOutBooks = new ArrayList<LibraryItem>() {{
+        add(book3);
+    }};
+
+    Biblioteca bookLibraryData = new Biblioteca(listOfBooks, checkedOutBooks);
 
     private Movie movie = new Movie("Vishvaroopam", 2013, "Kamalhasan", 10);
     private ArrayList<LibraryItem> availableMovieList = new ArrayList<LibraryItem>() {{
@@ -154,7 +159,23 @@ public class MenuOptionControllerTest {
         menuOptionController.handleMenuOption("4");
 
         assertEquals("Select a valid option!\n", outContent.toString());
-        }
+    }
+
+    @Test
+    public void shouldAllowLoggedInUserToReturnBookForOption4() {
+        String input = "Good will hunting";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
+        System.setIn(inContent);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+
+        menuOptionController.handleMenuOption("4");
+
+        assertEquals("Thank you for returning the book.\n", outContent.toString());
+    }
 
     @Test
     public void shouldListMenuItemToDisplayListOfMovies() {
