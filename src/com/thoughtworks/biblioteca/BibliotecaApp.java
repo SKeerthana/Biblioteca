@@ -50,7 +50,7 @@ public class BibliotecaApp {
     private HashMap<String, User> generateListOfValidUsers() {
         HashMap<String, User> userInfos = new HashMap<>();
         User normalUser = new User("lib-0001", "name", "abc", "abc@gmail.com", new LoggedInUserRole());
-        User admin = new User("lib-0002", "name", "abc", "abc@gmail.com", new LoggedInUserRole());
+        User admin = new User("lib-0002", "name", "abc", "abc@gmail.com", new AdminRole());
         userInfos.put("lib-0001", normalUser);
         userInfos.put("lib-0002", admin);
 
