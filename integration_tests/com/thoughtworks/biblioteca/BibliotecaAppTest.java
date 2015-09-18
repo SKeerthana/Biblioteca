@@ -1,8 +1,6 @@
 package com.thoughtworks.biblioteca;
 
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -10,7 +8,6 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.*;
 
 public class BibliotecaAppTest {
 
@@ -34,6 +31,7 @@ public class BibliotecaAppTest {
         add(movie);
     }};
     private Biblioteca movieLibraryData = new Biblioteca(availableMovieList, new ArrayList<LibraryItem>());
+    private MovieView movieView = new MovieView(movieLibraryData);
 
     private Menu menu = new Menu(currentUser.getMenuOptions());
     private User adminUser = new User("admin-001", "", "", "", "9944172304", new AdminRole());
@@ -43,11 +41,8 @@ public class BibliotecaAppTest {
     }};
     private UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
-    @Rule
-    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
-
     @Test
-    public void shouldDisplayListOfBooksOptionsAfterDisplayingWelcomeMessage() {
+    public void shouldDisplayListOfBooksForOption1() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
@@ -124,5 +119,21 @@ public class BibliotecaAppTest {
 
         bibliotecaApp.run(menuOptionController);
         assertEquals(menu.getMenuOptionsToDisplay(currentUser) + "That is not a valid book to return.\n", outContent.toString());
+    }
+
+    @Test
+    public void shouldDisplayListOfBooksForOption5() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ByteArrayInputStream inContent = new ByteArrayInputStream("5".getBytes());
+        System.setIn(inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
+
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+
+        bibliotecaApp.run(menuOptionController);
+        assertEquals(menu.getMenuOptionsToDisplay(currentUser) + movieView.getFormattedListOfItems(), outContent.toString());
     }
 }
