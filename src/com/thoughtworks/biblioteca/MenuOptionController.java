@@ -32,7 +32,7 @@ public class MenuOptionController {
         menu.handleSelectedMenuOption(menuOption);
     }
 
-    public MenuOption getMenuOption(String option) {
+    private MenuOption getMenuOption(String option) {
         switch (option) {
             case "List Books":
                 return new ListLibraryItemMenuOption(new BookView(bookLibraryData), consoleDisplay);

@@ -169,4 +169,20 @@ public class BibliotecaAppTest {
         bibliotecaApp.run(menuOptionController);
         assertEquals(menu.getMenuOptionsToDisplay(guestUser) + "Enter library Number : Enter password : Login successful\n", outContent.toString());
     }
+
+    @Test
+    public void shouldLoginUnSuccessfulMessageWhenLoginIsUnSuccessful() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ByteArrayInputStream inContent = new ByteArrayInputStream("7\n3234-122\nabc".getBytes());
+        System.setIn(inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
+
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, guestUser);
+
+        bibliotecaApp.run(menuOptionController);
+        assertEquals(menu.getMenuOptionsToDisplay(guestUser) + "Enter library Number : Enter password : Login unsuccessful\n", outContent.toString());
+    }
 }
