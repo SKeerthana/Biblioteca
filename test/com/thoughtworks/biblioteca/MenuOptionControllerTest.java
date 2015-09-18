@@ -96,6 +96,15 @@ public class MenuOptionControllerTest {
     }
 
     @Test
+    public void shouldHandleInvalidNegativeMenuOption() {
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+
+        menuOptionController.handleMenuOption("-1");
+
+        assertEquals("Select a valid option!\n", outContent.toString());
+    }
+
+    @Test
     public void shouldAllowCheckOutBookForLoggedInUserForOption3() {
         String input = "Harry Potter and the Chamber of Secrets";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());

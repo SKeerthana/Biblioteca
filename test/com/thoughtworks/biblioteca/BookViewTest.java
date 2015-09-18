@@ -40,4 +40,20 @@ public class BookViewTest {
         header += "==========================================================================================================================\n";
         assertEquals(header, bookView.getFormattedListOfCheckedOutItems());
     }
+
+    @Test
+    public void shouldDisplayNoBooksAvailableWhenAvailableBookListIsEmpty() {
+        Biblioteca bibilioteca = new Biblioteca(new ArrayList<LibraryItem>(), checkedOutBooks);
+        BookView bookView = new BookView(bibilioteca);
+
+        assertEquals("No books to display\n", bookView.getFormattedListOfItems());
+    }
+
+    @Test
+    public void shouldDisplayNoBooksAvailableWhenCheckedOutBookListIsEmpty() {
+        Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>());
+        BookView bookView = new BookView(bibilioteca);
+
+        assertEquals("No books to display\n", bookView.getFormattedListOfCheckedOutItems());
+    }
 }

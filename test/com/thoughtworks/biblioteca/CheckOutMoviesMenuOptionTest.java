@@ -52,4 +52,20 @@ public class CheckOutMoviesMenuOptionTest {
 
         assertEquals(availableItems, movieLibraryData.getAvailableItems());
     }
+
+    @Test
+    public void shouldNotReturnMovieWhichIsNotInCheckedOutList() {
+        String input = "Vishvaroo";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
+        System.setIn(inContent);
+        CheckOutMoviesMenuOption checkOutMoviesMenuOption = new CheckOutMoviesMenuOption(movieLibraryData, consoleDisplay);
+
+        checkOutMoviesMenuOption.performOperation();
+
+        assertEquals("", outContent.toString());
+    }
 }

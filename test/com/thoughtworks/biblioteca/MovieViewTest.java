@@ -23,4 +23,11 @@ public class MovieViewTest {
         displayData += "=====================================================================================\n";
         assertEquals(displayData, movieView.getFormattedListOfItems());
     }
+
+    @Test
+    public void shouldDisplayFeatureNotSupportedToDisplayCheckedOutMovies() {
+        Biblioteca movieLibraryData = new Biblioteca(availableMovieList, new ArrayList<LibraryItem>());
+        MovieView movieView = new MovieView(movieLibraryData);
+        assertEquals("Feature not supported", movieView.getFormattedListOfCheckedOutItems());
+    }
 }
