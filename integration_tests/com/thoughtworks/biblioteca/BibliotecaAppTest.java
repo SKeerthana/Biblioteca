@@ -58,7 +58,7 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void shouldDisplaySuccessMessageWhenCheckOutIsSuccessful() {
+    public void shouldDisplaySuccessMessageWhenCheckOutBookIsSuccessful() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
@@ -74,7 +74,7 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void shouldDisplayUnSuccessMessageWhenCheckOutIsUnSuccessful() {
+    public void shouldDisplayUnSuccessMessageWhenCheckOutBookIsUnSuccessful() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
@@ -90,7 +90,7 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void shouldDisplaySuccessMessageWhenReturnIsSuccessful() {
+    public void shouldDisplaySuccessMessageWhenReturnBookIsSuccessful() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
@@ -106,7 +106,7 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void shouldDisplayUnSuccessMessageWhenReturnIsUnSuccessful() {
+    public void shouldDisplayUnSuccessMessageWhenReturnBookIsUnSuccessful() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
@@ -135,5 +135,21 @@ public class BibliotecaAppTest {
 
         bibliotecaApp.run(menuOptionController);
         assertEquals(menu.getMenuOptionsToDisplay(currentUser) + movieView.getFormattedListOfItems(), outContent.toString());
+    }
+
+    @Test
+    public void shouldDisplaySuccessMessageWhenCheckOutMovieIsSuccessful() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ByteArrayInputStream inContent = new ByteArrayInputStream("6\nVishvaroopam\n".getBytes());
+        System.setIn(inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
+
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+
+        bibliotecaApp.run(menuOptionController);
+        assertEquals(menu.getMenuOptionsToDisplay(currentUser) + "Thank you! Enjoy the Movie\n", outContent.toString());
     }
 }
