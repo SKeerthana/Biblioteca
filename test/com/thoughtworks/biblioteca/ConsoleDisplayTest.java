@@ -18,9 +18,9 @@ public class ConsoleDisplayTest {
     public void shouldPrintTheWelcomeMessagePassed() {
         System.setOut(printStream);
 
-        consoleDisplay.printMessage("Welcome to Biblioteca");
+        consoleDisplay.printMessage("Welcome to Library");
 
-        assertEquals("Welcome to Biblioteca", outContent.toString());
+        assertEquals("Welcome to Library", outContent.toString());
     }
 
     @Test

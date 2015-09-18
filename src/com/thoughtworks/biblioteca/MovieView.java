@@ -3,9 +3,9 @@ package com.thoughtworks.biblioteca;
 import java.util.List;
 
 public class MovieView implements LibraryView {
-    private Biblioteca movieDataLibrary;
+    private Library movieDataLibrary;
 
-    public MovieView(Biblioteca movieDataLibrary) {
+    public MovieView(Library movieDataLibrary) {
         this.movieDataLibrary = movieDataLibrary;
     }
 

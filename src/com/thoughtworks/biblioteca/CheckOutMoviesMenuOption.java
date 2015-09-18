@@ -1,13 +1,13 @@
 package com.thoughtworks.biblioteca;
 
 public class CheckOutMoviesMenuOption implements MenuOption {
-    private Biblioteca movieLibraryData;
+    private Library movieLibraryData;
     private ConsoleDisplay consoleDisplay;
     private final int UNKNOWN_YEAR_RELEASED = 0;
     private final int UNKNOWN_RATING = 0;
     private final String UNKNOWN_DIRECTOR = null;
 
-    public CheckOutMoviesMenuOption(Biblioteca movieLibraryData, ConsoleDisplay consoleDisplay) {
+    public CheckOutMoviesMenuOption(Library movieLibraryData, ConsoleDisplay consoleDisplay) {
         this.movieLibraryData = movieLibraryData;
         this.consoleDisplay = consoleDisplay;
     }

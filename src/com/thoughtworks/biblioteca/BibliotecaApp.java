@@ -1,7 +1,6 @@
 package com.thoughtworks.biblioteca;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 //displays the welcome message and menu options
 public class BibliotecaApp {
@@ -37,8 +36,8 @@ public class BibliotecaApp {
         ArrayList<LibraryItem> listOfMoviesAvailable = generateListOfMovies();
         ArrayList<User> listOfUsers = generateListOfValidUsers();
 
-        Biblioteca bookLibraryData = new Biblioteca(listOfAvailableBooks, new ArrayList<LibraryItem>());
-        Biblioteca movieLibraryData = new Biblioteca(listOfMoviesAvailable, new ArrayList<LibraryItem>());
+        Library bookLibraryData = new Library(listOfAvailableBooks, new ArrayList<LibraryItem>());
+        Library movieLibraryData = new Library(listOfMoviesAvailable, new ArrayList<LibraryItem>());
         UserAuthenticator userAuthenticator = new UserAuthenticator(listOfUsers);
 
         User guestUser = new User("guest-001", "", "", "", "", new GuestRole());

@@ -21,7 +21,7 @@ public class ReturnBookMenuOptionTest {
     ArrayList<LibraryItem> listOfCheckedOutBooks = new ArrayList<LibraryItem>() {{
         add(checkedOutBook);
     }};
-    Biblioteca bibilioteca = new Biblioteca(listOfAvailableBooks, listOfCheckedOutBooks);
+    Library bibilioteca = new Library(listOfAvailableBooks, listOfCheckedOutBooks);
 
     @Test
     public void shouldPrintMessageForSuccessfulReturn() {

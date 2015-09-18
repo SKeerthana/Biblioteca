@@ -6,7 +6,6 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
@@ -29,13 +28,13 @@ public class MenuOptionControllerTest {
         add(checkedOutBook);
     }};
 
-    Biblioteca bookLibraryData = new Biblioteca(listOfBooks, checkedOutBooks);
+    Library bookLibraryData = new Library(listOfBooks, checkedOutBooks);
 
     private Movie movie = new Movie("Vishvaroopam", 2013, "Kamalhasan", 10);
     private ArrayList<LibraryItem> availableMovieList = new ArrayList<LibraryItem>() {{
         add(movie);
     }};
-    private Biblioteca movieLibraryData = new Biblioteca(availableMovieList, new ArrayList<LibraryItem>());
+    private Library movieLibraryData = new Library(availableMovieList, new ArrayList<LibraryItem>());
 
     private BookView bookView = new BookView(bookLibraryData);
     private MovieView movieView = new MovieView(movieLibraryData);

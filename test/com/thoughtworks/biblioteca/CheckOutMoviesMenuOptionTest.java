@@ -18,7 +18,7 @@ public class CheckOutMoviesMenuOptionTest {
         add(movie1);
         add(movie2);
     }};
-    Biblioteca movieLibraryData = new Biblioteca(availableListOfMovies, new ArrayList<LibraryItem>());
+    Library movieLibraryData = new Library(availableListOfMovies, new ArrayList<LibraryItem>());
 
     @Test
     public void shouldCheckoutMovieIfTheMovieIsInAvailableList() {

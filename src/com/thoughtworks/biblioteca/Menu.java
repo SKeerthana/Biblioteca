@@ -2,7 +2,7 @@ package com.thoughtworks.biblioteca;
 
 import java.util.ArrayList;
 
-//Has the list of menu options for Biblioteca
+//Has the list of menu options for Library
 public class Menu {
     private ArrayList<String> listOfMenuOptions;
 

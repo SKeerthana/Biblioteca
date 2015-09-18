@@ -2,13 +2,13 @@ package com.thoughtworks.biblioteca;
 
 //Get bookname from user and does checkout operation
 public class CheckOutBooksMenuOption implements MenuOption{
-    private Biblioteca libraryBookData;
+    private Library libraryBookData;
     private ConsoleDisplay consoleDisplay;
     private User user;
     private final String UNKNOWN_AUTHOR = null;
     private final int UNKNOWN_YEAR_PUBLISHED = 0;
 
-    public CheckOutBooksMenuOption(Biblioteca libraryBookData, ConsoleDisplay consoleDisplay, User user) {
+    public CheckOutBooksMenuOption(Library libraryBookData, ConsoleDisplay consoleDisplay, User user) {
         this.libraryBookData = libraryBookData;
         this.consoleDisplay = consoleDisplay;
         this.user = user;

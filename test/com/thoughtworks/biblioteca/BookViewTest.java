@@ -17,7 +17,7 @@ public class BookViewTest {
     ArrayList<LibraryItem> checkedOutBooks = new ArrayList<LibraryItem>() {{
         add(checkedOutBook);
     }};
-    Biblioteca bibilioteca = new Biblioteca(listOfBooks, checkedOutBooks);
+    Library bibilioteca = new Library(listOfBooks, checkedOutBooks);
 
     @Test
     public void shouldDisplayListOfAvailableBooks() {
@@ -43,7 +43,7 @@ public class BookViewTest {
 
     @Test
     public void shouldDisplayNoBooksAvailableWhenAvailableBookListIsEmpty() {
-        Biblioteca bibilioteca = new Biblioteca(new ArrayList<LibraryItem>(), checkedOutBooks);
+        Library bibilioteca = new Library(new ArrayList<LibraryItem>(), checkedOutBooks);
         BookView bookView = new BookView(bibilioteca);
 
         assertEquals("No books to display\n", bookView.getFormattedListOfItems());
@@ -51,7 +51,7 @@ public class BookViewTest {
 
     @Test
     public void shouldDisplayNoBooksAvailableWhenCheckedOutBookListIsEmpty() {
-        Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>());
+        Library bibilioteca = new Library(listOfBooks, new ArrayList<LibraryItem>());
         BookView bookView = new BookView(bibilioteca);
 
         assertEquals("No books to display\n", bookView.getFormattedListOfCheckedOutItems());

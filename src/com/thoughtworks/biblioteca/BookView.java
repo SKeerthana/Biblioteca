@@ -3,9 +3,9 @@ package com.thoughtworks.biblioteca;
 import java.util.List;
 
 public class BookView implements LibraryView {
-    private Biblioteca bookLibraryData;
+    private Library bookLibraryData;
 
-    public BookView(Biblioteca bookLibraryData) {
+    public BookView(Library bookLibraryData) {
         this.bookLibraryData = bookLibraryData;
     }
 

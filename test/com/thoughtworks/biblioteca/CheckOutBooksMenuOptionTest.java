@@ -19,7 +19,7 @@ public class CheckOutBooksMenuOptionTest {
         add(book1);
         add(book2);
     }};
-    Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>());
+    Library bibilioteca = new Library(listOfBooks, new ArrayList<LibraryItem>());
     User currentUser = new User("abc", "abc", "abc", "", "9944172304", new AdminRole());
 
     @Test

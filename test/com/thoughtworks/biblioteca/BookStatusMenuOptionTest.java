@@ -15,7 +15,7 @@ public class BookStatusMenuOptionTest {
     ArrayList<LibraryItem> checkedOutBooks = new ArrayList<LibraryItem>() {{
         add(checkedOutBook);
     }};
-    Biblioteca bibilioteca = new Biblioteca(new ArrayList<LibraryItem>(), checkedOutBooks);
+    Library bibilioteca = new Library(new ArrayList<LibraryItem>(), checkedOutBooks);
 
     @Test
     public void shouldDisplayListOfCheckedOutBooks() {

@@ -3,13 +3,13 @@ package com.thoughtworks.biblioteca;
 //based on the option delegates the functionality
 public class MenuOptionController {
     private Menu menu;
-    private Biblioteca bookLibraryData;
-    private Biblioteca movieLibraryData;
+    private Library bookLibraryData;
+    private Library movieLibraryData;
     private ConsoleDisplay consoleDisplay;
     private UserAuthenticator userAuthenticator;
     private User currentUser;
 
-    public MenuOptionController(Menu menu, Biblioteca bookLibraryData, Biblioteca movieLibraryData, ConsoleDisplay consoleDisplay, UserAuthenticator userAuthenticator, User currentUser) {
+    public MenuOptionController(Menu menu, Library bookLibraryData, Library movieLibraryData, ConsoleDisplay consoleDisplay, UserAuthenticator userAuthenticator, User currentUser) {
         this.menu = menu;
         this.bookLibraryData = bookLibraryData;
         this.movieLibraryData = movieLibraryData;

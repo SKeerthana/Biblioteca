@@ -14,7 +14,7 @@ public class MovieViewTest {
 
     @Test
     public void shouldFormattedListOfMovies() {
-        Biblioteca movieLibraryData = new Biblioteca(availableMovieList, new ArrayList<LibraryItem>());
+        Library movieLibraryData = new Library(availableMovieList, new ArrayList<LibraryItem>());
         MovieView movieView = new MovieView(movieLibraryData);
         String displayData = "=====================================================================================\n";
         displayData += String.format("%-25s %-25s %-15s %-15s\n", "MOVIE NAME", "DIRECTOR", "YEAR", "RATINGS");
@@ -26,7 +26,7 @@ public class MovieViewTest {
 
     @Test
     public void shouldDisplayFeatureNotSupportedToDisplayCheckedOutMovies() {
-        Biblioteca movieLibraryData = new Biblioteca(availableMovieList, new ArrayList<LibraryItem>());
+        Library movieLibraryData = new Library(availableMovieList, new ArrayList<LibraryItem>());
         MovieView movieView = new MovieView(movieLibraryData);
         assertEquals("Feature not supported", movieView.getFormattedListOfCheckedOutItems());
     }

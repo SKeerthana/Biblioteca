@@ -14,7 +14,7 @@ public class ListLibraryItemMenuOptionTest {
     ArrayList<LibraryItem> listOfBooks = new ArrayList<LibraryItem>() {{
         add(book1);
     }};
-    Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>());
+    Library bibilioteca = new Library(listOfBooks, new ArrayList<LibraryItem>());
 
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     PrintStream printStream = new PrintStream(outContent);
