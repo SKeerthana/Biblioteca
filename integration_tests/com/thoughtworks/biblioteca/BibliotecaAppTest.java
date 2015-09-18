@@ -72,4 +72,24 @@ public class BibliotecaAppTest {
         bibliotecaApp.start();
         assertEquals("Thank you! Enjoy the book\n", outContent.toString());
     }
+    @Test
+    public void shouldDisplayUnSuccessMessageWhenCheckOutIsUnSuccessful() {
+        ConsoleDisplay consoleDisplay1 = mock(ConsoleDisplay.class);
+        when(consoleDisplay1.getInputFromUser()).thenReturn("3", "2");
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay1);
+        MenuOptionController menuOptionController = mock(MenuOptionController.class);
+
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ByteArrayInputStream inContent = new ByteArrayInputStream("Harry Potter".getBytes());
+        System.setIn(inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
+        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new User("ABC12", "ABC23", "", "abc@gmail.com", "9944172304", new AdminRole()));
+        when(menuOptionController.getMenuOption("3")).thenReturn(checkOutBooksMenuOption);
+        exit.expectSystemExit();
+
+        bibliotecaApp.start();
+        assertEquals("That book is not available\n", outContent.toString());
+    }
 }
