@@ -53,7 +53,7 @@ public class MenuOptionController {
                     currentUser = userAuthenticator.loginUser(consoleDisplay);
 
                 if (currentUser.isAuthenticatedUser())
-                    return new ReturnBookOption(bookLibraryData, consoleDisplay, currentUser);
+                    return new ReturnBookMenuOption(bookLibraryData, consoleDisplay, currentUser);
                 break;
 
             case "List Movies":

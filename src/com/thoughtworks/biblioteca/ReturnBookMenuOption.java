@@ -1,14 +1,14 @@
 package com.thoughtworks.biblioteca;
 
 //Get bookname from user to return book to the library
-public class ReturnBookOption implements MenuOption {
+public class ReturnBookMenuOption implements MenuOption {
     private Biblioteca libraryBookData;
     private ConsoleDisplay consoleDisplay;
     private User user;
     private final String UNKNOWN_AUTHOR = null;
     private final int UNKNOWN_YEAR_PUBLISHED = 0;
 
-    public ReturnBookOption(Biblioteca libraryBookData, ConsoleDisplay consoleDisplay, User user) {
+    public ReturnBookMenuOption(Biblioteca libraryBookData, ConsoleDisplay consoleDisplay, User user) {
         this.libraryBookData = libraryBookData;
         this.consoleDisplay = consoleDisplay;
         this.user = user;

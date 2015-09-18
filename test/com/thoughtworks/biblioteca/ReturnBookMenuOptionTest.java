@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class ReturnBookOptionTest {
+public class ReturnBookMenuOptionTest {
     Book book1 = new Book("My experiments with Truth", "M.K.Gandhi", 1942);
     Book book2 = new Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998);
     User currentlyLoggedInUser = new User("admin-001", "abc", "abc", "", "9944172304", new AdminRole());
@@ -33,8 +33,8 @@ public class ReturnBookOptionTest {
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
 
-        ReturnBookOption returnBookOption = new ReturnBookOption(bibilioteca, consoleDisplay, currentlyLoggedInUser);
-        returnBookOption.performOperation();
+        ReturnBookMenuOption returnBookMenuOption = new ReturnBookMenuOption(bibilioteca, consoleDisplay, currentlyLoggedInUser);
+        returnBookMenuOption.performOperation();
 
         assertEquals("Thank you for returning the book.\n", outContent.toString());
     }
@@ -49,8 +49,8 @@ public class ReturnBookOptionTest {
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
         System.setIn(inContent);
 
-        ReturnBookOption returnBookOption = new ReturnBookOption(bibilioteca, consoleDisplay, currentlyLoggedInUser);
-        returnBookOption.performOperation();
+        ReturnBookMenuOption returnBookMenuOption = new ReturnBookMenuOption(bibilioteca, consoleDisplay, currentlyLoggedInUser);
+        returnBookMenuOption.performOperation();
 
         assertEquals("That is not a valid book to return.\n", outContent.toString());
     }
