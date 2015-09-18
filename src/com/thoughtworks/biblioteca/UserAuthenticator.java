@@ -6,6 +6,7 @@ import java.util.HashMap;
 //authenticates users using the list of predefined users
 public class UserAuthenticator {
     private ArrayList<User> listOfUsers;
+    private User guestUser = new User("guest-001", "", "", "", "", new GuestRole());
 
     public UserAuthenticator(ArrayList<User> listOfUsers) {
         this.listOfUsers = listOfUsers;
@@ -17,7 +18,7 @@ public class UserAuthenticator {
                 return user;
             }
         }
-        return new User("guest-001", "", "", "", "", new GuestRole());
+        return guestUser;
     }
 
     public User loginUser(ConsoleDisplay consoleDisplay) {
@@ -29,6 +30,6 @@ public class UserAuthenticator {
     }
 
     public User logOut() {
-        return new User("guest-001", "", "", "", "", new GuestRole());
+        return guestUser;
     }
 }

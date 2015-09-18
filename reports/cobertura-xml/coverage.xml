@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.9045226130653267" branch-rate="0.7767857142857143" lines-covered="360" lines-valid="398" branches-covered="87" branches-valid="112" complexity="1.5315315315315314" version="2.1.1" timestamp="1442545034809">
+<coverage line-rate="0.8935643564356436" branch-rate="0.7631578947368421" lines-covered="361" lines-valid="404" branches-covered="87" branches-valid="114" complexity="1.5315315315315314" version="2.1.1" timestamp="1442550847104">
 	<sources>
 		<source>src</source>
 	</sources>
 	<packages>
-		<package name="com.thoughtworks.biblioteca" line-rate="0.9045226130653267" branch-rate="0.7767857142857143" complexity="1.5315315315315314">
+		<package name="com.thoughtworks.biblioteca" line-rate="0.8935643564356436" branch-rate="0.7631578947368421" complexity="1.5315315315315314">
 			<classes>
 				<class name="com.thoughtworks.biblioteca.AdminRole" filename="com/thoughtworks/biblioteca/AdminRole.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
@@ -664,9 +664,9 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="8" hits="32" branch="false"/>
-								<line number="9" hits="32" branch="false"/>
-								<line number="18" hits="32" branch="false"/>
+								<line number="8" hits="49" branch="false"/>
+								<line number="9" hits="49" branch="false"/>
+								<line number="18" hits="49" branch="false"/>
 							</lines>
 						</method>
 						<method name="getMenuOptions" signature="()Ljava/util/ArrayList;" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -681,9 +681,9 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="8" hits="32" branch="false"/>
-						<line number="9" hits="32" branch="false"/>
-						<line number="18" hits="32" branch="false"/>
+						<line number="8" hits="49" branch="false"/>
+						<line number="9" hits="49" branch="false"/>
+						<line number="18" hits="49" branch="false"/>
 						<line number="22" hits="28" branch="false"/>
 						<line number="27" hits="12" branch="false"/>
 					</lines>
@@ -1364,14 +1364,14 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/thoughtworks/biblioteca/UserRole;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="13" hits="96" branch="false"/>
-								<line number="14" hits="96" branch="false"/>
-								<line number="15" hits="96" branch="false"/>
-								<line number="16" hits="96" branch="false"/>
-								<line number="17" hits="96" branch="false"/>
-								<line number="18" hits="96" branch="false"/>
-								<line number="19" hits="96" branch="false"/>
-								<line number="20" hits="96" branch="false"/>
+								<line number="13" hits="113" branch="false"/>
+								<line number="14" hits="113" branch="false"/>
+								<line number="15" hits="113" branch="false"/>
+								<line number="16" hits="113" branch="false"/>
+								<line number="17" hits="113" branch="false"/>
+								<line number="18" hits="113" branch="false"/>
+								<line number="19" hits="113" branch="false"/>
+								<line number="20" hits="113" branch="false"/>
 							</lines>
 						</method>
 						<method name="equals" signature="(Ljava/lang/Object;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -1449,14 +1449,14 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="13" hits="96" branch="false"/>
-						<line number="14" hits="96" branch="false"/>
-						<line number="15" hits="96" branch="false"/>
-						<line number="16" hits="96" branch="false"/>
-						<line number="17" hits="96" branch="false"/>
-						<line number="18" hits="96" branch="false"/>
-						<line number="19" hits="96" branch="false"/>
-						<line number="20" hits="96" branch="false"/>
+						<line number="13" hits="113" branch="false"/>
+						<line number="14" hits="113" branch="false"/>
+						<line number="15" hits="113" branch="false"/>
+						<line number="16" hits="113" branch="false"/>
+						<line number="17" hits="113" branch="false"/>
+						<line number="18" hits="113" branch="false"/>
+						<line number="19" hits="113" branch="false"/>
+						<line number="20" hits="113" branch="false"/>
 						<line number="24" hits="10" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
@@ -1492,70 +1492,90 @@
 						<line number="69" hits="5" branch="false"/>
 					</lines>
 				</class>
-				<class name="com.thoughtworks.biblioteca.UserAuthenticator" filename="com/thoughtworks/biblioteca/UserAuthenticator.java" line-rate="1.0" branch-rate="1.0" complexity="1.75">
+				<class name="com.thoughtworks.biblioteca.UserAuthenticator" filename="com/thoughtworks/biblioteca/UserAuthenticator.java" line-rate="0.75" branch-rate="0.6666666666666666" complexity="1.75">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Ljava/util/ArrayList;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Ljava/util/ArrayList;)V" line-rate="0.8" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="10" hits="22" branch="false"/>
+								<line number="9" hits="22" branch="false"/>
+								<line number="10" hits="0" branch="false"/>
 								<line number="11" hits="22" branch="false"/>
 								<line number="12" hits="22" branch="false"/>
+								<line number="13" hits="22" branch="false"/>
 							</lines>
 						</method>
-						<method name="authenticate" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/thoughtworks/biblioteca/User;" line-rate="1.0" branch-rate="1.0" complexity="0">
+						<method name="authenticate" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/thoughtworks/biblioteca/User;" line-rate="0.7142857142857143" branch-rate="0.6666666666666666" complexity="0">
 							<lines>
-								<line number="15" hits="7" branch="true" condition-coverage="100% (2/2)">
+								<line number="15" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="16" hits="7" branch="true" condition-coverage="100% (2/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="16" hits="8" branch="true" condition-coverage="100% (2/2)">
+								<line number="17" hits="8" branch="true" condition-coverage="100% (2/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="17" hits="3" branch="false"/>
-								<line number="19" hits="5" branch="false"/>
-								<line number="20" hits="4" branch="false"/>
+								<line number="18" hits="3" branch="false"/>
+								<line number="19" hits="0" branch="false"/>
+								<line number="20" hits="5" branch="false"/>
+								<line number="21" hits="4" branch="false"/>
 							</lines>
 						</method>
-						<method name="logOut" signature="()Lcom/thoughtworks/biblioteca/User;" line-rate="1.0" branch-rate="1.0" complexity="0">
+						<method name="logOut" signature="()Lcom/thoughtworks/biblioteca/User;" line-rate="0.5" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="32" hits="1" branch="false"/>
+								<line number="32" hits="0" branch="false"/>
+								<line number="33" hits="1" branch="false"/>
 							</lines>
 						</method>
-						<method name="loginUser" signature="(Lcom/thoughtworks/biblioteca/ConsoleDisplay;)Lcom/thoughtworks/biblioteca/User;" line-rate="1.0" branch-rate="1.0" complexity="0">
+						<method name="loginUser" signature="(Lcom/thoughtworks/biblioteca/ConsoleDisplay;)Lcom/thoughtworks/biblioteca/User;" line-rate="0.8333333333333334" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="24" hits="3" branch="false"/>
+								<line number="24" hits="0" branch="false"/>
 								<line number="25" hits="3" branch="false"/>
 								<line number="26" hits="3" branch="false"/>
 								<line number="27" hits="3" branch="false"/>
 								<line number="28" hits="3" branch="false"/>
+								<line number="29" hits="3" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="10" hits="22" branch="false"/>
+						<line number="9" hits="22" branch="false"/>
+						<line number="10" hits="0" branch="false"/>
 						<line number="11" hits="22" branch="false"/>
 						<line number="12" hits="22" branch="false"/>
-						<line number="15" hits="7" branch="true" condition-coverage="100% (2/2)">
+						<line number="13" hits="22" branch="false"/>
+						<line number="15" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="16" hits="7" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="16" hits="8" branch="true" condition-coverage="100% (2/2)">
+						<line number="17" hits="8" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="17" hits="3" branch="false"/>
-						<line number="19" hits="5" branch="false"/>
-						<line number="20" hits="4" branch="false"/>
-						<line number="24" hits="3" branch="false"/>
+						<line number="18" hits="3" branch="false"/>
+						<line number="19" hits="0" branch="false"/>
+						<line number="20" hits="5" branch="false"/>
+						<line number="21" hits="4" branch="false"/>
+						<line number="24" hits="0" branch="false"/>
 						<line number="25" hits="3" branch="false"/>
 						<line number="26" hits="3" branch="false"/>
 						<line number="27" hits="3" branch="false"/>
 						<line number="28" hits="3" branch="false"/>
-						<line number="32" hits="1" branch="false"/>
+						<line number="29" hits="3" branch="false"/>
+						<line number="32" hits="0" branch="false"/>
+						<line number="33" hits="1" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.thoughtworks.biblioteca.UserInfo" filename="com/thoughtworks/biblioteca/UserInfo.java" line-rate="0.0" branch-rate="0.0" complexity="0.0">
