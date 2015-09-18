@@ -1,7 +1,6 @@
 package com.thoughtworks.biblioteca;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 //authenticates users using the list of predefined users
 public class UserAuthenticator {
