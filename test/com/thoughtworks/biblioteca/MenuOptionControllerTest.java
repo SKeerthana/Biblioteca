@@ -48,9 +48,9 @@ public class MenuOptionControllerTest {
     }};
     private Menu menu = new Menu(listOfMenuOptions);
     private User adminUser = new User("admin-001", "", "", "", "9944172304", new AdminRole());
-    private HashMap<String, User> validUsers = new HashMap<String, User>() {{
-        put("1234-122", currentUser);
-        put("admin-001", adminUser);
+    private ArrayList<User> validUsers = new ArrayList<User>() {{
+        add(currentUser);
+        add(adminUser);
     }};
     private UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 

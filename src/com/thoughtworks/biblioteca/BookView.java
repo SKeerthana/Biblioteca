@@ -25,7 +25,7 @@ public class BookView implements LibraryView {
     @Override
     public String getFormattedListOfCheckedOutItems() {
         List<LibraryItem> checkedOutItems = bookLibraryData.getCheckedOutItems();
-        if(checkedOutItems.size() > 0) {
+        if (checkedOutItems.size() > 0) {
             String booksHeader = "==========================================================================================================================\n";
             booksHeader += getCheckedOutItemDetailsHeader(checkedOutItems.get(0));
             booksHeader += "==========================================================================================================================\n";

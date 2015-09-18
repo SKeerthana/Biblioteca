@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.HashMap;
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
@@ -15,8 +15,8 @@ public class UserAuthenticatorTest {
 
     @Test
     public void shouldLoginForValidCredentials() {
-        HashMap<String, User> validUsers = new HashMap<String, User>() {{
-            put("1234-122", currentUser);
+        ArrayList<User> validUsers = new ArrayList<User>() {{
+            add(currentUser);
         }};
         UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
@@ -25,8 +25,8 @@ public class UserAuthenticatorTest {
 
     @Test
     public void shouldNotLoginForInValidLibraryNumber() {
-        HashMap<String, User> validUsers = new HashMap<String, User>() {{
-            put("1234-122", currentUser);
+        ArrayList<User> validUsers = new ArrayList<User>() {{
+            add(currentUser);
         }};
         UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
@@ -35,8 +35,8 @@ public class UserAuthenticatorTest {
 
     @Test
     public void shouldNotLoginForInValidPassword() {
-        HashMap<String, User> validUsers = new HashMap<String, User>() {{
-            put("1234-122", currentUser);
+        ArrayList<User> validUsers = new ArrayList<User>() {{
+            add(currentUser);
         }};
         UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
@@ -45,8 +45,8 @@ public class UserAuthenticatorTest {
 
     @Test
     public void shouldNotLoginForInValidCredentials() {
-        HashMap<String, User> validUsers = new HashMap<String, User>() {{
-            put("1234-122", currentUser);
+        ArrayList<User> validUsers = new ArrayList<User>() {{
+            add(currentUser);
         }};
         UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
@@ -55,8 +55,8 @@ public class UserAuthenticatorTest {
 
     @Test
     public void shouldReturnLoggedInUserForValidUser() {
-        HashMap<String, User> validUsers = new HashMap<String, User>() {{
-            put("1234-122", currentUser);
+        ArrayList<User> validUsers = new ArrayList<User>() {{
+            add(currentUser);
         }};
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);

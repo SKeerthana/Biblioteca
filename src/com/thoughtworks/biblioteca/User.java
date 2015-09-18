@@ -33,8 +33,8 @@ public class User {
         return "LIBRARY NUMBER";
     }
 
-    public boolean validate(String password) {
-        return this.password.equals(password);
+    public boolean validate(String libraryNumber, String password) {
+        return this.libraryNumber.equals(libraryNumber) && this.password.equals(password);
     }
 
     public ArrayList<String> getMenuOptions() {

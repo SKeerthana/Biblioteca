@@ -1,19 +1,19 @@
 package com.thoughtworks.biblioteca;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 //authenticates users using the list of predefined users
 public class UserAuthenticator {
-    private HashMap<String, User> listOfUsers;
+    private ArrayList<User> listOfUsers;
 
-    public UserAuthenticator(HashMap<String, User> listOfUsers) {
+    public UserAuthenticator(ArrayList<User> listOfUsers) {
         this.listOfUsers = listOfUsers;
     }
 
     public User authenticate(String libraryNumber, String password) {
-        if (listOfUsers.containsKey(libraryNumber)) {
-            User user = listOfUsers.get(libraryNumber);
-            if (user.validate(password)) {
+        for (User user : listOfUsers) {
+            if (user.validate(libraryNumber, password)) {
                 return user;
             }
         }

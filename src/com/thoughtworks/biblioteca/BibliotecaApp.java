@@ -35,7 +35,7 @@ public class BibliotecaApp {
     private MenuOptionController getMenuOptionController() {
         ArrayList<LibraryItem> listOfAvailableBooks = generateListOfBooks();
         ArrayList<LibraryItem> listOfMoviesAvailable = generateListOfMovies();
-        HashMap<String, User> listOfUsers = generateListOfValidUsers();
+        ArrayList<User> listOfUsers = generateListOfValidUsers();
 
         Biblioteca bookLibraryData = new Biblioteca(listOfAvailableBooks, new ArrayList<LibraryItem>());
         Biblioteca movieLibraryData = new Biblioteca(listOfMoviesAvailable, new ArrayList<LibraryItem>());
@@ -47,12 +47,12 @@ public class BibliotecaApp {
         return new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, guestUser);
     }
 
-    private HashMap<String, User> generateListOfValidUsers() {
-        HashMap<String, User> userInfos = new HashMap<>();
+    private ArrayList<User> generateListOfValidUsers() {
+        ArrayList<User> userInfos = new ArrayList<>();
         User normalUser = new User("lib-0001", "name", "abc", "abc@gmail.com", "9944172304", new LoggedInUserRole());
         User admin = new User("lib-0002", "name", "abc", "abc@gmail.com", "9944172304", new AdminRole());
-        userInfos.put("lib-0001", normalUser);
-        userInfos.put("lib-0002", admin);
+        userInfos.add(normalUser);
+        userInfos.add(admin);
 
         return userInfos;
     }
