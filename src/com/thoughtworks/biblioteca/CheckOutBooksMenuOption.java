@@ -5,6 +5,8 @@ public class CheckOutBooksMenuOption implements MenuOption{
     private Biblioteca libraryBookData;
     private ConsoleDisplay consoleDisplay;
     private User user;
+    private final String UNKNOWN_AUTHOR = null;
+    private final int UNKNOWN_YEAR_PUBLISHED = 0;
 
     public CheckOutBooksMenuOption(Biblioteca libraryBookData, ConsoleDisplay consoleDisplay, User user) {
         this.libraryBookData = libraryBookData;
@@ -14,7 +16,7 @@ public class CheckOutBooksMenuOption implements MenuOption{
     @Override
     public void performOperation() {
         String bookName = consoleDisplay.getInputFromUser();
-        Book bookToBeSearched = new Book(bookName, null, 0);
+        Book bookToBeSearched = new Book(bookName, UNKNOWN_AUTHOR, UNKNOWN_YEAR_PUBLISHED);
         int index = libraryBookData.getIndexOfLibraryItemInAvailableList(bookToBeSearched);
 
         if(index != -1) {

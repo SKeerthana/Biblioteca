@@ -5,6 +5,8 @@ public class ReturnBookOption implements MenuOption {
     private Biblioteca libraryBookData;
     private ConsoleDisplay consoleDisplay;
     private User user;
+    private final String UNKNOWN_AUTHOR = null;
+    private final int UNKNOWN_YEAR_PUBLISHED = 0;
 
     public ReturnBookOption(Biblioteca libraryBookData, ConsoleDisplay consoleDisplay, User user) {
         this.libraryBookData = libraryBookData;
@@ -15,8 +17,8 @@ public class ReturnBookOption implements MenuOption {
     @Override
     public void performOperation() {
         String bookName = consoleDisplay.getInputFromUser();
-        Book bookToBeReturned = new Book(bookName, null, 0);
-        CheckedOutBook checkedOutBook = new CheckedOutBook(bookToBeReturned, null);
+        Book bookToBeReturned = new Book(bookName, UNKNOWN_AUTHOR, UNKNOWN_YEAR_PUBLISHED);
+        CheckedOutBook checkedOutBook = new CheckedOutBook(bookToBeReturned, user);
         int index = libraryBookData.getIndexOfLibraryItemInCheckedOutItems(checkedOutBook);
 
         if (index != -1) {

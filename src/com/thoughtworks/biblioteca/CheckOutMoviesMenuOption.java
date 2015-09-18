@@ -3,6 +3,9 @@ package com.thoughtworks.biblioteca;
 public class CheckOutMoviesMenuOption implements MenuOption {
     private Biblioteca movieLibraryData;
     private ConsoleDisplay consoleDisplay;
+    private final int UNKNOWN_YEAR_RELEASED = 0;
+    private final int UNKNOWN_RATING = 0;
+    private final String UNKNOWN_DIRECTOR = null;
 
     public CheckOutMoviesMenuOption(Biblioteca movieLibraryData, ConsoleDisplay consoleDisplay) {
         this.movieLibraryData = movieLibraryData;
@@ -12,7 +15,7 @@ public class CheckOutMoviesMenuOption implements MenuOption {
     @Override
     public void performOperation() {
         String movieName = consoleDisplay.getInputFromUser();
-        Movie movieTobeSearched = new Movie(movieName, 0, null, 0);
+        Movie movieTobeSearched = new Movie(movieName, UNKNOWN_YEAR_RELEASED, UNKNOWN_DIRECTOR, UNKNOWN_RATING);
         int index = movieLibraryData.getIndexOfLibraryItemInAvailableList(movieTobeSearched);
         if (index != -1) {
             LibraryItem movie = movieLibraryData.removeLibraryItemFromAvailableList(index);
