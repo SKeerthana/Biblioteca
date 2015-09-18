@@ -19,6 +19,7 @@ public class BibliotecaAppTest {
     }};
     Book book3 = new Book("Good will hunting", "some person", 1998);
     private User currentUser = new User("1234-122", "abc", "abc", "", "9944172304", new LoggedInUserRole());
+    private User guestUser = new User("guest-001", "abc", "abc", "", "9944172304", new GuestRole());
     CheckedOutBook checkedOutBook = new CheckedOutBook(book3, currentUser);
     ArrayList<LibraryItem> checkedOutBooks = new ArrayList<LibraryItem>() {{
         add(checkedOutBook);
@@ -154,18 +155,18 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void shouldDisplayNothingWhenCheckOutMovieIsUnSuccessful() {
+    public void shouldLoginSuccessfulMessageWhenLoginIsSuccessful() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        ByteArrayInputStream inContent = new ByteArrayInputStream("6\nVishva\n".getBytes());
+        ByteArrayInputStream inContent = new ByteArrayInputStream("7\n1234-122\nabc".getBytes());
         System.setIn(inContent);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
 
         BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay);
-        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, guestUser);
 
         bibliotecaApp.run(menuOptionController);
-        assertEquals(menu.getMenuOptionsToDisplay(currentUser), outContent.toString());
+        assertEquals(menu.getMenuOptionsToDisplay(guestUser) + "Enter library Number : Enter password : Login successful\n", outContent.toString());
     }
 }
