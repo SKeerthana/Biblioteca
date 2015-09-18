@@ -10,11 +10,17 @@ Recommended in Mac O.S.
 Java 1.7
 Apache Ant
 
-###To Build the codebase###
+###To build the codebase###
 
 Enter the following command in the project root directory :
 
-ant compile
+ant build-jar
+
+###To run the codebase###
+
+Enter the following command in the project root directory :
+
+ant run
 
 ###To automate the testing of the application###
 
