@@ -152,4 +152,20 @@ public class BibliotecaAppTest {
         bibliotecaApp.run(menuOptionController);
         assertEquals(menu.getMenuOptionsToDisplay(currentUser) + "Thank you! Enjoy the Movie\n", outContent.toString());
     }
+
+    @Test
+    public void shouldDisplayNothingWhenCheckOutMovieIsUnSuccessful() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ByteArrayInputStream inContent = new ByteArrayInputStream("6\nVishva\n".getBytes());
+        System.setIn(inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
+
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+
+        bibliotecaApp.run(menuOptionController);
+        assertEquals(menu.getMenuOptionsToDisplay(currentUser), outContent.toString());
+    }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.90625" branch-rate="0.8839285714285714" lines-covered="348" lines-valid="384" branches-covered="99" branches-valid="112" complexity="1.575221238938053" version="2.1.1" timestamp="1442573074508">
+<coverage line-rate="0.90625" branch-rate="0.8839285714285714" lines-covered="348" lines-valid="384" branches-covered="99" branches-valid="112" complexity="1.575221238938053" version="2.1.1" timestamp="1442575633247">
 	<sources>
 		<source>src</source>
 	</sources>
@@ -12,9 +12,9 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="8" hits="46" branch="false"/>
-								<line number="9" hits="46" branch="false"/>
-								<line number="20" hits="46" branch="false"/>
+								<line number="8" hits="48" branch="false"/>
+								<line number="9" hits="48" branch="false"/>
+								<line number="20" hits="48" branch="false"/>
 							</lines>
 						</method>
 						<method name="getMenuOptions" signature="()Ljava/util/ArrayList;" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -29,9 +29,9 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="8" hits="46" branch="false"/>
-						<line number="9" hits="46" branch="false"/>
-						<line number="20" hits="46" branch="false"/>
+						<line number="8" hits="48" branch="false"/>
+						<line number="9" hits="48" branch="false"/>
+						<line number="20" hits="48" branch="false"/>
 						<line number="24" hits="7" branch="false"/>
 						<line number="29" hits="3" branch="false"/>
 					</lines>
@@ -40,10 +40,10 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/util/ArrayList;Ljava/util/ArrayList;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="12" hits="72" branch="false"/>
-								<line number="13" hits="72" branch="false"/>
-								<line number="14" hits="72" branch="false"/>
-								<line number="15" hits="72" branch="false"/>
+								<line number="12" hits="76" branch="false"/>
+								<line number="13" hits="76" branch="false"/>
+								<line number="14" hits="76" branch="false"/>
+								<line number="15" hits="76" branch="false"/>
 							</lines>
 						</method>
 						<method name="addLibraryItemToAvailableList" signature="(Lcom/thoughtworks/biblioteca/LibraryItem;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -54,13 +54,13 @@
 						</method>
 						<method name="addLibraryItemToCheckedOutList" signature="(Lcom/thoughtworks/biblioteca/LibraryItem;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="26" hits="9" branch="false"/>
-								<line number="27" hits="9" branch="false"/>
+								<line number="26" hits="10" branch="false"/>
+								<line number="27" hits="10" branch="false"/>
 							</lines>
 						</method>
 						<method name="getAvailableItems" signature="()Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="42" hits="14" branch="false"/>
+								<line number="42" hits="16" branch="false"/>
 							</lines>
 						</method>
 						<method name="getCheckedOutItems" signature="()Ljava/util/ArrayList;" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -70,7 +70,7 @@
 						</method>
 						<method name="getIndexOfLibraryItemInAvailableList" signature="(Lcom/thoughtworks/biblioteca/LibraryItem;)I" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="18" hits="19" branch="false"/>
+								<line number="18" hits="20" branch="false"/>
 							</lines>
 						</method>
 						<method name="getIndexOfLibraryItemInCheckedOutItems" signature="(Lcom/thoughtworks/biblioteca/LibraryItem;)I" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -80,7 +80,7 @@
 						</method>
 						<method name="removeLibraryItemFromAvailableList" signature="(I)Lcom/thoughtworks/biblioteca/LibraryItem;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="22" hits="9" branch="false"/>
+								<line number="22" hits="10" branch="false"/>
 							</lines>
 						</method>
 						<method name="removeLibraryItemFromCheckedOutList" signature="(I)Lcom/thoughtworks/biblioteca/LibraryItem;" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -90,19 +90,19 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="12" hits="72" branch="false"/>
-						<line number="13" hits="72" branch="false"/>
-						<line number="14" hits="72" branch="false"/>
-						<line number="15" hits="72" branch="false"/>
-						<line number="18" hits="19" branch="false"/>
-						<line number="22" hits="9" branch="false"/>
-						<line number="26" hits="9" branch="false"/>
-						<line number="27" hits="9" branch="false"/>
+						<line number="12" hits="76" branch="false"/>
+						<line number="13" hits="76" branch="false"/>
+						<line number="14" hits="76" branch="false"/>
+						<line number="15" hits="76" branch="false"/>
+						<line number="18" hits="20" branch="false"/>
+						<line number="22" hits="10" branch="false"/>
+						<line number="26" hits="10" branch="false"/>
+						<line number="27" hits="10" branch="false"/>
 						<line number="30" hits="7" branch="false"/>
 						<line number="34" hits="4" branch="false"/>
 						<line number="38" hits="4" branch="false"/>
 						<line number="39" hits="4" branch="false"/>
-						<line number="42" hits="14" branch="false"/>
+						<line number="42" hits="16" branch="false"/>
 						<line number="46" hits="5" branch="false"/>
 					</lines>
 				</class>
@@ -110,9 +110,9 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/ConsoleDisplay;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="16" hits="5" branch="false"/>
-								<line number="17" hits="5" branch="false"/>
-								<line number="18" hits="5" branch="false"/>
+								<line number="16" hits="7" branch="false"/>
+								<line number="17" hits="7" branch="false"/>
+								<line number="18" hits="7" branch="false"/>
 							</lines>
 						</method>
 						<method name="generateListOfBooks" signature="()Ljava/util/ArrayList;" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -168,10 +168,10 @@
 						</method>
 						<method name="run" signature="(Lcom/thoughtworks/biblioteca/MenuOptionController;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="30" hits="5" branch="false"/>
-								<line number="31" hits="5" branch="false"/>
-								<line number="32" hits="5" branch="false"/>
-								<line number="33" hits="5" branch="false"/>
+								<line number="30" hits="7" branch="false"/>
+								<line number="31" hits="7" branch="false"/>
+								<line number="32" hits="7" branch="false"/>
+								<line number="33" hits="7" branch="false"/>
 							</lines>
 						</method>
 						<method name="start" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -187,16 +187,16 @@
 						<line number="12" hits="0" branch="false"/>
 						<line number="13" hits="0" branch="false"/>
 						<line number="14" hits="0" branch="false"/>
-						<line number="16" hits="5" branch="false"/>
-						<line number="17" hits="5" branch="false"/>
-						<line number="18" hits="5" branch="false"/>
+						<line number="16" hits="7" branch="false"/>
+						<line number="17" hits="7" branch="false"/>
+						<line number="18" hits="7" branch="false"/>
 						<line number="21" hits="0" branch="false"/>
 						<line number="22" hits="0" branch="false"/>
 						<line number="25" hits="0" branch="false"/>
-						<line number="30" hits="5" branch="false"/>
-						<line number="31" hits="5" branch="false"/>
-						<line number="32" hits="5" branch="false"/>
-						<line number="33" hits="5" branch="false"/>
+						<line number="30" hits="7" branch="false"/>
+						<line number="31" hits="7" branch="false"/>
+						<line number="32" hits="7" branch="false"/>
+						<line number="33" hits="7" branch="false"/>
 						<line number="36" hits="0" branch="false"/>
 						<line number="37" hits="0" branch="false"/>
 						<line number="38" hits="0" branch="false"/>
@@ -230,20 +230,20 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Book;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="15" hits="54" branch="false"/>
-								<line number="16" hits="54" branch="false"/>
-								<line number="17" hits="54" branch="false"/>
-								<line number="18" hits="54" branch="false"/>
-								<line number="19" hits="54" branch="false"/>
+								<line number="15" hits="56" branch="false"/>
+								<line number="16" hits="56" branch="false"/>
+								<line number="17" hits="56" branch="false"/>
+								<line number="18" hits="56" branch="false"/>
+								<line number="19" hits="56" branch="false"/>
 							</lines>
 						</method>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="9" hits="154" branch="false"/>
-								<line number="10" hits="154" branch="false"/>
-								<line number="11" hits="154" branch="false"/>
-								<line number="12" hits="154" branch="false"/>
-								<line number="13" hits="154" branch="false"/>
+								<line number="9" hits="160" branch="false"/>
+								<line number="10" hits="160" branch="false"/>
+								<line number="11" hits="160" branch="false"/>
+								<line number="12" hits="160" branch="false"/>
+								<line number="13" hits="160" branch="false"/>
 							</lines>
 						</method>
 						<method name="equals" signature="(Ljava/lang/Object;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -296,16 +296,16 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="9" hits="154" branch="false"/>
-						<line number="10" hits="154" branch="false"/>
-						<line number="11" hits="154" branch="false"/>
-						<line number="12" hits="154" branch="false"/>
-						<line number="13" hits="154" branch="false"/>
-						<line number="15" hits="54" branch="false"/>
-						<line number="16" hits="54" branch="false"/>
-						<line number="17" hits="54" branch="false"/>
-						<line number="18" hits="54" branch="false"/>
-						<line number="19" hits="54" branch="false"/>
+						<line number="9" hits="160" branch="false"/>
+						<line number="10" hits="160" branch="false"/>
+						<line number="11" hits="160" branch="false"/>
+						<line number="12" hits="160" branch="false"/>
+						<line number="13" hits="160" branch="false"/>
+						<line number="15" hits="56" branch="false"/>
+						<line number="16" hits="56" branch="false"/>
+						<line number="17" hits="56" branch="false"/>
+						<line number="18" hits="56" branch="false"/>
+						<line number="19" hits="56" branch="false"/>
 						<line number="22" hits="11" branch="false"/>
 						<line number="23" hits="11" branch="false"/>
 						<line number="24" hits="11" branch="false"/>
@@ -362,9 +362,9 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Biblioteca;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="8" hits="30" branch="false"/>
-								<line number="9" hits="30" branch="false"/>
-								<line number="10" hits="30" branch="false"/>
+								<line number="8" hits="32" branch="false"/>
+								<line number="9" hits="32" branch="false"/>
+								<line number="10" hits="32" branch="false"/>
 							</lines>
 						</method>
 						<method name="getAvailableItemDetails" signature="(Ljava/util/List;)Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -441,9 +441,9 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="8" hits="30" branch="false"/>
-						<line number="9" hits="30" branch="false"/>
-						<line number="10" hits="30" branch="false"/>
+						<line number="8" hits="32" branch="false"/>
+						<line number="9" hits="32" branch="false"/>
+						<line number="10" hits="32" branch="false"/>
 						<line number="13" hits="7" branch="false"/>
 						<line number="14" hits="7" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
@@ -558,61 +558,61 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Biblioteca;Lcom/thoughtworks/biblioteca/ConsoleDisplay;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="6" hits="4" branch="false"/>
-								<line number="7" hits="4" branch="false"/>
-								<line number="8" hits="4" branch="false"/>
-								<line number="10" hits="4" branch="false"/>
-								<line number="11" hits="4" branch="false"/>
-								<line number="12" hits="4" branch="false"/>
-								<line number="13" hits="4" branch="false"/>
+								<line number="6" hits="5" branch="false"/>
+								<line number="7" hits="5" branch="false"/>
+								<line number="8" hits="5" branch="false"/>
+								<line number="10" hits="5" branch="false"/>
+								<line number="11" hits="5" branch="false"/>
+								<line number="12" hits="5" branch="false"/>
+								<line number="13" hits="5" branch="false"/>
 							</lines>
 						</method>
 						<method name="performOperation" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="17" hits="4" branch="false"/>
-								<line number="18" hits="4" branch="false"/>
-								<line number="19" hits="4" branch="false"/>
-								<line number="20" hits="4" branch="true" condition-coverage="100% (2/2)">
+								<line number="17" hits="5" branch="false"/>
+								<line number="18" hits="5" branch="false"/>
+								<line number="19" hits="5" branch="false"/>
+								<line number="20" hits="5" branch="true" condition-coverage="100% (2/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="21" hits="3" branch="false"/>
-								<line number="22" hits="3" branch="false"/>
-								<line number="23" hits="3" branch="false"/>
-								<line number="25" hits="4" branch="false"/>
+								<line number="21" hits="4" branch="false"/>
+								<line number="22" hits="4" branch="false"/>
+								<line number="23" hits="4" branch="false"/>
+								<line number="25" hits="5" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="6" hits="4" branch="false"/>
-						<line number="7" hits="4" branch="false"/>
-						<line number="8" hits="4" branch="false"/>
-						<line number="10" hits="4" branch="false"/>
-						<line number="11" hits="4" branch="false"/>
-						<line number="12" hits="4" branch="false"/>
-						<line number="13" hits="4" branch="false"/>
-						<line number="17" hits="4" branch="false"/>
-						<line number="18" hits="4" branch="false"/>
-						<line number="19" hits="4" branch="false"/>
-						<line number="20" hits="4" branch="true" condition-coverage="100% (2/2)">
+						<line number="6" hits="5" branch="false"/>
+						<line number="7" hits="5" branch="false"/>
+						<line number="8" hits="5" branch="false"/>
+						<line number="10" hits="5" branch="false"/>
+						<line number="11" hits="5" branch="false"/>
+						<line number="12" hits="5" branch="false"/>
+						<line number="13" hits="5" branch="false"/>
+						<line number="17" hits="5" branch="false"/>
+						<line number="18" hits="5" branch="false"/>
+						<line number="19" hits="5" branch="false"/>
+						<line number="20" hits="5" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="21" hits="3" branch="false"/>
-						<line number="22" hits="3" branch="false"/>
-						<line number="23" hits="3" branch="false"/>
-						<line number="25" hits="4" branch="false"/>
+						<line number="21" hits="4" branch="false"/>
+						<line number="22" hits="4" branch="false"/>
+						<line number="23" hits="4" branch="false"/>
+						<line number="25" hits="5" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.thoughtworks.biblioteca.CheckedOutBook" filename="com/thoughtworks/biblioteca/CheckedOutBook.java" line-rate="1.0" branch-rate="1.0" complexity="2.2">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Book;Lcom/thoughtworks/biblioteca/User;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="9" hits="54" branch="false"/>
-								<line number="10" hits="54" branch="false"/>
-								<line number="11" hits="54" branch="false"/>
+								<line number="9" hits="56" branch="false"/>
+								<line number="10" hits="56" branch="false"/>
+								<line number="11" hits="56" branch="false"/>
 							</lines>
 						</method>
 						<method name="equals" signature="(Ljava/lang/Object;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -658,9 +658,9 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="9" hits="54" branch="false"/>
-						<line number="10" hits="54" branch="false"/>
-						<line number="11" hits="54" branch="false"/>
+						<line number="9" hits="56" branch="false"/>
+						<line number="10" hits="56" branch="false"/>
+						<line number="11" hits="56" branch="false"/>
 						<line number="15" hits="5" branch="false"/>
 						<line number="16" hits="5" branch="false"/>
 						<line number="17" hits="5" branch="false"/>
@@ -692,41 +692,41 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/io/PrintStream;Ljava/io/InputStream;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="12" hits="54" branch="false"/>
-								<line number="13" hits="54" branch="false"/>
-								<line number="14" hits="54" branch="false"/>
-								<line number="15" hits="54" branch="false"/>
+								<line number="12" hits="56" branch="false"/>
+								<line number="13" hits="56" branch="false"/>
+								<line number="14" hits="56" branch="false"/>
+								<line number="15" hits="56" branch="false"/>
 							</lines>
 						</method>
 						<method name="getInputFromUser" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="22" hits="28" branch="false"/>
+								<line number="22" hits="31" branch="false"/>
 							</lines>
 						</method>
 						<method name="printMessage" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="18" hits="44" branch="false"/>
-								<line number="19" hits="44" branch="false"/>
+								<line number="18" hits="48" branch="false"/>
+								<line number="19" hits="48" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="12" hits="54" branch="false"/>
-						<line number="13" hits="54" branch="false"/>
-						<line number="14" hits="54" branch="false"/>
-						<line number="15" hits="54" branch="false"/>
-						<line number="18" hits="44" branch="false"/>
-						<line number="19" hits="44" branch="false"/>
-						<line number="22" hits="28" branch="false"/>
+						<line number="12" hits="56" branch="false"/>
+						<line number="13" hits="56" branch="false"/>
+						<line number="14" hits="56" branch="false"/>
+						<line number="15" hits="56" branch="false"/>
+						<line number="18" hits="48" branch="false"/>
+						<line number="19" hits="48" branch="false"/>
+						<line number="22" hits="31" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.thoughtworks.biblioteca.GuestRole" filename="com/thoughtworks/biblioteca/GuestRole.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="8" hits="53" branch="false"/>
-								<line number="9" hits="53" branch="false"/>
-								<line number="18" hits="53" branch="false"/>
+								<line number="8" hits="55" branch="false"/>
+								<line number="9" hits="55" branch="false"/>
+								<line number="18" hits="55" branch="false"/>
 							</lines>
 						</method>
 						<method name="getMenuOptions" signature="()Ljava/util/ArrayList;" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -741,9 +741,9 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="8" hits="53" branch="false"/>
-						<line number="9" hits="53" branch="false"/>
-						<line number="18" hits="53" branch="false"/>
+						<line number="8" hits="55" branch="false"/>
+						<line number="9" hits="55" branch="false"/>
+						<line number="18" hits="55" branch="false"/>
 						<line number="22" hits="14" branch="false"/>
 						<line number="27" hits="11" branch="false"/>
 					</lines>
@@ -788,40 +788,40 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/LibraryView;Lcom/thoughtworks/biblioteca/ConsoleDisplay;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="8" hits="4" branch="false"/>
-								<line number="9" hits="4" branch="false"/>
-								<line number="10" hits="4" branch="false"/>
-								<line number="11" hits="4" branch="false"/>
+								<line number="8" hits="5" branch="false"/>
+								<line number="9" hits="5" branch="false"/>
+								<line number="10" hits="5" branch="false"/>
+								<line number="11" hits="5" branch="false"/>
 							</lines>
 						</method>
 						<method name="performOperation" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="15" hits="4" branch="false"/>
-								<line number="16" hits="4" branch="false"/>
+								<line number="15" hits="5" branch="false"/>
+								<line number="16" hits="5" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="8" hits="4" branch="false"/>
-						<line number="9" hits="4" branch="false"/>
-						<line number="10" hits="4" branch="false"/>
-						<line number="11" hits="4" branch="false"/>
-						<line number="15" hits="4" branch="false"/>
-						<line number="16" hits="4" branch="false"/>
+						<line number="8" hits="5" branch="false"/>
+						<line number="9" hits="5" branch="false"/>
+						<line number="10" hits="5" branch="false"/>
+						<line number="11" hits="5" branch="false"/>
+						<line number="15" hits="5" branch="false"/>
+						<line number="16" hits="5" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.thoughtworks.biblioteca.LoggedInUserRole" filename="com/thoughtworks/biblioteca/LoggedInUserRole.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="8" hits="55" branch="false"/>
-								<line number="9" hits="55" branch="false"/>
-								<line number="19" hits="55" branch="false"/>
+								<line number="8" hits="57" branch="false"/>
+								<line number="9" hits="57" branch="false"/>
+								<line number="19" hits="57" branch="false"/>
 							</lines>
 						</method>
 						<method name="getMenuOptions" signature="()Ljava/util/ArrayList;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="23" hits="41" branch="false"/>
+								<line number="23" hits="51" branch="false"/>
 							</lines>
 						</method>
 						<method name="isAuthenticatedUser" signature="()Z" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -831,10 +831,10 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="8" hits="55" branch="false"/>
-						<line number="9" hits="55" branch="false"/>
-						<line number="19" hits="55" branch="false"/>
-						<line number="23" hits="41" branch="false"/>
+						<line number="8" hits="57" branch="false"/>
+						<line number="9" hits="57" branch="false"/>
+						<line number="19" hits="57" branch="false"/>
+						<line number="23" hits="51" branch="false"/>
 						<line number="28" hits="17" branch="false"/>
 					</lines>
 				</class>
@@ -918,46 +918,46 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/util/ArrayList;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="9" hits="25" branch="false"/>
-								<line number="10" hits="25" branch="false"/>
-								<line number="11" hits="25" branch="false"/>
+								<line number="9" hits="27" branch="false"/>
+								<line number="10" hits="27" branch="false"/>
+								<line number="11" hits="27" branch="false"/>
 							</lines>
 						</method>
 						<method name="getMenuOptionsToDisplay" signature="(Lcom/thoughtworks/biblioteca/User;)Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="14" hits="14" branch="false"/>
-								<line number="15" hits="14" branch="false"/>
-								<line number="16" hits="125" branch="true" condition-coverage="100% (2/2)">
+								<line number="14" hits="18" branch="false"/>
+								<line number="15" hits="18" branch="false"/>
+								<line number="16" hits="161" branch="true" condition-coverage="100% (2/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="17" hits="111" branch="false"/>
-								<line number="19" hits="14" branch="false"/>
+								<line number="17" hits="143" branch="false"/>
+								<line number="19" hits="18" branch="false"/>
 							</lines>
 						</method>
 						<method name="handleSelectedMenuOption" signature="(Lcom/thoughtworks/biblioteca/MenuOption;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="23" hits="21" branch="false"/>
-								<line number="24" hits="21" branch="false"/>
+								<line number="23" hits="23" branch="false"/>
+								<line number="24" hits="23" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="9" hits="25" branch="false"/>
-						<line number="10" hits="25" branch="false"/>
-						<line number="11" hits="25" branch="false"/>
-						<line number="14" hits="14" branch="false"/>
-						<line number="15" hits="14" branch="false"/>
-						<line number="16" hits="125" branch="true" condition-coverage="100% (2/2)">
+						<line number="9" hits="27" branch="false"/>
+						<line number="10" hits="27" branch="false"/>
+						<line number="11" hits="27" branch="false"/>
+						<line number="14" hits="18" branch="false"/>
+						<line number="15" hits="18" branch="false"/>
+						<line number="16" hits="161" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="17" hits="111" branch="false"/>
-						<line number="19" hits="14" branch="false"/>
-						<line number="23" hits="21" branch="false"/>
-						<line number="24" hits="21" branch="false"/>
+						<line number="17" hits="143" branch="false"/>
+						<line number="19" hits="18" branch="false"/>
+						<line number="23" hits="23" branch="false"/>
+						<line number="24" hits="23" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.thoughtworks.biblioteca.MenuOption" filename="com/thoughtworks/biblioteca/MenuOption.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
@@ -970,25 +970,25 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Menu;Lcom/thoughtworks/biblioteca/Biblioteca;Lcom/thoughtworks/biblioteca/Biblioteca;Lcom/thoughtworks/biblioteca/ConsoleDisplay;Lcom/thoughtworks/biblioteca/UserAuthenticator;Lcom/thoughtworks/biblioteca/User;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="12" hits="21" branch="false"/>
-								<line number="13" hits="21" branch="false"/>
-								<line number="14" hits="21" branch="false"/>
-								<line number="15" hits="21" branch="false"/>
-								<line number="16" hits="21" branch="false"/>
-								<line number="17" hits="21" branch="false"/>
-								<line number="18" hits="21" branch="false"/>
-								<line number="19" hits="21" branch="false"/>
+								<line number="12" hits="23" branch="false"/>
+								<line number="13" hits="23" branch="false"/>
+								<line number="14" hits="23" branch="false"/>
+								<line number="15" hits="23" branch="false"/>
+								<line number="16" hits="23" branch="false"/>
+								<line number="17" hits="23" branch="false"/>
+								<line number="18" hits="23" branch="false"/>
+								<line number="19" hits="23" branch="false"/>
 							</lines>
 						</method>
 						<method name="displayMenuOption" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="22" hits="6" branch="false"/>
-								<line number="23" hits="6" branch="false"/>
+								<line number="22" hits="8" branch="false"/>
+								<line number="23" hits="8" branch="false"/>
 							</lines>
 						</method>
 						<method name="getMenuOption" signature="(Ljava/lang/String;)Lcom/thoughtworks/biblioteca/MenuOption;" line-rate="0.95" branch-rate="0.74" complexity="0">
 							<lines>
-								<line number="36" hits="20" branch="true" condition-coverage="69% (29/42)">
+								<line number="36" hits="22" branch="true" condition-coverage="69% (29/42)">
 									<conditions>
 										<condition number="0" type="jump" coverage="50%"/>
 										<condition number="1" type="jump" coverage="0%"/>
@@ -1030,8 +1030,8 @@
 									</conditions>
 								</line>
 								<line number="56" hits="3" branch="false"/>
-								<line number="60" hits="1" branch="false"/>
-								<line number="63" hits="1" branch="false"/>
+								<line number="60" hits="2" branch="false"/>
+								<line number="63" hits="2" branch="false"/>
 								<line number="66" hits="1" branch="false"/>
 								<line number="67" hits="1" branch="false"/>
 								<line number="70" hits="1" branch="false"/>
@@ -1043,43 +1043,43 @@
 						</method>
 						<method name="handleMenuOption" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="26" hits="20" branch="false"/>
-								<line number="28" hits="20" branch="true" condition-coverage="100% (4/4)">
+								<line number="26" hits="22" branch="false"/>
+								<line number="28" hits="22" branch="true" condition-coverage="100% (4/4)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 										<condition number="1" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="29" hits="18" branch="false"/>
-								<line number="31" hits="20" branch="false"/>
-								<line number="32" hits="20" branch="false"/>
-								<line number="33" hits="20" branch="false"/>
+								<line number="29" hits="20" branch="false"/>
+								<line number="31" hits="22" branch="false"/>
+								<line number="32" hits="22" branch="false"/>
+								<line number="33" hits="22" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="12" hits="21" branch="false"/>
-						<line number="13" hits="21" branch="false"/>
-						<line number="14" hits="21" branch="false"/>
-						<line number="15" hits="21" branch="false"/>
-						<line number="16" hits="21" branch="false"/>
-						<line number="17" hits="21" branch="false"/>
-						<line number="18" hits="21" branch="false"/>
-						<line number="19" hits="21" branch="false"/>
-						<line number="22" hits="6" branch="false"/>
-						<line number="23" hits="6" branch="false"/>
-						<line number="26" hits="20" branch="false"/>
-						<line number="28" hits="20" branch="true" condition-coverage="100% (4/4)">
+						<line number="12" hits="23" branch="false"/>
+						<line number="13" hits="23" branch="false"/>
+						<line number="14" hits="23" branch="false"/>
+						<line number="15" hits="23" branch="false"/>
+						<line number="16" hits="23" branch="false"/>
+						<line number="17" hits="23" branch="false"/>
+						<line number="18" hits="23" branch="false"/>
+						<line number="19" hits="23" branch="false"/>
+						<line number="22" hits="8" branch="false"/>
+						<line number="23" hits="8" branch="false"/>
+						<line number="26" hits="22" branch="false"/>
+						<line number="28" hits="22" branch="true" condition-coverage="100% (4/4)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 								<condition number="1" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="29" hits="18" branch="false"/>
-						<line number="31" hits="20" branch="false"/>
-						<line number="32" hits="20" branch="false"/>
-						<line number="33" hits="20" branch="false"/>
-						<line number="36" hits="20" branch="true" condition-coverage="69% (29/42)">
+						<line number="29" hits="20" branch="false"/>
+						<line number="31" hits="22" branch="false"/>
+						<line number="32" hits="22" branch="false"/>
+						<line number="33" hits="22" branch="false"/>
+						<line number="36" hits="22" branch="true" condition-coverage="69% (29/42)">
 							<conditions>
 								<condition number="0" type="jump" coverage="50%"/>
 								<condition number="1" type="jump" coverage="0%"/>
@@ -1121,8 +1121,8 @@
 							</conditions>
 						</line>
 						<line number="56" hits="3" branch="false"/>
-						<line number="60" hits="1" branch="false"/>
-						<line number="63" hits="1" branch="false"/>
+						<line number="60" hits="2" branch="false"/>
+						<line number="63" hits="2" branch="false"/>
 						<line number="66" hits="1" branch="false"/>
 						<line number="67" hits="1" branch="false"/>
 						<line number="70" hits="1" branch="false"/>
@@ -1136,61 +1136,61 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;ILjava/lang/String;I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="9" hits="44" branch="false"/>
-								<line number="10" hits="44" branch="false"/>
-								<line number="11" hits="44" branch="false"/>
-								<line number="12" hits="44" branch="false"/>
-								<line number="13" hits="44" branch="false"/>
-								<line number="14" hits="44" branch="false"/>
+								<line number="9" hits="47" branch="false"/>
+								<line number="10" hits="47" branch="false"/>
+								<line number="11" hits="47" branch="false"/>
+								<line number="12" hits="47" branch="false"/>
+								<line number="13" hits="47" branch="false"/>
+								<line number="14" hits="47" branch="false"/>
 							</lines>
 						</method>
 						<method name="equals" signature="(Ljava/lang/Object;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="28" hits="10" branch="true" condition-coverage="100% (2/2)">
+								<line number="28" hits="11" branch="true" condition-coverage="100% (2/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
 								<line number="29" hits="1" branch="false"/>
-								<line number="30" hits="9" branch="true" condition-coverage="100% (4/4)">
+								<line number="30" hits="10" branch="true" condition-coverage="100% (4/4)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 										<condition number="1" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
 								<line number="31" hits="2" branch="false"/>
-								<line number="32" hits="7" branch="false"/>
-								<line number="33" hits="7" branch="false"/>
+								<line number="32" hits="8" branch="false"/>
+								<line number="33" hits="8" branch="false"/>
 							</lines>
 						</method>
 						<method name="getDirector" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="50" hits="3" branch="false"/>
+								<line number="50" hits="5" branch="false"/>
 							</lines>
 						</method>
 						<method name="getHeaderDetails" signature="()[Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="18" hits="3" branch="false"/>
-								<line number="19" hits="3" branch="false"/>
-								<line number="20" hits="3" branch="false"/>
-								<line number="21" hits="3" branch="false"/>
-								<line number="22" hits="3" branch="false"/>
-								<line number="23" hits="3" branch="false"/>
+								<line number="18" hits="5" branch="false"/>
+								<line number="19" hits="5" branch="false"/>
+								<line number="20" hits="5" branch="false"/>
+								<line number="21" hits="5" branch="false"/>
+								<line number="22" hits="5" branch="false"/>
+								<line number="23" hits="5" branch="false"/>
 							</lines>
 						</method>
 						<method name="getMovieName" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="42" hits="3" branch="false"/>
+								<line number="42" hits="5" branch="false"/>
 							</lines>
 						</method>
 						<method name="getRatings" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="54" hits="3" branch="false"/>
+								<line number="54" hits="5" branch="false"/>
 							</lines>
 						</method>
 						<method name="getYearReleased" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="46" hits="3" branch="false"/>
+								<line number="46" hits="5" branch="false"/>
 							</lines>
 						</method>
 						<method name="hashCode" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -1200,47 +1200,47 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="9" hits="44" branch="false"/>
-						<line number="10" hits="44" branch="false"/>
-						<line number="11" hits="44" branch="false"/>
-						<line number="12" hits="44" branch="false"/>
-						<line number="13" hits="44" branch="false"/>
-						<line number="14" hits="44" branch="false"/>
-						<line number="18" hits="3" branch="false"/>
-						<line number="19" hits="3" branch="false"/>
-						<line number="20" hits="3" branch="false"/>
-						<line number="21" hits="3" branch="false"/>
-						<line number="22" hits="3" branch="false"/>
-						<line number="23" hits="3" branch="false"/>
-						<line number="28" hits="10" branch="true" condition-coverage="100% (2/2)">
+						<line number="9" hits="47" branch="false"/>
+						<line number="10" hits="47" branch="false"/>
+						<line number="11" hits="47" branch="false"/>
+						<line number="12" hits="47" branch="false"/>
+						<line number="13" hits="47" branch="false"/>
+						<line number="14" hits="47" branch="false"/>
+						<line number="18" hits="5" branch="false"/>
+						<line number="19" hits="5" branch="false"/>
+						<line number="20" hits="5" branch="false"/>
+						<line number="21" hits="5" branch="false"/>
+						<line number="22" hits="5" branch="false"/>
+						<line number="23" hits="5" branch="false"/>
+						<line number="28" hits="11" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
 						<line number="29" hits="1" branch="false"/>
-						<line number="30" hits="9" branch="true" condition-coverage="100% (4/4)">
+						<line number="30" hits="10" branch="true" condition-coverage="100% (4/4)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 								<condition number="1" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
 						<line number="31" hits="2" branch="false"/>
-						<line number="32" hits="7" branch="false"/>
-						<line number="33" hits="7" branch="false"/>
+						<line number="32" hits="8" branch="false"/>
+						<line number="33" hits="8" branch="false"/>
 						<line number="38" hits="4" branch="false"/>
-						<line number="42" hits="3" branch="false"/>
-						<line number="46" hits="3" branch="false"/>
-						<line number="50" hits="3" branch="false"/>
-						<line number="54" hits="3" branch="false"/>
+						<line number="42" hits="5" branch="false"/>
+						<line number="46" hits="5" branch="false"/>
+						<line number="50" hits="5" branch="false"/>
+						<line number="54" hits="5" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.thoughtworks.biblioteca.MovieView" filename="com/thoughtworks/biblioteca/MovieView.java" line-rate="1.0" branch-rate="1.0" complexity="1.2">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lcom/thoughtworks/biblioteca/Biblioteca;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="8" hits="19" branch="false"/>
-								<line number="9" hits="19" branch="false"/>
-								<line number="10" hits="19" branch="false"/>
+								<line number="8" hits="27" branch="false"/>
+								<line number="9" hits="27" branch="false"/>
+								<line number="10" hits="27" branch="false"/>
 							</lines>
 						</method>
 						<method name="getFormattedListOfCheckedOutItems" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -1250,58 +1250,58 @@
 						</method>
 						<method name="getFormattedListOfItems" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="13" hits="3" branch="false"/>
-								<line number="14" hits="3" branch="false"/>
-								<line number="15" hits="3" branch="false"/>
-								<line number="16" hits="3" branch="false"/>
-								<line number="17" hits="3" branch="false"/>
-								<line number="18" hits="3" branch="false"/>
-								<line number="19" hits="3" branch="false"/>
+								<line number="13" hits="5" branch="false"/>
+								<line number="14" hits="5" branch="false"/>
+								<line number="15" hits="5" branch="false"/>
+								<line number="16" hits="5" branch="false"/>
+								<line number="17" hits="5" branch="false"/>
+								<line number="18" hits="5" branch="false"/>
+								<line number="19" hits="5" branch="false"/>
 							</lines>
 						</method>
 						<method name="getItemDetails" signature="(Ljava/util/List;)Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="28" hits="3" branch="false"/>
-								<line number="29" hits="3" branch="true" condition-coverage="100% (2/2)">
+								<line number="28" hits="5" branch="false"/>
+								<line number="29" hits="5" branch="true" condition-coverage="100% (2/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="30" hits="3" branch="false"/>
-								<line number="31" hits="3" branch="false"/>
-								<line number="32" hits="3" branch="false"/>
-								<line number="33" hits="3" branch="false"/>
+								<line number="30" hits="5" branch="false"/>
+								<line number="31" hits="5" branch="false"/>
+								<line number="32" hits="5" branch="false"/>
+								<line number="33" hits="5" branch="false"/>
 							</lines>
 						</method>
 						<method name="getItemDetailsHeader" signature="(Lcom/thoughtworks/biblioteca/LibraryItem;)Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="37" hits="3" branch="false"/>
+								<line number="37" hits="5" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="8" hits="19" branch="false"/>
-						<line number="9" hits="19" branch="false"/>
-						<line number="10" hits="19" branch="false"/>
-						<line number="13" hits="3" branch="false"/>
-						<line number="14" hits="3" branch="false"/>
-						<line number="15" hits="3" branch="false"/>
-						<line number="16" hits="3" branch="false"/>
-						<line number="17" hits="3" branch="false"/>
-						<line number="18" hits="3" branch="false"/>
-						<line number="19" hits="3" branch="false"/>
+						<line number="8" hits="27" branch="false"/>
+						<line number="9" hits="27" branch="false"/>
+						<line number="10" hits="27" branch="false"/>
+						<line number="13" hits="5" branch="false"/>
+						<line number="14" hits="5" branch="false"/>
+						<line number="15" hits="5" branch="false"/>
+						<line number="16" hits="5" branch="false"/>
+						<line number="17" hits="5" branch="false"/>
+						<line number="18" hits="5" branch="false"/>
+						<line number="19" hits="5" branch="false"/>
 						<line number="24" hits="1" branch="false"/>
-						<line number="28" hits="3" branch="false"/>
-						<line number="29" hits="3" branch="true" condition-coverage="100% (2/2)">
+						<line number="28" hits="5" branch="false"/>
+						<line number="29" hits="5" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="30" hits="3" branch="false"/>
-						<line number="31" hits="3" branch="false"/>
-						<line number="32" hits="3" branch="false"/>
-						<line number="33" hits="3" branch="false"/>
-						<line number="37" hits="3" branch="false"/>
+						<line number="30" hits="5" branch="false"/>
+						<line number="31" hits="5" branch="false"/>
+						<line number="32" hits="5" branch="false"/>
+						<line number="33" hits="5" branch="false"/>
+						<line number="37" hits="5" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.thoughtworks.biblioteca.QuitMenuOption" filename="com/thoughtworks/biblioteca/QuitMenuOption.java" line-rate="0.6666666666666666" branch-rate="1.0" complexity="1.0">
@@ -1388,14 +1388,14 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/thoughtworks/biblioteca/UserRole;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="13" hits="147" branch="false"/>
-								<line number="14" hits="147" branch="false"/>
-								<line number="15" hits="147" branch="false"/>
-								<line number="16" hits="147" branch="false"/>
-								<line number="17" hits="147" branch="false"/>
-								<line number="18" hits="147" branch="false"/>
-								<line number="19" hits="147" branch="false"/>
-								<line number="20" hits="147" branch="false"/>
+								<line number="13" hits="153" branch="false"/>
+								<line number="14" hits="153" branch="false"/>
+								<line number="15" hits="153" branch="false"/>
+								<line number="16" hits="153" branch="false"/>
+								<line number="17" hits="153" branch="false"/>
+								<line number="18" hits="153" branch="false"/>
+								<line number="19" hits="153" branch="false"/>
+								<line number="20" hits="153" branch="false"/>
 							</lines>
 						</method>
 						<method name="equals" signature="(Ljava/lang/Object;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -1443,7 +1443,7 @@
 						</method>
 						<method name="getMenuOptions" signature="()Ljava/util/ArrayList;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="41" hits="56" branch="false"/>
+								<line number="41" hits="66" branch="false"/>
 							</lines>
 						</method>
 						<method name="getPhoneNumber" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -1473,14 +1473,14 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="13" hits="147" branch="false"/>
-						<line number="14" hits="147" branch="false"/>
-						<line number="15" hits="147" branch="false"/>
-						<line number="16" hits="147" branch="false"/>
-						<line number="17" hits="147" branch="false"/>
-						<line number="18" hits="147" branch="false"/>
-						<line number="19" hits="147" branch="false"/>
-						<line number="20" hits="147" branch="false"/>
+						<line number="13" hits="153" branch="false"/>
+						<line number="14" hits="153" branch="false"/>
+						<line number="15" hits="153" branch="false"/>
+						<line number="16" hits="153" branch="false"/>
+						<line number="17" hits="153" branch="false"/>
+						<line number="18" hits="153" branch="false"/>
+						<line number="19" hits="153" branch="false"/>
+						<line number="20" hits="153" branch="false"/>
 						<line number="24" hits="16" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
@@ -1503,7 +1503,7 @@
 								<condition number="1" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="41" hits="56" branch="false"/>
+						<line number="41" hits="66" branch="false"/>
 						<line number="45" hits="28" branch="false"/>
 						<line number="49" hits="4" branch="false"/>
 						<line number="53" hits="5" branch="false"/>
@@ -1520,10 +1520,10 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/util/ArrayList;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="8" hits="26" branch="false"/>
-								<line number="10" hits="26" branch="false"/>
-								<line number="11" hits="26" branch="false"/>
-								<line number="12" hits="26" branch="false"/>
+								<line number="8" hits="28" branch="false"/>
+								<line number="10" hits="28" branch="false"/>
+								<line number="11" hits="28" branch="false"/>
+								<line number="12" hits="28" branch="false"/>
 							</lines>
 						</method>
 						<method name="authenticate" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/thoughtworks/biblioteca/User;" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -1559,10 +1559,10 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="8" hits="26" branch="false"/>
-						<line number="10" hits="26" branch="false"/>
-						<line number="11" hits="26" branch="false"/>
-						<line number="12" hits="26" branch="false"/>
+						<line number="8" hits="28" branch="false"/>
+						<line number="10" hits="28" branch="false"/>
+						<line number="11" hits="28" branch="false"/>
+						<line number="12" hits="28" branch="false"/>
 						<line number="15" hits="6" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
