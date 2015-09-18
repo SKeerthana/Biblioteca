@@ -26,7 +26,7 @@ public class BibliotecaApp {
         }
     }
 
-    private void run(MenuOptionController menuOptionController) {
+    public void run(MenuOptionController menuOptionController) {
         menuOptionController.displayMenuOption();
         String option = consoleDisplay.getInputFromUser();
         menuOptionController.handleMenuOption(option);

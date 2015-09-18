@@ -20,76 +20,109 @@ public class BibliotecaAppTest {
         add(book1);
         add(book2);
     }};
-    Biblioteca bibilioteca = new Biblioteca(listOfBooks, new ArrayList<LibraryItem>());
-    BookView bookView = new BookView(bibilioteca);
-    ArrayList<String> listOfMenuOptions = new ArrayList<String>() {{
-        add("1. List all the books");
-        add("2. Quit");
-        add("3. Checkout books");
-        add("3. Checkout books");
+    Book book3 = new Book("Good will hunting", "some person", 1998);
+    private User currentUser = new User("1234-122", "abc", "abc", "", "9944172304", new LoggedInUserRole());
+    CheckedOutBook checkedOutBook = new CheckedOutBook(book3, currentUser);
+    ArrayList<LibraryItem> checkedOutBooks = new ArrayList<LibraryItem>() {{
+        add(checkedOutBook);
     }};
-    Menu menu = new Menu(listOfMenuOptions);
+    Biblioteca bookLibraryData = new Biblioteca(listOfBooks, checkedOutBooks);
+    BookView bookView = new BookView(bookLibraryData);
+
+    private Movie movie = new Movie("Vishvaroopam", 2013, "Kamalhasan", 10);
+    private ArrayList<LibraryItem> availableMovieList = new ArrayList<LibraryItem>() {{
+        add(movie);
+    }};
+    private Biblioteca movieLibraryData = new Biblioteca(availableMovieList, new ArrayList<LibraryItem>());
+
+    private Menu menu = new Menu(currentUser.getMenuOptions());
+    private User adminUser = new User("admin-001", "", "", "", "9944172304", new AdminRole());
+    private ArrayList<User> validUsers = new ArrayList<User>() {{
+        add(currentUser);
+        add(adminUser);
+    }};
+    private UserAuthenticator userAuthenticator = new UserAuthenticator(validUsers);
 
     @Rule
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     @Test
     public void shouldDisplayListOfBooksOptionsAfterDisplayingWelcomeMessage() {
-        ConsoleDisplay consoleDisplay1 = mock(ConsoleDisplay.class);
-        when(consoleDisplay1.getInputFromUser()).thenReturn("1", "2");
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay1);
-        MenuOptionController menuOptionController = mock(MenuOptionController.class);
-
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, System.in);
-        ListLibraryItemMenuOption listLibraryItemMenuOption = new ListLibraryItemMenuOption(bookView, consoleDisplay);
-        when(menuOptionController.getMenuOption("1")).thenReturn(listLibraryItemMenuOption);
-        exit.expectSystemExit();
+        ByteArrayInputStream inContent = new ByteArrayInputStream("1".getBytes());
+        System.setIn(inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
 
-        bibliotecaApp.start();
-        assertEquals(bookView.getFormattedListOfItems(), outContent.toString());
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+
+        bibliotecaApp.run(menuOptionController);
+        assertEquals(menu.getMenuOptionsToDisplay(currentUser) + bookView.getFormattedListOfItems(), outContent.toString());
     }
 
     @Test
     public void shouldDisplaySuccessMessageWhenCheckOutIsSuccessful() {
-        ConsoleDisplay consoleDisplay1 = mock(ConsoleDisplay.class);
-        when(consoleDisplay1.getInputFromUser()).thenReturn("3", "2");
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay1);
-        MenuOptionController menuOptionController = mock(MenuOptionController.class);
-
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        ByteArrayInputStream inContent = new ByteArrayInputStream("Harry Potter and the Chamber of Secrets".getBytes());
+        ByteArrayInputStream inContent = new ByteArrayInputStream("3\nMy experiments with Truth\n".getBytes());
         System.setIn(inContent);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new User("ABC12", "ABC23", "", "abc@gmail.com", "9944172304", new AdminRole()));
-        when(menuOptionController.getMenuOption("3")).thenReturn(checkOutBooksMenuOption);
-        exit.expectSystemExit();
 
-        bibliotecaApp.start();
-        assertEquals("Thank you! Enjoy the book\n", outContent.toString());
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+
+        bibliotecaApp.run(menuOptionController);
+        assertEquals(menu.getMenuOptionsToDisplay(currentUser) + "Thank you! Enjoy the book\n", outContent.toString());
     }
+
     @Test
     public void shouldDisplayUnSuccessMessageWhenCheckOutIsUnSuccessful() {
-        ConsoleDisplay consoleDisplay1 = mock(ConsoleDisplay.class);
-        when(consoleDisplay1.getInputFromUser()).thenReturn("3", "2");
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay1);
-        MenuOptionController menuOptionController = mock(MenuOptionController.class);
-
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outContent);
         System.setOut(printStream);
-        ByteArrayInputStream inContent = new ByteArrayInputStream("Harry Potter".getBytes());
+        ByteArrayInputStream inContent = new ByteArrayInputStream("3\nMy experiments\n".getBytes());
         System.setIn(inContent);
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
-        CheckOutBooksMenuOption checkOutBooksMenuOption = new CheckOutBooksMenuOption(bibilioteca, consoleDisplay, new User("ABC12", "ABC23", "", "abc@gmail.com", "9944172304", new AdminRole()));
-        when(menuOptionController.getMenuOption("3")).thenReturn(checkOutBooksMenuOption);
-        exit.expectSystemExit();
 
-        bibliotecaApp.start();
-        assertEquals("That book is not available\n", outContent.toString());
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+
+        bibliotecaApp.run(menuOptionController);
+        assertEquals(menu.getMenuOptionsToDisplay(currentUser) + "That book is not available\n", outContent.toString());
+    }
+
+    @Test
+    public void shouldDisplaySuccessMessageWhenReturnIsSuccessful() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ByteArrayInputStream inContent = new ByteArrayInputStream("4\nGood will hunting\n".getBytes());
+        System.setIn(inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
+
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+
+        bibliotecaApp.run(menuOptionController);
+        assertEquals(menu.getMenuOptionsToDisplay(currentUser) + "Thank you for returning the book.\n", outContent.toString());
+    }
+
+    @Test
+    public void shouldDisplayUnSuccessMessageWhenReturnIsUnSuccessful() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outContent);
+        System.setOut(printStream);
+        ByteArrayInputStream inContent = new ByteArrayInputStream("4\nGood will\n".getBytes());
+        System.setIn(inContent);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(printStream, inContent);
+
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(consoleDisplay);
+        MenuOptionController menuOptionController = new MenuOptionController(menu, bookLibraryData, movieLibraryData, consoleDisplay, userAuthenticator, currentUser);
+
+        bibliotecaApp.run(menuOptionController);
+        assertEquals(menu.getMenuOptionsToDisplay(currentUser) + "That is not a valid book to return.\n", outContent.toString());
     }
 }
